@@ -19,12 +19,12 @@ export function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-yellow disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-accent-yellow/50 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group';
   
   const variantClasses = {
-    primary: 'bg-accent-yellow text-navy hover:bg-accent-yellow/90 shadow-lg hover:shadow-xl',
-    secondary: 'bg-blue-grey text-off-white hover:bg-blue-grey/80',
-    outline: 'border-2 border-accent-yellow text-accent-yellow hover:bg-accent-yellow hover:text-navy',
+    primary: 'bg-gradient-to-r from-accent-yellow to-yellow-400 text-navy hover:from-yellow-400 hover:to-accent-yellow shadow-xl hover:shadow-2xl hover:scale-105 glow-yellow',
+    secondary: 'bg-gradient-to-r from-blue-grey to-blue-grey/80 text-off-white hover:from-blue-grey/90 hover:to-blue-grey shadow-lg hover:shadow-xl hover:scale-105',
+    outline: 'border-2 border-accent-yellow text-accent-yellow hover:bg-accent-yellow hover:text-navy shadow-lg hover:shadow-accent-yellow/50 hover:scale-105',
   };
 
   const sizeClasses = {
