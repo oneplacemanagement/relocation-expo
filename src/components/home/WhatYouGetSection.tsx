@@ -62,34 +62,31 @@ export function WhatYouGetSection() {
   ];
 
   return (
-    <Section>
+    <Section background="dark">
       <Container>
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
             What You'll Get at The Expo
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent-yellow to-orange-400 mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-navy/70 max-w-3xl mx-auto">
+          <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
             Everything you need to make informed decisions about your relocation journey
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit) => (
             <Card 
               key={benefit.title} 
               hover
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto bg-accent-yellow/20 rounded-full flex items-center justify-center mb-4 text-navy">
+                <div className="w-16 h-16 mx-auto bg-accent-yellow/20 rounded-full flex items-center justify-center mb-4 text-accent-yellow">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">
+                <h3 className="text-xl font-bold text-off-white mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-navy/70 text-sm">
+                <p className="text-off-white/70 text-sm">
                   {benefit.description}
                 </p>
               </div>
@@ -98,8 +95,8 @@ export function WhatYouGetSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <p className="text-lg text-navy/70 mb-6 font-medium">
+        <div className="mt-12 text-center">
+          <p className="text-lg text-off-white/70 mb-6 font-medium">
             Plus networking opportunities, live Q&A sessions, and exclusive resources to download
           </p>
           <Button href="/#register" size="lg">

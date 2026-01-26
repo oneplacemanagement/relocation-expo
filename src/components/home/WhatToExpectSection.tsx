@@ -1,5 +1,6 @@
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
+import { Card } from '@/components/ui/Card';
 
 export function WhatToExpectSection() {
   const expectations = [
@@ -36,7 +37,7 @@ export function WhatToExpectSection() {
   ];
 
   return (
-    <Section background="navy">
+    <Section background="dark">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
@@ -47,15 +48,17 @@ export function WhatToExpectSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {expectations.map((item) => (
-            <div key={item.title} className="text-center">
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <h3 className="text-xl font-bold text-accent-yellow mb-3">
-                {item.title}
-              </h3>
-              <p className="text-off-white/70">{item.description}</p>
-            </div>
+            <Card key={item.title} hover>
+              <div className="text-center">
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-off-white mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-off-white/70 text-sm">{item.description}</p>
+              </div>
+            </Card>
           ))}
         </div>
       </Container>
