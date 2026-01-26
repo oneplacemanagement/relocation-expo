@@ -75,7 +75,7 @@ export function WhatYouGetSection() {
             What You'll Get at The Expo
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent-yellow to-orange-400 mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-muted-grey max-w-3xl mx-auto">
+          <p className="text-xl text-navy/70 max-w-3xl mx-auto">
             Everything you need to make informed decisions about your relocation journey
           </p>
         </div>
@@ -85,11 +85,11 @@ export function WhatYouGetSection() {
             <Card 
               key={benefit.title} 
               variant="glass"
-              className="group relative overflow-hidden animate-fade-in bg-white/90 backdrop-blur-md"
+              className="group relative overflow-hidden animate-fade-in bg-gradient-to-br from-off-white/95 to-off-white/90 backdrop-blur-md border-2 border-navy/10"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Gradient glow on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-8 transition-opacity duration-500 rounded-2xl`}></div>
               
               {/* Icon with gradient background */}
               <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -102,13 +102,13 @@ export function WhatYouGetSection() {
               <h3 className="text-2xl font-bold text-navy mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-navy group-hover:to-blue-grey transition-all duration-300">
                 {benefit.title}
               </h3>
-              <p className="text-slate-700 leading-relaxed text-base">
+              <p className="text-navy/80 leading-relaxed text-base">
                 {benefit.description}
               </p>
 
               {/* Decorative corner accent */}
               <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className={`absolute top-0 right-0 w-full h-full bg-gradient-to-bl ${benefit.gradient} opacity-5 rounded-bl-full`}></div>
+                <div className={`absolute top-0 right-0 w-full h-full bg-gradient-to-bl ${benefit.gradient} opacity-8 rounded-bl-full`}></div>
               </div>
             </Card>
           ))}
@@ -116,7 +116,7 @@ export function WhatYouGetSection() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <p className="text-lg text-slate-700 mb-6 font-medium">
+          <p className="text-lg text-navy/70 mb-6 font-medium">
             Plus networking opportunities, live Q&A sessions, and exclusive resources to download
           </p>
           <Button href="/#register" size="lg">
