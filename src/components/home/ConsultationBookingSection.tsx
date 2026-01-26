@@ -40,13 +40,13 @@ export function ConsultationBookingSection() {
   ];
 
   return (
-    <Section>
+    <Section background="dark">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
             Book Your Consultation Slot
           </h2>
-          <p className="text-xl text-muted-grey max-w-3xl mx-auto">
+          <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
             Pre-book one-on-one consultations with migration experts. Limited spots available!
           </p>
         </div>
@@ -54,7 +54,7 @@ export function ConsultationBookingSection() {
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Exhibitor Selection */}
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-off-white mb-6 flex items-center">
               <span className="bg-accent-yellow text-navy w-8 h-8 rounded-full flex items-center justify-center mr-3 font-bold">
                 1
               </span>
@@ -76,8 +76,8 @@ export function ConsultationBookingSection() {
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h4 className="font-bold text-navy mb-1">{exhibitor.name}</h4>
-                        <p className="text-sm text-muted-grey">{exhibitor.specialty}</p>
+                        <h4 className="font-bold text-off-white mb-1">{exhibitor.name}</h4>
+                        <p className="text-sm text-off-white/70">{exhibitor.specialty}</p>
                       </div>
                       <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                         selectedExhibitor === exhibitor.id
@@ -99,7 +99,7 @@ export function ConsultationBookingSection() {
 
           {/* Time Slot Selection */}
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-off-white mb-6 flex items-center">
               <span className="bg-accent-yellow text-navy w-8 h-8 rounded-full flex items-center justify-center mr-3 font-bold">
                 2
               </span>
@@ -108,10 +108,10 @@ export function ConsultationBookingSection() {
             
             {!selectedExhibitor ? (
               <Card className="text-center py-12">
-                <svg className="w-16 h-16 text-muted-grey mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-16 h-16 text-off-white/50 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p className="text-muted-grey">Please select an exhibitor first to see available time slots</p>
+                <p className="text-off-white/70">Please select an exhibitor first to see available time slots</p>
               </Card>
             ) : (
               <div>
@@ -126,10 +126,10 @@ export function ConsultationBookingSection() {
                           ? 'border-muted-grey/30 bg-muted-grey/10 opacity-50 cursor-not-allowed'
                           : selectedSlot === slot.time
                           ? 'border-accent-yellow bg-accent-yellow/10'
-                          : 'border-blue-grey/30 hover:border-accent-yellow/50 bg-white'
+                          : 'border-blue-grey/30 hover:border-accent-yellow/50 bg-blue-grey/20'
                       }`}
                     >
-                      <div className="font-bold text-navy mb-1">{slot.time}</div>
+                      <div className="font-bold text-off-white mb-1">{slot.time}</div>
                       <div className={`text-xs ${
                         slot.available === 0
                           ? 'text-red-500'
@@ -151,8 +151,8 @@ export function ConsultationBookingSection() {
                 {selectedSlot && (
                   <Card className="bg-gradient-to-r from-accent-yellow/20 to-yellow-400/20 border-accent-yellow">
                     <div className="text-center">
-                      <h4 className="font-bold text-navy mb-2">Ready to Book?</h4>
-                      <p className="text-sm text-navy/80 mb-4">
+                      <h4 className="font-bold text-off-white mb-2">Ready to Book?</h4>
+                      <p className="text-sm text-off-white/80 mb-4">
                         <strong>{exhibitors.find(e => e.id === selectedExhibitor)?.name}</strong>
                         <br />
                         at <strong>{selectedSlot}</strong> on October 3, 2026
@@ -163,7 +163,7 @@ export function ConsultationBookingSection() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                         </svg>
                       </Button>
-                      <p className="text-xs text-navy/60 mt-3">
+                      <p className="text-xs text-off-white/60 mt-3">
                         🔒 Secure your registration to confirm your consultation
                       </p>
                     </div>
@@ -176,7 +176,7 @@ export function ConsultationBookingSection() {
 
         {/* Info Banner */}
         <div className="mt-12 max-w-4xl mx-auto">
-          <Card className="bg-blue-grey/10 border-blue-grey/30">
+          <Card className="bg-blue-grey/20 border-blue-grey/30">
             <div className="flex items-start space-x-4">
               <div className="bg-accent-yellow/20 p-3 rounded-full flex-shrink-0">
                 <svg className="w-6 h-6 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,8 +184,8 @@ export function ConsultationBookingSection() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-bold text-navy mb-2">How Consultations Work</h4>
-                <ul className="text-sm text-navy/80 space-y-1">
+                <h4 className="font-bold text-off-white mb-2">How Consultations Work</h4>
+                <ul className="text-sm text-off-white/80 space-y-1">
                   <li>✅ <strong>15-minute slots</strong> with registered migration agents</li>
                   <li>✅ <strong>Free initial assessment</strong> of your eligibility</li>
                   <li>✅ <strong>First-come, first-served</strong> — register early to secure premium times</li>
