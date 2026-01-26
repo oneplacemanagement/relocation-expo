@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #2B2F48;
+  --accent-yellow: #EFC544;
+  --off-white: #EFEFF0;
+  --muted-grey: #535466;
+  --blue-grey: #5C6D8C;
+}
+
+body {
+  color: var(--off-white);
+  background: var(--navy);
+}
