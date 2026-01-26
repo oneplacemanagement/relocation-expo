@@ -4,6 +4,7 @@ import { WhatYouGetSection } from '@/components/home/WhatYouGetSection';
 import { DestinationsSection } from '@/components/home/DestinationsSection';
 import { WhatToExpectSection } from '@/components/home/WhatToExpectSection';
 import { ExhibitorsSection } from '@/components/home/ExhibitorsSection';
+import { ConsultationBookingSection } from '@/components/home/ConsultationBookingSection';
 import { ScheduleSection } from '@/components/home/ScheduleSection';
 import { VenueSection } from '@/components/home/VenueSection';
 import { FAQSection } from '@/components/home/FAQSection';
@@ -18,6 +19,7 @@ export default function Home() {
       <DestinationsSection />
       <WhatToExpectSection />
       <ExhibitorsSection />
+      <ConsultationBookingSection />
       <ScheduleSection />
       <VenueSection />
       <FAQSection />

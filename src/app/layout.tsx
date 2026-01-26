@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieBanner } from '@/components/CookieBanner';
+import { LiveChatWidget } from '@/components/LiveChatWidget';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <CookieBanner />
+        <LiveChatWidget />
       </body>
     </html>
   );
