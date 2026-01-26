@@ -1,0 +1,76 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+export function CountdownTimer() {
+  const targetDate = new Date('2026-10-03T10:00:00+01:00'); // October 3, 2026, 10:00 AM Dublin time
+  
+  const calculateTimeLeft = (): TimeLeft => {
+    const difference = targetDate.getTime() - new Date().getTime();
+    
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  };
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const TimeUnit = ({ value, label }: { value: number; label: string }) => (
+    <div className="flex flex-col items-center">
+      <div className="bg-gradient-to-br from-accent-yellow to-yellow-500 text-navy font-bold text-3xl md:text-5xl w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-lg mb-2">
+        {String(value).padStart(2, '0')}
+      </div>
+      <span className="text-off-white/70 text-xs md:text-sm font-semibold uppercase tracking-wide">
+        {label}
+      </span>
+    </div>
+  );
+
+  return (
+    <div className="bg-navy/50 backdrop-blur-md border-2 border-accent-yellow/30 rounded-2xl p-6 md:p-8 shadow-2xl">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl md:text-3xl font-bold text-off-white mb-2">
+          Event Starts In
+        </h3>
+        <p className="text-accent-yellow text-sm md:text-base font-semibold">
+          October 3, 2026 • RDS Simmonscourt, Dublin
+        </p>
+      </div>
+      
+      <div className="flex justify-center gap-3 md:gap-6">
+        <TimeUnit value={timeLeft.days} label="Days" />
+        <TimeUnit value={timeLeft.hours} label="Hours" />
+        <TimeUnit value={timeLeft.minutes} label="Minutes" />
+        <TimeUnit value={timeLeft.seconds} label="Seconds" />
+      </div>
+
+      <div className="mt-6 text-center">
+        <p className="text-off-white/60 text-xs md:text-sm">
+          🔥 Limited spots available - Register now to secure your place!
+        </p>
+      </div>
+    </div>
+  );
+}

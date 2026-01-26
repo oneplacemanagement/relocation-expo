@@ -84,6 +84,126 @@ export function RegisterSection() {
           </p>
         </div>
 
+        {/* Early Bird Pricing Section */}
+        <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Early Bird */}
+            <div className="glass-card border-2 border-accent-yellow/50 p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-accent-yellow text-navy text-xs font-bold px-3 py-1 rounded-bl-lg">
+                BEST VALUE
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="text-lg font-bold text-accent-yellow mb-2">Early Bird</h3>
+                <div className="mb-4">
+                  <span className="text-5xl font-black text-off-white">€15</span>
+                  <span className="text-off-white/60 text-sm ml-2">per person</span>
+                </div>
+                <p className="text-off-white/70 text-sm mb-4">
+                  Register before March 31, 2026
+                </p>
+                <ul className="text-left space-y-2 text-sm text-off-white/80 mb-6">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Full event access
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Priority entry
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Welcome pack
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Save €10
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Standard */}
+            <div className="glass-card border-2 border-blue-grey/30 p-6">
+              <div className="text-center">
+                <h3 className="text-lg font-bold text-off-white mb-2 mt-6">Standard</h3>
+                <div className="mb-4">
+                  <span className="text-5xl font-black text-off-white">€25</span>
+                  <span className="text-off-white/60 text-sm ml-2">per person</span>
+                </div>
+                <p className="text-off-white/70 text-sm mb-4">
+                  Register April 1 - Sept 30
+                </p>
+                <ul className="text-left space-y-2 text-sm text-off-white/80 mb-6">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Full event access
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Welcome pack
+                  </li>
+                  <li className="flex items-start opacity-30">
+                    <svg className="w-5 h-5 text-off-white mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    No priority entry
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* At the Door */}
+            <div className="glass-card border-2 border-blue-grey/30 p-6">
+              <div className="text-center">
+                <h3 className="text-lg font-bold text-off-white mb-2 mt-6">At the Door</h3>
+                <div className="mb-4">
+                  <span className="text-5xl font-black text-off-white">€35</span>
+                  <span className="text-off-white/60 text-sm ml-2">per person</span>
+                </div>
+                <p className="text-off-white/70 text-sm mb-4">
+                  Walk-ins on event day
+                </p>
+                <ul className="text-left space-y-2 text-sm text-off-white/80 mb-6">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Full event access
+                  </li>
+                  <li className="flex items-start opacity-30">
+                    <svg className="w-5 h-5 text-off-white mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    No welcome pack
+                  </li>
+                  <li className="flex items-start opacity-30">
+                    <svg className="w-5 h-5 text-off-white mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    Subject to capacity
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-center text-accent-yellow font-semibold mt-6 text-lg">
+            ⏰ Early Bird deadline: March 31, 2026 — Save €10!
+          </p>
+        </div>
+
         {status === 'success' ? (
           <div className="glass-card border-accent-yellow/50 p-10 text-center animate-fade-in">
             <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
