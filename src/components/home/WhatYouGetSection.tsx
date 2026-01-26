@@ -13,7 +13,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Meet Migration Experts',
       description: 'Connect with licensed migration agents specializing in Australia, Canada, New Zealand, and more',
-      gradient: 'from-blue-500 to-indigo-600',
     },
     {
       icon: (
@@ -23,7 +22,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Visa Pathway Guidance',
       description: 'Get personalized advice on work visas, study permits, skilled migration, and permanent residency options',
-      gradient: 'from-purple-500 to-pink-600',
     },
     {
       icon: (
@@ -33,7 +31,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Career Opportunities',
       description: 'Explore job markets, in-demand skills, and employment prospects in your destination country',
-      gradient: 'from-green-500 to-teal-600',
     },
     {
       icon: (
@@ -43,7 +40,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Education Insights',
       description: 'Learn about study abroad programs, university pathways, and student visa requirements',
-      gradient: 'from-yellow-500 to-orange-600',
     },
     {
       icon: (
@@ -53,7 +49,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Settling In Support',
       description: 'Discover housing, healthcare, banking, and practical tips for starting your new life abroad',
-      gradient: 'from-red-500 to-rose-600',
     },
     {
       icon: (
@@ -63,7 +58,6 @@ export function WhatYouGetSection() {
       ),
       title: 'Financial Planning',
       description: 'Understand costs, budgeting, tax implications, and financial preparation for your move',
-      gradient: 'from-cyan-500 to-blue-600',
     },
   ];
 
@@ -84,31 +78,20 @@ export function WhatYouGetSection() {
           {benefits.map((benefit, index) => (
             <Card 
               key={benefit.title} 
-              variant="glass"
-              className="group relative overflow-hidden animate-fade-in bg-gradient-to-br from-off-white/95 to-off-white/90 backdrop-blur-md border-2 border-navy/10"
+              hover
+              className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient glow on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-8 transition-opacity duration-500 rounded-2xl`}></div>
-              
-              {/* Icon with gradient background */}
-              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                <div className="text-white">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto bg-accent-yellow/20 rounded-full flex items-center justify-center mb-4 text-navy">
                   {benefit.icon}
                 </div>
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-2xl font-bold text-navy mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-navy group-hover:to-blue-grey transition-all duration-300">
-                {benefit.title}
-              </h3>
-              <p className="text-navy/80 leading-relaxed text-base">
-                {benefit.description}
-              </p>
-
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className={`absolute top-0 right-0 w-full h-full bg-gradient-to-bl ${benefit.gradient} opacity-8 rounded-bl-full`}></div>
+                <h3 className="text-xl font-bold text-navy mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-navy/70 text-sm">
+                  {benefit.description}
+                </p>
               </div>
             </Card>
           ))}
