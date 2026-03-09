@@ -29,12 +29,11 @@ export default function ContactPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
           subject: formData.subject || 'New Contact Form Submission',
           from_name: formData.name,
           email: formData.email,
           message: formData.message,
-          to: 'partner@therelocationexpo.com',
         }),
       });
 
