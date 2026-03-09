@@ -17,19 +17,19 @@ export function VenueSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Map Placeholder */}
+          {/* Google Maps */}
           <Card>
-            <div className="aspect-video bg-blue-grey/10 rounded-lg flex items-center justify-center">
-              <div className="text-center p-8">
-                <svg className="w-16 h-16 mx-auto mb-4 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-off-white/70 text-sm">
-                  Map embed placeholder<br />
-                  (Add Google Maps iframe or embed here)
-                </p>
-              </div>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2383.2959837916243!2d-6.228965884210201!3d53.329971179974755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8b8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sRDS%20Simmonscourt!5e0!3m2!1sen!2sie!4v1620000000000!5m2!1sen!2sie"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="RDS Simmonscourt Location Map"
+              ></iframe>
             </div>
           </Card>
 
@@ -38,8 +38,11 @@ export function VenueSection() {
             <h3 className="text-2xl font-bold text-accent-yellow mb-4">
               {eventData.venue}
             </h3>
-            <p className="text-off-white/70 mb-6">
+            <p className="text-off-white/70 mb-2">
               {eventData.address}
+            </p>
+            <p className="text-lg font-bold text-off-white mb-6">
+              📅 {eventData.date} | 🕐 11:30 AM - 5:00 PM
             </p>
 
             <div className="space-y-4">

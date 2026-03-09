@@ -10,11 +10,11 @@ export function LiveChatWidget() {
   ]);
 
   const quickQuestions = [
-    "When is the event?",
-    "Where is it located?",
-    "How much does it cost?",
-    "What destinations are covered?",
-    "Can I book consultations?",
+    "Do I need to bring anything?",
+    "Can I speak to migration agents?",
+    "Are children welcome?",
+    "Will there be real job opportunities?",
+    "Can I buy tickets at the door?",
   ];
 
   const handleQuickQuestion = (question: string) => {
@@ -22,16 +22,16 @@ export function LiveChatWidget() {
     
     // Simple FAQ responses
     let response = '';
-    if (question.includes('When')) {
-      response = "The Relocation Expo is on October 3, 2026, from 10:00 AM to 5:00 PM. 📅";
-    } else if (question.includes('Where')) {
-      response = "We're at RDS Simmonscourt, Ballsbridge, Dublin 4, Ireland. Easy to reach by public transport! 📍";
-    } else if (question.includes('cost')) {
-      response = "Early Bird tickets are just €15 (until March 31). Standard tickets are €25, or €35 at the door. Save €10 by registering early! 💰";
-    } else if (question.includes('destinations')) {
-      response = "We cover Australia (our main focus), Canada, New Zealand, USA, Europe, and more! 🌍";
-    } else if (question.includes('consultations')) {
-      response = "Yes! You can book free one-on-one consultations with migration agents at the event. Register early to secure your preferred time slots. 🤝";
+    if (question.includes('bring')) {
+      response = "Bring copies of your CV, a notebook, and an open mind! We recommend having your CV ready to hand directly to employers. �";
+    } else if (question.includes('migration agents')) {
+      response = "Yes! There'll be migration clinics where you can book a 15-20 minute consultation with agents who specialize in 482 sponsorship, skilled migration, and family visas. 🤝";
+    } else if (question.includes('children')) {
+      response = "Absolutely! The event is family-friendly. There'll be a quiet area if you need space, and the atmosphere is welcoming for all ages. 👨‍👩‍👧‍�";
+    } else if (question.includes('job opportunities')) {
+      response = "Yes! Australian employers attending are recruiting now and many are visa sponsors. Bring your CV and be ready to talk about your skills and experience. 💼";
+    } else if (question.includes('door')) {
+      response = "Yes, you can buy Walk-In tickets at the door (cash only). However, they're more expensive (€30-60) than Early Bird tickets (€15-35). Book in advance to save! 🎟️";
     }
     
     setTimeout(() => {
@@ -48,7 +48,7 @@ export function LiveChatWidget() {
     // Auto-response
     setTimeout(() => {
       setMessages(prev => [...prev, { 
-        text: "Thanks for your message! For immediate assistance, call us at +353 1 234 5678 or email info@relocationexpo.ie. We'll respond within 24 hours! 📧", 
+        text: "Thanks for your message! For immediate assistance, email us at info@therelocationexpo.com. We'll respond within 24 hours! 📧", 
         sender: 'bot' 
       }]);
     }, 800);

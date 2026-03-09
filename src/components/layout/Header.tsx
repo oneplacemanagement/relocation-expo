@@ -11,13 +11,26 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/exhibitors', label: 'Exhibitors' },
+    { href: '#why-attend', label: 'Why Attend' },
+    { href: '#why-exhibit', label: 'Why Exhibit' },
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-blue-grey/20">
+      {/* Top Banner with Event Details */}
+      <div className="bg-accent-yellow/10 border-b border-accent-yellow/20">
+        <Container>
+          <div className="py-2 text-center text-sm text-off-white/90">
+            <span className="font-semibold">October 3, 2026</span>
+            <span className="mx-2">|</span>
+            <span>11:30 AM - 5:00 PM</span>
+            <span className="mx-2">|</span>
+            <span>RDS Simmonscourt, Dublin</span>
+          </div>
+        </Container>
+      </div>
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -25,12 +38,12 @@ export function Header() {
             <img 
               src="/brand/globe.svg" 
               alt="The Relocation Expo" 
-              className="h-10 w-auto"
+              className="h-10 w-10 flex-shrink-0"
             />
             <img 
               src="/brand/logo.svg" 
               alt="The Relocation Expo" 
-              className="h-8 w-auto hidden sm:inline"
+              className="h-7 w-auto"
             />
           </Link>
 

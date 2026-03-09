@@ -1,21 +1,21 @@
 export const eventData = {
   name: 'The Relocation Expo',
-  tagline: 'Everything you need to plan your move — with visa experts on-site.',
+  tagline: 'Your One-Stop Relocation Expo for Australia',
   date: '3 October 2026',
   dateISO: '2026-10-03',
-  hours: '10:00–17:00',
+  hours: '11:30–17:00',
   venue: 'RDS Simmonscourt',
   address: 'RDS Simmonscourt, Ballsbridge, Dublin 4, D04 HX80, Ireland',
   contactEmail: 'info@therelocationexpo.com',
-  registrationLink: '#register',
+  registrationLink: '/tickets',
   freeEntry: false,
   primaryCTA: {
-    text: 'Register Your Interest',
-    href: '#register',
+    text: 'Purchase Tickets',
+    href: '/tickets',
   },
   secondaryCTA: {
-    text: 'View Exhibitors',
-    href: '/exhibitors',
+    text: 'Exhibitor Opportunities',
+    href: '#why-exhibit',
   },
   socialLinks: {
     facebook: '',
