@@ -40,7 +40,7 @@ export function HeroSection() {
 
           {/* Tagline with better typography */}
           <p className="text-xl md:text-2xl text-off-white/90 mb-10 font-light leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.2s' }}>
-            Join us at The Relocation Expo 2026 — a major one-day event in the RDS, Dublin bringing together Ireland's top talent and Australia's leading employers.
+            Join us at The Relocation Expo 2026 — a major one-day event in the RDS, Dublin bringing together Ireland and the UK's top talent and Australia's leading employers.
           </p>
           
           <p className="text-lg md:text-xl text-off-white/80 mb-12 font-light leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
