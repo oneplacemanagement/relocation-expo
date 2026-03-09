@@ -33,7 +33,7 @@ export const faqs: FAQ[] = [
   {
     id: 'tickets-at-door',
     question: 'Can I buy tickets at the door?',
-    answer: 'Yes — walk-in tickets are cash only and priced higher than online tickets.',
+    answer: 'Yes — walk-in tickets will be available at the door (cash only) and priced higher than Early Bird online tickets. Early Bird tickets launch 1st May 2026.',
     category: 'tickets',
   },
   {

@@ -10,7 +10,7 @@ export const eventData = {
   registrationLink: '/tickets',
   freeEntry: false,
   primaryCTA: {
-    text: 'Purchase Tickets',
+    text: 'Register Interest',
     href: '/tickets',
   },
   secondaryCTA: {

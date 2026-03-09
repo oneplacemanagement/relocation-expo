@@ -1,31 +1,50 @@
+'use client';
+
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
+import { InterestModal } from '@/components/ui/InterestModal';
+import { useState } from 'react';
 
 export default function TicketsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTicket, setSelectedTicket] = useState('');
+
+  const openModal = (ticketType: string) => {
+    setSelectedTicket(ticketType);
+    setIsModalOpen(true);
+  };
   return (
     <>
+      <InterestModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        ticketType={selectedTicket}
+      />
+      
       <Section className="pt-24" background="dark">
         <Container>
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-off-white mb-4">
-              Get Your Tickets
+              Early Bird Pricing
             </h1>
-            <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-off-white/80 max-w-3xl mx-auto mb-4">
               Secure your spot at The Relocation Expo 2026 — October 3, RDS Dublin
             </p>
+            <div className="inline-block bg-accent-yellow text-navy px-6 py-3 rounded-full font-bold text-lg">
+              Tickets Available from 1st May 2026
+            </div>
           </div>
 
           {/* Early Bird Tickets */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <div className="inline-block bg-accent-yellow text-navy px-6 py-2 rounded-full font-bold mb-4">
+              <div className="inline-block bg-accent-yellow/20 border-2 border-accent-yellow text-accent-yellow px-6 py-2 rounded-full font-bold mb-4">
                 LIMITED AVAILABILITY
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
                 Early Bird Tickets
               </h2>
-              <p className="text-off-white/80">Save up to €15 — book now before they're gone!</p>
+              <p className="text-off-white/80">Save €15 compared to standard pricing — register your interest now!</p>
             </div>
 
             <div className="overflow-x-auto">
@@ -35,6 +54,7 @@ export default function TicketsPage() {
                     <th className="px-6 py-4 text-left">Ticket Type</th>
                     <th className="px-6 py-4 text-left">Description</th>
                     <th className="px-6 py-4 text-right">Price (€)</th>
+                    <th className="px-6 py-4 text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -42,103 +62,40 @@ export default function TicketsPage() {
                     <td className="px-6 py-4 font-semibold text-navy">Early Bird Single</td>
                     <td className="px-6 py-4 text-muted-grey">1 adult</td>
                     <td className="px-6 py-4 text-right text-navy font-bold text-lg">€15</td>
+                    <td className="px-6 py-4 text-center">
+                      <button
+                        onClick={() => openModal('Early Bird Single - €15')}
+                        className="bg-accent-yellow text-navy font-semibold px-4 py-2 rounded-lg hover:bg-accent-yellow/90 transition-colors text-sm whitespace-nowrap"
+                      >
+                        Register Interest
+                      </button>
+                    </td>
                   </tr>
                   <tr className="border-b border-muted-grey/20 bg-accent-yellow/5">
                     <td className="px-6 py-4 font-semibold text-navy">Early Bird Couple</td>
                     <td className="px-6 py-4 text-muted-grey">2 adults</td>
                     <td className="px-6 py-4 text-right text-navy font-bold text-lg">€25</td>
+                    <td className="px-6 py-4 text-center">
+                      <button
+                        onClick={() => openModal('Early Bird Couple - €25')}
+                        className="bg-accent-yellow text-navy font-semibold px-4 py-2 rounded-lg hover:bg-accent-yellow/90 transition-colors text-sm whitespace-nowrap"
+                      >
+                        Register Interest
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 font-semibold text-navy">Early Bird Family Pass</td>
                     <td className="px-6 py-4 text-muted-grey">2 adults + 3 children</td>
                     <td className="px-6 py-4 text-right text-navy font-bold text-lg">€35</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button size="lg" href="mailto:info@therelocationexpo.com?subject=Early Bird Ticket Purchase">
-                Purchase Early Bird Tickets
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Button>
-            </div>
-          </div>
-
-          {/* Standard Tickets */}
-          <div className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
-                Standard Tickets
-              </h2>
-              <p className="text-off-white/80">Opens after Early Bird ends</p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-                <thead className="bg-blue-grey text-off-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Ticket Type</th>
-                    <th className="px-6 py-4 text-left">Description</th>
-                    <th className="px-6 py-4 text-right">Price (€)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-muted-grey/20">
-                    <td className="px-6 py-4 font-semibold text-navy">General Admission – Single</td>
-                    <td className="px-6 py-4 text-muted-grey">1 adult</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€20</td>
-                  </tr>
-                  <tr className="border-b border-muted-grey/20">
-                    <td className="px-6 py-4 font-semibold text-navy">General Admission – Couple</td>
-                    <td className="px-6 py-4 text-muted-grey">2 adults</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€30</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-semibold text-navy">General Admission – Family Pass</td>
-                    <td className="px-6 py-4 text-muted-grey">2 adults + 3 children</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€45</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* Walk-In Tickets */}
-          <div className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
-                Walk-In on The Day
-              </h2>
-              <p className="text-off-white/80">Cash only — priced higher than online tickets</p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-                <thead className="bg-muted-grey text-off-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Ticket Type</th>
-                    <th className="px-6 py-4 text-left">Description</th>
-                    <th className="px-6 py-4 text-right">Price (€)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-muted-grey/20">
-                    <td className="px-6 py-4 font-semibold text-navy">Walk-In Single</td>
-                    <td className="px-6 py-4 text-muted-grey">1 adult</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€30</td>
-                  </tr>
-                  <tr className="border-b border-muted-grey/20">
-                    <td className="px-6 py-4 font-semibold text-navy">Walk-In Couple</td>
-                    <td className="px-6 py-4 text-muted-grey">2 adults</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€45</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-semibold text-navy">Walk-In Family Pass</td>
-                    <td className="px-6 py-4 text-muted-grey">2 adults + 3 children</td>
-                    <td className="px-6 py-4 text-right text-navy font-bold text-lg">€60</td>
+                    <td className="px-6 py-4 text-center">
+                      <button
+                        onClick={() => openModal('Early Bird Family Pass - €35')}
+                        className="bg-accent-yellow text-navy font-semibold px-4 py-2 rounded-lg hover:bg-accent-yellow/90 transition-colors text-sm whitespace-nowrap"
+                      >
+                        Register Interest
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -153,7 +110,13 @@ export default function TicketsPage() {
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong className="text-off-white">Early Bird tickets</strong> are limited and sell fast</span>
+                <span><strong className="text-off-white">Tickets launch 1st May 2026</strong> — Register your interest to be notified</span>
+              </li>
+              <li className="flex items-start">
+                <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span><strong className="text-off-white">Early Bird tickets</strong> are limited and will sell fast</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -165,13 +128,7 @@ export default function TicketsPage() {
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong className="text-off-white">Walk-in tickets</strong> are cash only and priced higher</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Book early to <strong className="text-off-white">save up to €15 per ticket</strong></span>
+                <span>Save <strong className="text-off-white">€15 per ticket</strong> with Early Bird pricing</span>
               </li>
             </ul>
           </div>

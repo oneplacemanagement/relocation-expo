@@ -26,7 +26,7 @@ export function RegisterSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-5 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <Button href="/tickets" size="lg" className="text-lg px-10 py-5">
-            Early Bird Tickets (Limited)
+            Register Interest - Tickets Launch May 1st
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
             </svg>
