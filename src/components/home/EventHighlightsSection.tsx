@@ -89,11 +89,11 @@ export function EventHighlightsSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {highlights.map((highlight, index) => (
-            <Card key={index} hover className="flex items-center space-x-4">
+            <Card key={index} hover className="flex items-center space-x-4 bg-navy/50 border border-accent-yellow/20">
               <div className="w-12 h-12 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow flex-shrink-0">
                 {highlight.icon}
               </div>
-              <h3 className="text-base font-semibold text-navy">
+              <h3 className="text-base font-semibold text-off-white">
                 {highlight.title}
               </h3>
             </Card>
