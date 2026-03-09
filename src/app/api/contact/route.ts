@@ -19,8 +19,8 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'The Relocation Expo <noreply@therelocationexpo.com>',
-      to: ['info@therelocationexpo.com'],
+      from: 'The Relocation Expo <onboarding@resend.dev>',
+      to: ['info@therelocationexpo.com', 'partner@therelocationexpo.com'],
       replyTo: email,
       subject: subject || `New Contact Form Submission from ${name}`,
       html: `
