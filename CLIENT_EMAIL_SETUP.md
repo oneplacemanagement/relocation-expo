@@ -7,7 +7,7 @@
 
 ## 🎯 WHAT YOU NEED TO DO
 
-Your website's contact form is ready, but needs one final step to deliver emails to your Gmail accounts (`info@therelocationexpo.com` and `partner@therelocationexpo.com`).
+Your website's contact form is ready, but needs one final step to deliver emails to your Gmail account (`partner@therelocationexpo.com`).
 
 ---
 
@@ -18,7 +18,7 @@ Your website's contact form is ready, but needs one final step to deliver emails
 **Option A: Create Resend Account**
 1. Go to: https://resend.com/
 2. Click "Sign Up"
-3. Use your business email: `info@therelocationexpo.com` or `partner@therelocationexpo.com`
+3. Use your business email: `partner@therelocationexpo.com`
 4. Verify your email
 5. Log in to Resend dashboard
 
@@ -131,10 +131,9 @@ Once domain shows "Verified" in Resend:
 4. **Submit and Check:**
    - Click "Send Message"
    - Should see: "Message Sent!" ✅
-   - Within 30 seconds, check BOTH Gmail inboxes:
-     - `info@therelocationexpo.com`
+   - Within 30 seconds, check your Gmail inbox:
      - `partner@therelocationexpo.com`
-   - Both should receive the same email
+   - You should receive the email
 
 5. **Check Email Details:**
    - From: "The Relocation Expo <noreply@therelocationexpo.com>"
@@ -156,7 +155,6 @@ Once domain shows "Verified" in Resend:
 [ ] Waited 10-30 minutes
 [ ] Domain shows "Verified" in Resend
 [ ] Tested contact form
-[ ] Email received in info@therelocationexpo.com
 [ ] Email received in partner@therelocationexpo.com
 ```
 
@@ -240,7 +238,6 @@ To get instant notifications when someone submits the form:
 **When someone fills out your contact form:**
 1. They click "Send Message"
 2. Within 10-30 seconds:
-   - Email arrives in `info@therelocationexpo.com` ✅
    - Email arrives in `partner@therelocationexpo.com` ✅
 3. You get notification on your phone 📱
 4. You can reply directly from Gmail
