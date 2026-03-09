@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/Button';
 export default function TicketsPage() {
   return (
     <>
-      <Section className="pt-24" background="light">
+      <Section className="pt-24" background="dark">
         <Container>
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-navy mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-off-white mb-4">
               Get Your Tickets
             </h1>
-            <p className="text-xl text-muted-grey max-w-3xl mx-auto">
+            <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
               Secure your spot at The Relocation Expo 2026 — October 3, RDS Dublin
             </p>
           </div>
@@ -22,10 +22,10 @@ export default function TicketsPage() {
               <div className="inline-block bg-accent-yellow text-navy px-6 py-2 rounded-full font-bold mb-4">
                 LIMITED AVAILABILITY
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
                 Early Bird Tickets
               </h2>
-              <p className="text-muted-grey">Save up to €15 — book now before they're gone!</p>
+              <p className="text-off-white/80">Save up to €15 — book now before they're gone!</p>
             </div>
 
             <div className="overflow-x-auto">
@@ -70,10 +70,10 @@ export default function TicketsPage() {
           {/* Standard Tickets */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
                 Standard Tickets
               </h2>
-              <p className="text-muted-grey">Opens after Early Bird ends</p>
+              <p className="text-off-white/80">Opens after Early Bird ends</p>
             </div>
 
             <div className="overflow-x-auto">
@@ -109,10 +109,10 @@ export default function TicketsPage() {
           {/* Walk-In Tickets */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-off-white mb-2">
                 Walk-In on The Day
               </h2>
-              <p className="text-muted-grey">Cash only — priced higher than online tickets</p>
+              <p className="text-off-white/80">Cash only — priced higher than online tickets</p>
             </div>
 
             <div className="overflow-x-auto">
@@ -146,38 +146,38 @@ export default function TicketsPage() {
           </div>
 
           {/* Important Info */}
-          <div className="bg-blue-grey/10 rounded-2xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-navy mb-4">Important Information</h3>
-            <ul className="space-y-3 text-navy/80">
+          <div className="bg-navy/30 border border-accent-yellow/30 rounded-2xl p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-off-white mb-4">Important Information</h3>
+            <ul className="space-y-3 text-off-white/80">
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong>Early Bird tickets</strong> are limited and sell fast</span>
+                <span><strong className="text-off-white">Early Bird tickets</strong> are limited and sell fast</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong>Family Pass</strong> covers 2 adults + up to 3 children (under 16)</span>
+                <span><strong className="text-off-white">Family Pass</strong> covers 2 adults + up to 3 children (under 16)</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span><strong>Walk-in tickets</strong> are cash only and priced higher</span>
+                <span><strong className="text-off-white">Walk-in tickets</strong> are cash only and priced higher</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Book early to <strong>save up to €15 per ticket</strong></span>
+                <span>Book early to <strong className="text-off-white">save up to €15 per ticket</strong></span>
               </li>
             </ul>
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-grey mb-6">
+            <p className="text-off-white/80 mb-6">
               Questions about tickets? Contact us at{' '}
               <a href="mailto:info@therelocationexpo.com" className="text-accent-yellow hover:underline">
                 info@therelocationexpo.com

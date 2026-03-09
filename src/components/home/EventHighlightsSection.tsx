@@ -79,10 +79,10 @@ export function EventHighlightsSection() {
   ];
 
   return (
-    <Section background="light">
+    <Section background="dark">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
             Event Highlights
           </h2>
         </div>
