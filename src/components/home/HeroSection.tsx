@@ -4,20 +4,38 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { eventData } from '@/data/event';
+import Image from 'next/image';
 
 export function HeroSection() {
   return (
     <Section className="relative overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-blue-grey/30">
-        <div className="absolute inset-0 opacity-20">
+      {/* Background Image (if available) */}
+      <div className="absolute inset-0">
+        {/* Fallback gradient if no image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-blue-grey/30 z-0" />
+        
+        {/* Optional: Uncomment when hero image is added */}
+        {/* <Image
+          src="/images/hero/expo-hall.jpg"
+          alt="Career fair expo hall with professionals networking"
+          fill
+          className="object-cover opacity-40"
+          priority
+          quality={90}
+        /> */}
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-navy/70 z-10" />
+        
+        {/* Animated accent blobs */}
+        <div className="absolute inset-0 opacity-20 z-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-accent-yellow/30 rounded-full filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-grey/40 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
       </div>
 
       {/* Premium grid pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="premium-grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -28,7 +46,7 @@ export function HeroSection() {
         </svg>
       </div>
 
-      <Container className="relative z-10">
+      <Container className="relative z-20">
         <div className="text-center max-w-5xl mx-auto">
           {/* Main Heading with gradient */}
           <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-off-white via-accent-yellow to-off-white mb-6 animate-fade-in leading-tight">
