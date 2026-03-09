@@ -22,12 +22,20 @@ export default function ContactPage() {
     setStatus('submitting');
 
     try {
-      const response = await fetch('/api/contact', {
+      // Simple Web3Forms API - no DNS verification needed
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          subject: formData.subject || 'New Contact Form Submission',
+          from_name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          to: 'partner@therelocationexpo.com',
+        }),
       });
 
       if (!response.ok) {

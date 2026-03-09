@@ -9,11 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "next": "^15.1.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "resend": "^6.9.3"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
