@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 export default function TicketsPage() {
   return (
     <>
-      <Section className="pt-24">
+      <Section className="pt-24" background="light">
         <Container>
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-navy mb-4">

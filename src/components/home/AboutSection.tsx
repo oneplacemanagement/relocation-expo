@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/Container';
 
 export function AboutSection() {
   return (
-    <Section id="about">
+    <Section id="about" background="light">
       <Container>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

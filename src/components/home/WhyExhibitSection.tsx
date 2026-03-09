@@ -62,28 +62,28 @@ export function WhyExhibitSection() {
   ];
 
   return (
-    <Section id="why-exhibit">
+    <Section id="why-exhibit" background="dark">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
             Why Exhibit
           </h2>
-          <p className="text-xl text-muted-grey max-w-3xl mx-auto">
+          <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
             Connect With Skilled Talent Ready to Relocate
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {benefits.map((benefit, index) => (
-            <Card key={index} hover className="h-full">
+            <Card key={index} hover className="h-full bg-navy/50 border border-accent-yellow/20">
               <div className="flex flex-col h-full">
                 <div className="w-12 h-12 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mb-4">
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-bold text-navy mb-2">
+                <h3 className="text-lg font-bold text-off-white mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-muted-grey leading-relaxed">
+                <p className="text-sm text-off-white/80 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -91,46 +91,46 @@ export function WhyExhibitSection() {
           ))}
         </div>
 
-        <div className="bg-blue-grey/10 rounded-2xl p-8 mb-8">
-          <h3 className="text-2xl font-bold text-navy mb-4">
+        <div className="bg-navy/30 border border-accent-yellow/30 rounded-2xl p-8 mb-8">
+          <h3 className="text-2xl font-bold text-off-white mb-4">
             Exhibitor Benefits
           </h3>
-          <ul className="space-y-3 text-navy/80">
+          <ul className="space-y-3 text-off-white/80">
             <li className="flex items-start">
               <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span><strong>Premium booth space</strong></span>
+              <span><strong className="text-off-white">Premium booth space</strong></span>
             </li>
             <li className="flex items-start">
               <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span><strong>Branding across event materials</strong></span>
+              <span><strong className="text-off-white">Branding across event materials</strong></span>
             </li>
             <li className="flex items-start">
               <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span><strong>Access to attendee CVs</strong> (optional add-on)</span>
+              <span><strong className="text-off-white">Access to attendee CVs</strong> (optional add-on)</span>
             </li>
             <li className="flex items-start">
               <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span><strong>Speaking opportunities</strong> on the main stage</span>
+              <span><strong className="text-off-white">Speaking opportunities</strong> on the main stage</span>
             </li>
             <li className="flex items-start">
               <svg className="w-5 h-5 text-accent-yellow mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span><strong>Inclusion in the official exhibitor directory</strong></span>
+              <span><strong className="text-off-white">Inclusion in the official exhibitor directory</strong></span>
             </li>
           </ul>
         </div>
 
         <div className="text-center">
-          <p className="text-lg text-navy/80 mb-6">
+          <p className="text-lg text-off-white/80 mb-6">
             The Relocation Expo is the ideal platform for Australian employers, recruiters, migration agents, and relocation service providers to meet highly skilled, motivated candidates from Ireland and the UK.
           </p>
           <Button 
