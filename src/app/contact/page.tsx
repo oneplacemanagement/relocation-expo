@@ -21,11 +21,25 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus('submitting');
 
-    // Simulate submission (you can add actual API endpoint later)
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -56,6 +70,24 @@ export default function ContactPage() {
                     </p>
                     <Button onClick={() => setStatus('idle')} variant="outline">
                       Send Another Message
+                    </Button>
+                  </div>
+                </Card>
+              ) : status === 'error' ? (
+                <Card>
+                  <div className="text-center py-8">
+                    <div className="text-5xl mb-4">❌</div>
+                    <h3 className="text-2xl font-bold text-red-500 mb-3">
+                      Failed to Send
+                    </h3>
+                    <p className="text-off-white/80 mb-4">
+                      Sorry, there was an error sending your message. Please try again or email us directly at{' '}
+                      <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow hover:underline">
+                        {eventData.contactEmail}
+                      </a>
+                    </p>
+                    <Button onClick={() => setStatus('idle')} variant="outline">
+                      Try Again
                     </Button>
                   </div>
                 </Card>
