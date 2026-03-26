@@ -45,7 +45,7 @@ export function CountdownTimer() {
       <div className="bg-navy/50 backdrop-blur-md border-2 border-accent-yellow/30 rounded-2xl p-6 md:p-8 shadow-2xl">
         <div className="text-center mb-6">
           <h3 className="text-2xl md:text-3xl font-bold text-off-white mb-2">
-            Early Bird Tickets Launch In
+            Early Bird Tickets Launch
           </h3>
           <p className="text-accent-yellow text-sm md:text-base font-semibold">
             1st May 2026 • Register your interest now
@@ -89,7 +89,7 @@ export function CountdownTimer() {
     <div className="bg-navy/50 backdrop-blur-md border-2 border-accent-yellow/30 rounded-2xl p-6 md:p-8 shadow-2xl">
       <div className="text-center mb-6">
         <h3 className="text-2xl md:text-3xl font-bold text-off-white mb-2">
-          Early Bird Tickets Launch In
+          Early Bird Tickets Launch
         </h3>
         <p className="text-accent-yellow text-sm md:text-base font-semibold">
           1st May 2026 • Register your interest now

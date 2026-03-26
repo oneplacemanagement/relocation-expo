@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useEffect } from 'react';
 
 interface InterestModalProps {
   isOpen: boolean;
@@ -8,13 +8,35 @@ interface InterestModalProps {
   ticketType: string;
 }
 
+const TICKET_OPTIONS = [
+  { label: 'Single — €15', value: 'Early Bird Single - €15' },
+  { label: 'Couple — €25', value: 'Early Bird Couple - €25' },
+  { label: 'Family Pass — €35 (2 adults + 3 children)', value: 'Early Bird Family Pass - €35' },
+];
+
+function deriveTicketValue(ticketType: string): string {
+  const match = TICKET_OPTIONS.find((o) => o.value === ticketType);
+  return match ? match.value : TICKET_OPTIONS[0].value;
+}
+
 export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    occupation: '',
+    yearOfBirth: '',
+    selectedTicket: deriveTicketValue(ticketType),
     phone: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  // When a different ticket button is clicked, update the dropdown to match
+  useEffect(() => {
+    setFormData((prev) => ({ ...prev, selectedTicket: deriveTicketValue(ticketType) }));
+  }, [ticketType]);
+
+  // Sync selectedTicket when ticketType prop changes (i.e. different button clicked)
+  const initialTicket = deriveTicketValue(ticketType);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -25,16 +47,18 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: `Ticket Interest - ${ticketType}`,
+          subject: `Ticket Interest - ${formData.selectedTicket}`,
           from_name: formData.name,
           email: formData.email,
-          phone: formData.phone,
-          message: `I'm interested in registering for: ${ticketType}\n\nPhone: ${formData.phone}`,
+          message: [
+            `Ticket Type: ${formData.selectedTicket}`,
+            `Occupation: ${formData.occupation}`,
+            `Year of Birth: ${formData.yearOfBirth}`,
+            `Phone: ${formData.phone || 'Not provided'}`,
+          ].join('\n'),
         }),
       });
 
@@ -45,9 +69,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', phone: '' });
-      
-      // Close modal after 2 seconds
+      setFormData({ name: '', email: '', occupation: '', yearOfBirth: '', selectedTicket: initialTicket, phone: '' });
+
       setTimeout(() => {
         onClose();
         setStatus('idle');
@@ -60,9 +83,11 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
 
   if (!isOpen) return null;
 
+  const isSubmitting = status === 'submitting';
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/80 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in max-h-[90vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -83,18 +108,18 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
             </div>
             <h3 className="text-2xl font-bold text-navy mb-2">Interest Registered!</h3>
             <p className="text-muted-grey">
-              We'll notify you when {ticketType} tickets become available on May 1st, 2026.
+              We'll notify you when tickets become available on 1st May 2026.
             </p>
           </div>
         ) : (
           <>
-            <h3 className="text-2xl font-bold text-navy mb-2">Register Your Interest</h3>
-            <p className="text-muted-grey mb-2">{ticketType}</p>
+            <h3 className="text-2xl font-bold text-navy mb-1">Register Your Interest</h3>
             <p className="text-sm text-muted-grey mb-6">
               Tickets launch on <strong className="text-navy">1st May 2026</strong>. Register now and we'll notify you when they're available.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Full Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-navy mb-1">
                   Full Name *
@@ -107,10 +132,11 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
                   placeholder="John Smith"
-                  disabled={status === 'submitting'}
+                  disabled={isSubmitting}
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-navy mb-1">
                   Email Address *
@@ -123,10 +149,67 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
                   placeholder="john@example.com"
-                  disabled={status === 'submitting'}
+                  disabled={isSubmitting}
                 />
               </div>
 
+              {/* Occupation */}
+              <div>
+                <label htmlFor="occupation" className="block text-sm font-medium text-navy mb-1">
+                  Occupation *
+                </label>
+                <input
+                  type="text"
+                  id="occupation"
+                  required
+                  value={formData.occupation}
+                  onChange={(e) => setFormData({ ...formData, occupation: e.target.value })}
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  placeholder="e.g. Nurse, Engineer, Teacher"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              {/* Year of Birth */}
+              <div>
+                <label htmlFor="yearOfBirth" className="block text-sm font-medium text-navy mb-1">
+                  Year of Birth *
+                </label>
+                <input
+                  type="number"
+                  id="yearOfBirth"
+                  required
+                  min={1940}
+                  max={2007}
+                  value={formData.yearOfBirth}
+                  onChange={(e) => setFormData({ ...formData, yearOfBirth: e.target.value })}
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  placeholder="e.g. 1990"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              {/* Ticket Type dropdown */}
+              <div>
+                <label htmlFor="selectedTicket" className="block text-sm font-medium text-navy mb-1">
+                  Ticket Type
+                </label>
+                <select
+                  id="selectedTicket"
+                  value={formData.selectedTicket}
+                  onChange={(e) => setFormData({ ...formData, selectedTicket: e.target.value })}
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent bg-white"
+                  disabled={isSubmitting}
+                >
+                  {TICKET_OPTIONS.map((opt) => (
+                    <option key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Phone */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-navy mb-1">
                   Phone Number (Optional)
@@ -138,22 +221,22 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
                   placeholder="+353 XX XXX XXXX"
-                  disabled={status === 'submitting'}
+                  disabled={isSubmitting}
                 />
               </div>
 
               {status === 'error' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
-                  Sorry, there was an error. Please try again or email us at info@therelocationexpo.com
+                  Sorry, there was an error. Please try again or email us at partner@therelocationexpo.com
                 </div>
               )}
 
               <button
                 type="submit"
-                disabled={status === 'submitting'}
+                disabled={isSubmitting}
                 className="w-full bg-accent-yellow text-navy font-bold py-3 px-6 rounded-lg hover:bg-accent-yellow/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === 'submitting' ? 'Submitting...' : 'Register Interest'}
+                {isSubmitting ? 'Submitting...' : 'Register Interest'}
               </button>
             </form>
           </>
