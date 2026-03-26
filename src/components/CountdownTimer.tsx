@@ -10,7 +10,7 @@ interface TimeLeft {
 }
 
 export function CountdownTimer() {
-  const targetDate = new Date('2026-10-03T11:30:00+01:00'); // October 3, 2026, 11:30 AM Dublin time
+  const targetDate = new Date('2026-05-01T09:00:00+01:00'); // May 1, 2026 — Ticket Launch Day
   
   const calculateTimeLeft = (): TimeLeft => {
     const difference = targetDate.getTime() - new Date().getTime();
@@ -45,10 +45,10 @@ export function CountdownTimer() {
       <div className="bg-navy/50 backdrop-blur-md border-2 border-accent-yellow/30 rounded-2xl p-6 md:p-8 shadow-2xl">
         <div className="text-center mb-6">
           <h3 className="text-2xl md:text-3xl font-bold text-off-white mb-2">
-            Event Starts In
+            Early Bird Tickets Launch In
           </h3>
           <p className="text-accent-yellow text-sm md:text-base font-semibold">
-            October 3, 2026 • RDS Simmonscourt, Dublin
+            1st May 2026 • Register your interest now
           </p>
         </div>
         
@@ -67,7 +67,7 @@ export function CountdownTimer() {
 
         <div className="mt-6 text-center">
           <p className="text-off-white/60 text-xs md:text-sm">
-            🔥 Limited spots available - Register now to secure your place!
+            🎟️ Early Bird tickets are limited — register your interest to be first in line
           </p>
         </div>
       </div>
@@ -89,10 +89,10 @@ export function CountdownTimer() {
     <div className="bg-navy/50 backdrop-blur-md border-2 border-accent-yellow/30 rounded-2xl p-6 md:p-8 shadow-2xl">
       <div className="text-center mb-6">
         <h3 className="text-2xl md:text-3xl font-bold text-off-white mb-2">
-          Event Starts In
+          Early Bird Tickets Launch In
         </h3>
         <p className="text-accent-yellow text-sm md:text-base font-semibold">
-          October 3, 2026 • RDS Simmonscourt, Dublin
+          1st May 2026 • Register your interest now
         </p>
       </div>
       
@@ -105,7 +105,7 @@ export function CountdownTimer() {
 
       <div className="mt-6 text-center">
         <p className="text-off-white/60 text-xs md:text-sm">
-          🔥 Limited spots available - Register now to secure your place!
+          🎟️ Early Bird tickets are limited — register your interest to be first in line
         </p>
       </div>
     </div>

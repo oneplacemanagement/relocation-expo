@@ -23,11 +23,11 @@ export function Header() {
       <div className="bg-accent-yellow/10 border-b border-accent-yellow/20">
         <Container>
           <div className="py-2 text-center text-sm text-off-white/90">
-            <span className="font-semibold">October 3, 2026</span>
+            <span className="font-semibold">Autumn 2026</span>
             <span className="mx-2">|</span>
-            <span>11:30 AM - 5:00 PM</span>
+            <span>One Day Only</span>
             <span className="mx-2">|</span>
-            <span>RDS Simmonscourt, Dublin</span>
+            <span>A Premium Dublin Venue</span>
           </div>
         </Container>
       </div>

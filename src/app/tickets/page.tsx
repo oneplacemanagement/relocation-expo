@@ -28,7 +28,7 @@ export default function TicketsPage() {
               Early Bird Pricing
             </h1>
             <p className="text-xl text-off-white/80 max-w-3xl mx-auto mb-4">
-              Secure your spot at The Relocation Expo 2026 — October 3, RDS Dublin
+              Secure your spot at The Relocation Expo 2026 — Autumn 2026, Dublin
             </p>
             <div className="inline-block bg-accent-yellow text-navy px-6 py-3 rounded-full font-bold text-lg">
               Tickets Available from 1st May 2026

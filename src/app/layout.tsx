@@ -9,12 +9,12 @@ import { LiveChatWidget } from '@/components/LiveChatWidget';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'The Relocation Expo | 3 October 2026 | Dublin, Ireland',
-  description: 'The Relocation Expo brings together visa companies, migration experts, and relocation specialists to help Irish people planning their move abroad — with a primary focus on Australia.',
+  title: 'The Relocation Expo | Autumn 2026 | Dublin, Ireland',
+  description: 'The Relocation Expo brings together visa companies, migration experts, and relocation specialists to help Irish and UK people planning their move to Australia — one powerful day in Dublin.',
   keywords: ['relocation', 'visa', 'migration', 'Australia', 'Ireland', 'Dublin', 'expo', 'moving abroad'],
   openGraph: {
     title: 'The Relocation Expo',
-    description: 'Everything you need to plan your move — with visa experts on-site.',
+    description: 'Everything you need to plan your move to Australia — visa experts, employers, and relocation specialists all under one roof in Dublin.',
     type: 'website',
     locale: 'en_IE',
     siteName: 'The Relocation Expo',

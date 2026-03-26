@@ -155,7 +155,7 @@ export function ConsultationBookingSection() {
                       <p className="text-sm text-off-white/80 mb-4">
                         <strong>{exhibitors.find(e => e.id === selectedExhibitor)?.name}</strong>
                         <br />
-                        at <strong>{selectedSlot}</strong> on October 3, 2026
+                        at <strong>{selectedSlot}</strong> — Autumn 2026
                       </p>
                       <Button href="/#register" className="w-full">
                         Reserve This Slot
