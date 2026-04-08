@@ -20,9 +20,9 @@ export const exhibitors: Exhibitor[] = [
   {
     id: 'multi-destination-migration',
     name: 'International Immigration Consultants',
-    description: 'Expert immigration consultants covering Australia, Canada, New Zealand, and the UAE. Specialists in employer-sponsored visas and skilled migration.',
+    description: 'Expert immigration consultants specialising in employer-sponsored visas, skilled migration, and permanent residency pathways to Australia.',
     category: 'migration',
-    destinations: ['Australia', 'Canada', 'New Zealand', 'UAE'],
+    destinations: ['Australia'],
     featured: true,
   },
   {
@@ -36,9 +36,9 @@ export const exhibitors: Exhibitor[] = [
   {
     id: 'financial-planning',
     name: 'Expat Financial Planning Service',
-    description: 'Specialist financial advice for people relocating abroad — covering currency transfer, pensions, tax obligations, and long-term financial planning.',
+      description: 'Specialist financial advice for people relocating to Australia — covering currency transfer, superannuation, tax obligations, and long-term financial planning.',
     category: 'financial',
-    destinations: ['Australia', 'Canada', 'New Zealand'],
+    destinations: ['Australia'],
     featured: true,
   },
   {

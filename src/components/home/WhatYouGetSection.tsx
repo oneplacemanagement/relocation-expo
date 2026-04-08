@@ -14,7 +14,7 @@ export function WhatYouGetSection() {
         </svg>
       ),
       title: 'Meet Migration Experts',
-      description: 'Connect with licensed migration agents specializing in Australia, Canada, New Zealand, and more',
+      description: 'Connect with registered Australian migration agents specialising in skilled visas, employer sponsorship, and permanent residency pathways',
     },
     {
       icon: (

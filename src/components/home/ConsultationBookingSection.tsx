@@ -17,11 +17,11 @@ export function ConsultationBookingSection() {
 
   const exhibitors = [
     { id: 'australia-experts', name: 'Australia Migration Experts', specialty: 'Skilled Migration & Working Holiday' },
-    { id: 'canada-pathways', name: 'Canada Pathways', specialty: 'Express Entry & PNP' },
-    { id: 'nz-visa-pros', name: 'NZ Visa Professionals', specialty: 'Work Visas & Residence' },
-    { id: 'global-relocate', name: 'Global Relocate', specialty: 'Multi-Country Options' },
-    { id: 'study-abroad-hub', name: 'Study Abroad Hub', specialty: 'Student Visas & Pathways' },
-    { id: 'family-visa-centre', name: 'Family Visa Centre', specialty: 'Partner & Family Visas' },
+    { id: 'employer-sponsorship', name: 'Employer Sponsorship Specialists', specialty: '482 TSS & Employer Nomination' },
+    { id: 'permanent-residency', name: 'Permanent Residency Advisors', specialty: 'PR Pathways & Points Tests' },
+    { id: 'relocation-services', name: 'Relocation Services Australia', specialty: 'Housing, Shipping & Settling In' },
+    { id: 'study-abroad-hub', name: 'Education & Study Pathways', specialty: 'Student Visas & University Entry' },
+    { id: 'family-visa-centre', name: 'Family Visa Centre', specialty: 'Partner, Family & Spouse Visas' },
   ];
 
   const timeSlots: TimeSlot[] = [

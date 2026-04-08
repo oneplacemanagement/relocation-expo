@@ -26,7 +26,7 @@ export function WhatToExpectSection() {
     },
     {
       title: 'Resource Materials',
-      description: 'Collect brochures, checklists, country guides, and contact information to take home.',
+      description: 'Collect brochures, checklists, Australia guides, and contact information to take home.',
       icon: '📚',
     },
     {

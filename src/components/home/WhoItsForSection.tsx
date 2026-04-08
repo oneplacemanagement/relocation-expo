@@ -11,8 +11,7 @@ export function WhoItsForSection() {
             Who Is This For?
           </h2>
           <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
-            Whether you're dreaming of Sydney's beaches, Vancouver's mountains, or Europe's vibrant cities — 
-            we're here to help you make it happen.
+            Whether you're just exploring the idea or ready to make the move — we're here to help you make it happen in Australia.
           </p>
         </div>
 
@@ -32,25 +31,25 @@ export function WhoItsForSection() {
 
           <Card>
             <div className="text-center">
-              <div className="text-4xl mb-4">🌍</div>
+              <div className="text-4xl mb-4">👨‍👩‍👧‍👦</div>
               <h3 className="text-xl font-bold text-accent-yellow mb-3">
-                Multiple Destinations
+                Families & Couples
               </h3>
               <p className="text-off-white/70">
-                Also covering Canada, New Zealand, USA, and Europe. Find exhibitors and resources 
-                for your chosen destination.
+                Planning a move with your family? Find exhibitors, advice, and real stories from 
+                families who've already made the leap to Australia.
               </p>
             </div>
           </Card>
 
           <Card>
             <div className="text-center">
-              <div className="text-4xl mb-4">🇮🇪</div>
+              <div className="text-4xl mb-4">🇮🇪🇬🇧</div>
               <h3 className="text-xl font-bold text-accent-yellow mb-3">
-                Irish Residents
+                Irish & UK Residents
               </h3>
               <p className="text-off-white/70">
-                Tailored specifically for Irish citizens and residents planning their move abroad. 
+                Tailored specifically for Irish and UK citizens and residents planning their move to Australia. 
                 Meet experts who understand your journey.
               </p>
             </div>

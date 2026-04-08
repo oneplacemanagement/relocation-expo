@@ -3,7 +3,6 @@ import { AboutSection } from '@/components/home/AboutSection';
 import { WhatYouGetSection } from '@/components/home/WhatYouGetSection';
 import { WhoYouMeetSection } from '@/components/home/WhoYouMeetSection';
 import { WhyAttendSection } from '@/components/home/WhyAttendSection';
-import { DestinationsSection } from '@/components/home/DestinationsSection';
 import { WhyExhibitSection } from '@/components/home/WhyExhibitSection';
 import { ExhibitorsSection } from '@/components/home/ExhibitorsSection';
 import { WhatMakesDifferentSection } from '@/components/home/WhatMakesDifferentSection';
@@ -21,7 +20,6 @@ export default function Home() {
       <WhatYouGetSection />
       <WhoYouMeetSection />
       <WhyAttendSection />
-      <DestinationsSection />
       <WhyExhibitSection />
       <ExhibitorsSection />
       <WhatMakesDifferentSection />
