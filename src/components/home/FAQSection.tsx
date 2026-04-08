@@ -29,9 +29,20 @@ export function FAQSection() {
                 {faq.question}
               </h3>
               <div className="space-y-3">
-                {faq.answer.split('\n\n').map((para, i) => (
-                  <p key={i} className="text-off-white/70">{para}</p>
-                ))}
+                {faq.blocks.map((block, i) =>
+                  block.type === 'paragraph' ? (
+                    <p key={i} className="text-off-white/70">{block.text}</p>
+                  ) : (
+                    <ul key={i} className="space-y-1.5 pl-1">
+                      {block.items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2 text-off-white/70">
+                          <span className="text-accent-yellow mt-1 flex-shrink-0 text-xs">▸</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )
+                )}
               </div>
             </div>
           ))}

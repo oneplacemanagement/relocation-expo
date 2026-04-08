@@ -56,9 +56,20 @@ export default function FAQPage() {
                         {faq.question}
                       </h2>
                       <div className="space-y-3">
-                        {faq.answer.split('\n\n').map((para, i) => (
-                          <p key={i} className="text-off-white/80 leading-relaxed">{para}</p>
-                        ))}
+                        {faq.blocks.map((block, i) =>
+                          block.type === 'paragraph' ? (
+                            <p key={i} className="text-off-white/80 leading-relaxed">{block.text}</p>
+                          ) : (
+                            <ul key={i} className="space-y-2 pl-1">
+                              {block.items.map((item, j) => (
+                                <li key={j} className="flex items-start gap-2 text-off-white/80 leading-relaxed">
+                                  <span className="text-accent-yellow mt-1 flex-shrink-0 text-xs">▸</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )
+                        )}
                       </div>
                     </div>
                   ))}

@@ -19,7 +19,7 @@ export function RegisterSection() {
             Take the Next Step Toward Your Australian Future
           </h2>
           <p className="text-xl text-off-white/80 max-w-2xl mx-auto leading-relaxed">
-            Whether you're exploring your options or ready to make the move, the Relocation Expo brings everything — and everyone — together.
+            Whether you're planning your move or looking to hire top talent, the Relocation Expo brings the right people together.
           </p>
         </div>
 
@@ -46,9 +46,10 @@ export function RegisterSection() {
 
         {/* Contact Info */}
         <div className="text-center glass-card p-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <h3 className="text-2xl font-bold text-off-white mb-4">Contact Us</h3>
+          <h3 className="text-2xl font-bold text-off-white mb-1">Contact Us</h3>
+          <p className="text-accent-yellow/80 text-sm font-medium mb-4">The Relocation Expo Team</p>
           <p className="text-off-white/80 mb-6">
-            If you have questions about the Relocation Expo — tickets, exhibitor options, or event details — our team is here to help.
+            If you have questions about the Relocation Expo — tickets, exhibitor options, or event details — our team is here to help. We handle all enquiries directly and aim to respond as quickly as possible.
           </p>
           <div className="space-y-3 text-off-white/90">
             <p>
