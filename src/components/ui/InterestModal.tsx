@@ -130,7 +130,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
                   placeholder="John Smith"
                   disabled={isSubmitting}
                 />
@@ -147,7 +147,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
                   placeholder="john@example.com"
                   disabled={isSubmitting}
                 />
@@ -164,7 +164,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   required
                   value={formData.occupation}
                   onChange={(e) => setFormData({ ...formData, occupation: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
                   placeholder="e.g. Nurse, Engineer, Teacher"
                   disabled={isSubmitting}
                 />
@@ -183,7 +183,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   max={2007}
                   value={formData.yearOfBirth}
                   onChange={(e) => setFormData({ ...formData, yearOfBirth: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
                   placeholder="e.g. 1990"
                   disabled={isSubmitting}
                 />
@@ -198,7 +198,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   id="selectedTicket"
                   value={formData.selectedTicket}
                   onChange={(e) => setFormData({ ...formData, selectedTicket: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent bg-white"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent bg-white text-navy"
                   disabled={isSubmitting}
                 >
                   {TICKET_OPTIONS.map((opt) => (
@@ -219,7 +219,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent"
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
                   placeholder="+353 XX XXX XXXX"
                   disabled={isSubmitting}
                 />
