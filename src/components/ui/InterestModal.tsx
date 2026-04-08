@@ -24,6 +24,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
     name: '',
     email: '',
     occupation: '',
+    nationality: '',
+    nationalityOther: '',
     yearOfBirth: '',
     selectedTicket: deriveTicketValue(ticketType),
     phone: '',
@@ -55,6 +57,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
           email: formData.email,
           message: [
             `Ticket Type: ${formData.selectedTicket}`,
+            `Nationality: ${formData.nationality === 'Other' ? `Other — ${formData.nationalityOther}` : formData.nationality}`,
             `Occupation: ${formData.occupation}`,
             `Year of Birth: ${formData.yearOfBirth}`,
             `Phone: ${formData.phone || 'Not provided'}`,
@@ -69,7 +72,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', occupation: '', yearOfBirth: '', selectedTicket: initialTicket, phone: '' });
+      setFormData({ name: '', email: '', occupation: '', nationality: '', nationalityOther: '', yearOfBirth: '', selectedTicket: initialTicket, phone: '' });
 
       setTimeout(() => {
         onClose();
@@ -168,6 +171,37 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   placeholder="e.g. Nurse, Engineer, Teacher"
                   disabled={isSubmitting}
                 />
+              </div>
+
+              {/* Nationality */}
+              <div>
+                <label htmlFor="nationality" className="block text-sm font-medium text-navy mb-1">
+                  Nationality *
+                </label>
+                <select
+                  id="nationality"
+                  required
+                  value={formData.nationality}
+                  onChange={(e) => setFormData({ ...formData, nationality: e.target.value, nationalityOther: '' })}
+                  className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent bg-white text-navy"
+                  disabled={isSubmitting}
+                >
+                  <option value="" disabled>Select your nationality</option>
+                  <option value="Irish">Irish</option>
+                  <option value="UK">UK</option>
+                  <option value="Other">Other (Please specify)</option>
+                </select>
+                {formData.nationality === 'Other' && (
+                  <input
+                    type="text"
+                    required
+                    value={formData.nationalityOther}
+                    onChange={(e) => setFormData({ ...formData, nationalityOther: e.target.value })}
+                    className="w-full mt-2 px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
+                    placeholder="Please specify your nationality"
+                    disabled={isSubmitting}
+                  />
+                )}
               </div>
 
               {/* Year of Birth */}
