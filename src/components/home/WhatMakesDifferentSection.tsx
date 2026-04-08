@@ -3,6 +3,8 @@ import { Container } from '@/components/ui/Container';
 import { Card } from '@/components/ui/Card';
 
 export function WhatMakesDifferentSection() {
+  // Hogan Suite image as background
+  const backgroundUrl = "/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg";
   const highlights = [
     'Main-stage speakers sharing their real relocation journeys',
     'Honest insights on what works, what doesn\'t, and what they wish they knew',
@@ -14,7 +16,11 @@ export function WhatMakesDifferentSection() {
   ];
 
   return (
-    <Section background="dark">
+    <Section
+      background="dark"
+      backgroundImage={backgroundUrl}
+      backgroundImageAlt="Hogan Suite, Croke Park"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">

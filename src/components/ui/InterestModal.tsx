@@ -227,7 +227,11 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
 
               {status === 'error' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
-                  Sorry, there was an error. Please try again or email us at partner@therelocationexpo.com
+                  Sorry, there was an error. Please try again or contact us at{' '}
+                  <a href="mailto:info@therelocationexpo.com" className="underline font-medium">info@therelocationexpo.com</a>
+                  {' '}(attendee enquiries) or{' '}
+                  <a href="mailto:partner@therelocationexpo.com" className="underline font-medium">partner@therelocationexpo.com</a>
+                  {' '}(exhibitor opportunities).
                 </div>
               )}
 

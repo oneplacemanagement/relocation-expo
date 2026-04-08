@@ -55,7 +55,11 @@ export default function FAQPage() {
                       <h2 className="text-lg font-bold text-accent-yellow mb-3">
                         {faq.question}
                       </h2>
-                      <p className="text-off-white/80 leading-relaxed">{faq.answer}</p>
+                      <div className="space-y-3">
+                        {faq.answer.split('\n\n').map((para, i) => (
+                          <p key={i} className="text-off-white/80 leading-relaxed">{para}</p>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>

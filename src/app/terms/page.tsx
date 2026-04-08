@@ -40,7 +40,7 @@ export default function TermsPage() {
                   2. Event Registration
                 </h2>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Ticket pricing will be announced closer to the event date</li>
+                  <li>Ticket prices are as displayed on the <a href="/tickets" className="text-accent-yellow underline hover:no-underline">tickets page</a> and are subject to change prior to the event</li>
                   <li>Pre-registration is strongly recommended to secure your place</li>
                   <li>Walk-in attendees may be admitted subject to capacity limits and ticket availability</li>
                   <li>You must provide accurate information when registering</li>

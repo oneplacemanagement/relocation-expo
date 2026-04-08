@@ -23,11 +23,11 @@ export function LiveChatWidget() {
     // Simple FAQ responses
     let response = '';
     if (question.includes('bring')) {
-      response = "Bring copies of your CV, a notebook, and an open mind! We recommend having your CV ready to hand directly to employers. �";
+      response = "Bring copies of your CV, a notebook, and an open mind! We recommend having your CV ready to hand directly to employers.";
     } else if (question.includes('migration agents')) {
-      response = "Yes! There'll be migration clinics where you can book a 15-20 minute consultation with agents who specialize in 482 sponsorship, skilled migration, and family visas. 🤝";
+      response = "Yes! There'll be migration clinics where you can book a 15-20 minute consultation with agents who specialise in 482 sponsorship, skilled migration, and family visas.";
     } else if (question.includes('children')) {
-      response = "Absolutely! The event is family-friendly. There'll be a quiet area if you need space, and the atmosphere is welcoming for all ages. 👨‍👩‍👧‍�";
+      response = "Absolutely! The event is family-friendly. There'll be a quiet area if you need space, and the atmosphere is welcoming for all ages.";
     } else if (question.includes('job opportunities')) {
       response = "Yes! Australian employers attending are recruiting now and many are visa sponsors. Bring your CV and be ready to talk about your skills and experience. 💼";
     } else if (question.includes('door')) {
@@ -68,9 +68,6 @@ export function LiveChatWidget() {
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
-          <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-pulse">
-            1
-          </span>
         </button>
       )}
 
@@ -87,7 +84,7 @@ export function LiveChatWidget() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Chat with Us</h3>
-                <p className="text-xs opacity-80">We typically reply instantly</p>
+                <p className="text-xs opacity-80">Answers to common questions</p>
               </div>
             </div>
             <button

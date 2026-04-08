@@ -15,8 +15,12 @@ const config: Config = {
         "muted-grey": "#535466",
         "blue-grey": "#5C6D8C",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

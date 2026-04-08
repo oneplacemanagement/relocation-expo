@@ -11,6 +11,10 @@
     --blue-grey: #5C6D8C;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     color: var(--off-white);
     background: var(--navy);
@@ -20,19 +24,32 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Focus rings — accessible, brand-coloured */
+  :focus-visible {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
   /* Premium scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
     background: var(--navy);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--blue-grey);
-    border-radius: 5px;
+    border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-yellow);
+  }
+
+  /* Selection colour */
+  ::selection {
+    background: var(--accent-yellow);
+    color: var(--navy);
   }
 }
 
@@ -42,7 +59,7 @@
     background: linear-gradient(135deg, rgba(43, 47, 72, 0.95) 0%, rgba(92, 109, 140, 0.8) 100%);
   }
 
-  /* Premium glassmorphism effect */
+  /* Glassmorphism card */
   .glass-card {
     background: rgba(92, 109, 140, 0.15);
     backdrop-filter: blur(20px);
@@ -50,22 +67,22 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
-  /* Premium glow effect */
+  /* Yellow glow */
   .glow-yellow {
     box-shadow: 0 0 20px rgba(239, 197, 68, 0.3),
                 0 0 40px rgba(239, 197, 68, 0.2),
                 0 0 60px rgba(239, 197, 68, 0.1);
   }
 
-  /* Smooth animations */
+  /* Fade-in animation */
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-in;
+    animation: fadeIn 0.7s ease-out both;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(24px);
     }
     to {
       opacity: 1;
@@ -73,12 +90,30 @@
     }
   }
 
-  /* Premium hover lift */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-bounce,
+    .animate-pulse {
+      animation: none !important;
+    }
+    .transition-all,
+    .transition-transform,
+    .transition-colors {
+      transition: none !important;
+    }
+  }
+
+  /* Hover lift */
   .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .hover-lift:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Subtle section divider */
+  .section-divider {
+    border-top: 1px solid rgba(92, 109, 140, 0.2);
   }
 }

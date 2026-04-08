@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button';
 
 export function RegisterSection() {
   return (
-    <Section id="register" background="dark" className="relative overflow-hidden">
-      {/* Premium background effect */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-yellow rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-grey rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-      </div>
-
-      <Container size="md" className="relative z-10">
+    <Section
+      id="register"
+      background="dark"
+      backgroundImage="/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg"
+      backgroundImageAlt="Hogan Mezzanine & Foyer, Croke Park"
+      overlayIntensity="heavy"
+    >
+      <Container size="md">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-off-white via-accent-yellow to-off-white mb-6">
             Take the Next Step Toward Your Australian Future

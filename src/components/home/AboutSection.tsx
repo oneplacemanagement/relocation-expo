@@ -3,7 +3,13 @@ import { Container } from '@/components/ui/Container';
 
 export function AboutSection() {
   return (
-    <Section id="about" background="dark">
+    <Section
+      id="about"
+      background="dark"
+      backgroundImage="/images/Field View.jpg"
+      backgroundImageAlt="Croke Park Field View"
+      overlayIntensity="heavy"
+    >
       <Container>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

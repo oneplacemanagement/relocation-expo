@@ -8,6 +8,7 @@ export function Footer() {
   const footerLinks = {
     navigation: [
       { href: '/', label: 'Home' },
+      { href: '/tickets', label: 'Tickets' },
       { href: '/exhibitors', label: 'Exhibitors' },
       { href: '/faq', label: 'FAQ' },
       { href: '/contact', label: 'Contact' },
@@ -25,24 +26,27 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* About */}
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/brand/globe.svg" 
-                  alt="" 
-                  className="h-8 w-auto"
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/images/White--Globe-Icon.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-10 w-auto mix-blend-screen"
                 />
-                <h3 className="text-accent-yellow font-bold text-lg">
-                  The Relocation Expo
-                </h3>
+                <img
+                  src="/images/White-Text (1).png"
+                  alt="The Relocation Expo"
+                  className="h-7 w-auto mix-blend-screen"
+                />
               </div>
               <p className="text-off-white/70 text-sm mb-4">
                 {eventData.description}
               </p>
               <p className="text-off-white/70 text-sm">
-                <strong>Date:</strong> {eventData.date}
+                <strong>Date:</strong> Sunday 27th September 2026
               </p>
               <p className="text-off-white/70 text-sm">
-                <strong>Venue:</strong> {eventData.venue}
+                <strong>Venue:</strong> Croke Park, Dublin
               </p>
             </div>
 

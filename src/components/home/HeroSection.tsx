@@ -1,34 +1,31 @@
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { eventData } from '@/data/event';
 import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <Section className="relative overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
+    <Section className="relative overflow-hidden pt-40 md:pt-48 pb-24 md:pb-32">
       {/* Background Image (if available) */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         {/* Fallback gradient if no image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-blue-grey/30 z-0" />
-        
-        {/* Optional: Uncomment when hero image is added */}
-        {/* <Image
-          src="/images/hero/expo-hall.jpg"
-          alt="Career fair expo hall with professionals networking"
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-navy via-navy to-blue-grey/30 z-0" />
+        {/* Croke Park Hero Image, less transparent for readability */}
+        <Image
+          src="/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg"
+          alt="Hogan Mezzanine & Foyer, Croke Park, Dublin"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-70"
           priority
           quality={90}
-        /> */}
-        
+          style={{position: 'absolute'}}
+        />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-navy/70 z-10" />
-        
+        <div className="absolute inset-0 w-full h-full bg-navy/60 z-10" />
         {/* Animated accent blobs */}
-        <div className="absolute inset-0 opacity-20 z-0">
+        <div className="absolute inset-0 w-full h-full opacity-20 z-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-accent-yellow/30 rounded-full filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-grey/40 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
@@ -58,7 +55,7 @@ export function HeroSection() {
 
           {/* Tagline with better typography */}
           <p className="text-xl md:text-2xl text-off-white/90 mb-10 font-light leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.2s' }}>
-            Join us at The Relocation Expo 2026 — a major one-day event in Dublin bringing together Ireland and the UK's top talent and Australia's leading employers.
+            Join us at The Relocation Expo 2026 — Sunday 27th September 2026 at <strong>Croke Park, Dublin</strong>, bringing together Ireland and the UK's top talent and Australia's leading employers.
           </p>
           
           <p className="text-lg md:text-xl text-off-white/80 mb-12 font-light leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>

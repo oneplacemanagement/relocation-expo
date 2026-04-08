@@ -28,7 +28,11 @@ export function FAQSection() {
               <h3 className="text-lg font-bold text-accent-yellow mb-3">
                 {faq.question}
               </h3>
-              <p className="text-off-white/70">{faq.answer}</p>
+              <div className="space-y-3">
+                {faq.answer.split('\n\n').map((para, i) => (
+                  <p key={i} className="text-off-white/70">{para}</p>
+                ))}
+              </div>
             </div>
           ))}
         </div>

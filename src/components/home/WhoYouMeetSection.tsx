@@ -3,7 +3,12 @@ import { Container } from '@/components/ui/Container';
 
 export function WhoYouMeetSection() {
   return (
-    <Section background="dark">
+    <Section
+      background="dark"
+      backgroundImage="/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg"
+      backgroundImageAlt="Reception, Croke Park"
+      overlayIntensity="heavy"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-6">

@@ -23,10 +23,6 @@ export default function ContactPage() {
 
     try {
       const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'c188ed1a-81bf-43a4-a3b4-5b531128a80a';
-      
-      console.log('Access key available:', accessKey ? 'Yes' : 'No');
-      console.log('Access key value:', accessKey);
-      console.log('Access key length:', accessKey?.length);
 
       // Simple Web3Forms API - no DNS verification needed
       const response = await fetch('https://api.web3forms.com/submit', {

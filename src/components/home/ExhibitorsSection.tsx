@@ -6,10 +6,16 @@ import { Badge } from '@/components/ui/Badge';
 import { exhibitors } from '@/data/exhibitors';
 
 export function ExhibitorsSection() {
+  // Reception image as background
+  const backgroundUrl = "/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg";
   const featuredExhibitors = exhibitors.filter((ex) => ex.featured);
 
   return (
-    <Section background="dark">
+    <Section
+      background="dark"
+      backgroundImage={backgroundUrl}
+      backgroundImageAlt="Reception, Croke Park"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">

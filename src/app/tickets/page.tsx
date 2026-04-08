@@ -21,14 +21,14 @@ export default function TicketsPage() {
         ticketType={selectedTicket}
       />
       
-      <Section className="pt-24" background="dark">
+      <Section className="pt-36" background="dark">
         <Container>
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-off-white mb-4">
               Early Bird Pricing
             </h1>
             <p className="text-xl text-off-white/80 max-w-3xl mx-auto mb-4">
-              Secure your spot at The Relocation Expo 2026 — Autumn 2026, Dublin
+              Secure your spot at The Relocation Expo 2026 — Sunday 27th September 2026, Croke Park, Dublin
             </p>
             <div className="inline-block bg-accent-yellow text-navy px-6 py-3 rounded-full font-bold text-lg">
               Tickets Available from 1st May 2026

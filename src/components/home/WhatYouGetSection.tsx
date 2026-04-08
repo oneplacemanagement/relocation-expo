@@ -4,6 +4,8 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
 export function WhatYouGetSection() {
+  // Cusack Suite image as background
+  const backgroundUrl = "/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg";
   const benefits = [
     {
       icon: (
@@ -62,7 +64,11 @@ export function WhatYouGetSection() {
   ];
 
   return (
-    <Section background="dark">
+    <Section
+      background="dark"
+      backgroundImage={backgroundUrl}
+      backgroundImageAlt="Cusack Suite, Croke Park"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">

@@ -1,31 +1,33 @@
+
+'use client';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-
+import { useState } from 'react';
 export function VenueSection() {
   return (
-    <Section background="dark">
+    <Section id="location" background="dark">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
             Location
           </h2>
           <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
-            The Relocation Expo 2026 takes place at a premium venue in Dublin — full details to be announced.
+            The Relocation Expo 2026 takes place at <strong>Croke Park Conference Centre, Dublin</strong> — Ireland’s most iconic event venue, centrally located and fully accessible.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
-          {/* Dublin Map Embed */}
+          {/* Croke Park Map Embed */}
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-grey/30 min-h-[320px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38132.004675083145!2d-6.3196165!3d53.3340285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9d53c0fc71%3A0xf00c1ddb93b8cd8c!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sie!4v1711000000000!5m2!1sen!2sie"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.527964232625!2d-6.249824684161057!3d53.3606949799787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9d53c0fc71%3A0x7c6c7c6c7c6c7c6c!2sCroke%20Park!5e0!3m2!1sen!2sie!4v1712420000000!5m2!1sen!2sie"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '320px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Dublin, Ireland — Expo Location"
+              title="Croke Park, Dublin — Expo Location"
               aria-hidden="false"
             />
           </div>
@@ -34,13 +36,13 @@ export function VenueSection() {
           <div className="flex flex-col justify-center space-y-6">
             <div>
               <div className="inline-block bg-accent-yellow/20 border border-accent-yellow/40 text-accent-yellow px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                Venue announcement coming soon
+                Venue Confirmed: Croke Park
               </div>
               <h3 className="text-2xl font-bold text-off-white mb-2">
-                Dublin, Ireland
+                Croke Park Conference Centre, Dublin
               </h3>
               <p className="text-off-white/70 leading-relaxed">
-                The expo will be held at a premium, centrally located Dublin venue — easily accessible by public transport and road from across Ireland and the UK.
+                Croke Park is Ireland’s largest and most prestigious conference and events venue, located just minutes from Dublin city centre. The venue is fully wheelchair accessible, with step-free access, accessible restrooms, and priority seating. Extensive on-site parking is available, and the stadium is easily reached by public transport (DART, LUAS, and multiple Dublin Bus routes). For full travel and accessibility details, visit <a href="https://crokepark.ie/meetings-events/getting-here" target="_blank" rel="noopener noreferrer" className="underline text-accent-yellow">crokepark.ie/meetings-events/getting-here</a>.
               </p>
             </div>
 
@@ -52,8 +54,8 @@ export function VenueSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-off-white">Autumn 2026</h4>
-                  <p className="text-off-white/60 text-sm">Exact date to be confirmed — register your interest to be notified first</p>
+                  <h4 className="font-bold text-off-white">Sunday 27th September 2026</h4>
+                  <p className="text-off-white/60 text-sm">Register your interest to be notified first</p>
                 </div>
               </div>
 
@@ -65,8 +67,8 @@ export function VenueSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-off-white">Central Dublin</h4>
-                  <p className="text-off-white/60 text-sm">Accessible from across Ireland and easily reachable from the UK</p>
+                  <h4 className="font-bold text-off-white">Croke Park, Dublin 3</h4>
+                  <p className="text-off-white/60 text-sm">Jones' Road, Drumcondra, Dublin 3, D03 P6K7</p>
                 </div>
               </div>
 
@@ -77,14 +79,72 @@ export function VenueSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-off-white">Full Details Coming Soon</h4>
-                  <p className="text-off-white/60 text-sm">Venue, parking, transport links and accessibility info will be published ahead of the event</p>
+                  <h4 className="font-bold text-off-white">Travel & Accessibility</h4>
+                  <p className="text-off-white/60 text-sm">Fully wheelchair accessible. On-site parking. Served by DART, LUAS, and Dublin Bus. See <a href="https://crokepark.ie/meetings-events/getting-here" target="_blank" rel="noopener noreferrer" className="underline text-accent-yellow">Croke Park travel info</a>.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <VenueGallery />
       </Container>
     </Section>
   );
 }
+
+// VenueGallery component for clickable images
+function VenueGallery() {
+  const images = [
+    {
+      src: '/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg',
+      label: 'Reception',
+    },
+    {
+      src: '/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg',
+      label: 'Hogan Mezzanine & Foyer',
+    },
+    {
+      src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
+      label: 'Hogan Suite',
+    },
+    {
+      src: '/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg',
+      label: 'Cusack Suite',
+    },
+    {
+      src: '/images/Field View.jpg',
+      label: 'Field View',
+    },
+    {
+      src: '/images/Small Room View.jpg',
+      label: 'Small Room View',
+    },
+  ];
+  const [modal, setModal] = useState<number|null>(null);
+  return (
+    <>
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {images.map((img, i) => (
+          <div
+            key={img.label}
+            className="rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+            onClick={() => setModal(i)}
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setModal(i)}
+            role="button"
+            tabIndex={0}
+            aria-label={`View ${img.label}`}
+          >
+            <img src={img.src} alt={img.label + ', Croke Park'} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200 opacity-80" style={{background: 'transparent'}} />
+          </div>
+        ))}
+      </div>
+      {modal !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy/90 bg-opacity-90" onClick={() => setModal(null)}>
+          <img src={images[modal].src} alt={images[modal].label + ', Croke Park'} className="max-w-3xl max-h-[80vh] rounded-2xl shadow-2xl border-4 border-accent-yellow opacity-90" style={{background: 'transparent'}} />
+          <button className="absolute top-8 right-8 text-3xl text-accent-yellow font-bold" aria-label="Close" onClick={() => setModal(null)}>&times;</button>
+        </div>
+      )}
+    </>
+  );
+}
+

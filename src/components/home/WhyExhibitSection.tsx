@@ -62,7 +62,12 @@ export function WhyExhibitSection() {
   ];
 
   return (
-    <Section id="why-exhibit" background="dark">
+    <Section
+      id="why-exhibit"
+      background="dark"
+      backgroundImage="/images/Small Room View.jpg"
+      backgroundImageAlt="Small Room View, Croke Park"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">

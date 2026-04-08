@@ -92,8 +92,9 @@ export default function PrivacyPage() {
                 <p>
                   We retain your personal information for as long as necessary to fulfill the purposes outlined 
                   in this Privacy Policy, unless a longer retention period is required or permitted by law. 
-                  Registration data will typically be retained for [SPECIFY PERIOD, e.g., 2 years] after the 
-                  event date, after which it will be securely deleted.
+                  Registration data is retained until you request deletion or it is no longer required for 
+                  our event purposes, after which it will be securely deleted. You may request deletion at 
+                  any time by contacting us at the email address below.
                 </p>
               </section>
 
@@ -126,10 +127,9 @@ export default function PrivacyPage() {
                   7. Cookies and Tracking
                 </h2>
                 <p>
-                  Our website uses essential cookies to ensure proper functionality. We do not use tracking 
-                  or analytics cookies by default. If you accept all cookies via our cookie banner, we may use 
-                  analytics services to understand website usage patterns. You can manage your cookie preferences 
-                  at any time by clearing your browser cookies.
+                  Our website uses only essential cookies required for proper functionality. We do not use 
+                  tracking, analytics, or advertising cookies. You can manage or clear cookies at any time 
+                  through your browser settings.
                 </p>
               </section>
 
@@ -174,14 +174,11 @@ export default function PrivacyPage() {
                   data, please contact us at:
                 </p>
                 <p className="mt-3">
+                  <strong>Event Organizer:</strong> The Relocation Expo<br />
                   <strong>Email:</strong>{' '}
                   <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow underline hover:no-underline">
                     {eventData.contactEmail}
                   </a>
-                </p>
-                <p>
-                  <strong>Event Organizer:</strong> The Relocation Expo<br />
-                  <strong>Address:</strong> [ADD ORGANIZER ADDRESS IF AVAILABLE]
                 </p>
               </section>
             </div>

@@ -79,7 +79,11 @@ export function EventHighlightsSection() {
   ];
 
   return (
-    <Section background="dark">
+    <Section
+      background="dark"
+      backgroundImage="/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg"
+      backgroundImageAlt="Cusack Suite, Croke Park"
+    >
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
