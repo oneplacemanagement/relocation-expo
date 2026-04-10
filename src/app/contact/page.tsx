@@ -22,7 +22,7 @@ export default function ContactPage() {
     setStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'c188ed1a-81bf-43a4-a3b4-5b531128a80a';
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '7832ef81-4ebc-40da-b2c3-0e58eb2ba730';
 
       // Simple Web3Forms API - no DNS verification needed
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -188,6 +188,16 @@ export default function ContactPage() {
                   Contact Information
                 </h2>
                 <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-off-white mb-2">
+                      🏢 Organiser
+                    </h3>
+                    <p className="text-off-white/70">
+                      Malone Consultancy<br />
+                      ABN 45956177897
+                    </p>
+                  </div>
+
                   <div>
                     <h3 className="text-lg font-bold text-off-white mb-2">
                       📧 Email

@@ -29,8 +29,8 @@ export default function PrivacyPage() {
                   1. Introduction
                 </h2>
                 <p>
-                  The Relocation Expo ("we," "us," or "our") is committed to protecting your privacy. 
-                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
+                  The Relocation Expo is operated by Malone Consultancy (ABN 45956177897) ("we," "us," or "our") and is committed to protecting your privacy.
+                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information
                   when you register for or attend our event.
                 </p>
               </section>
@@ -174,7 +174,8 @@ export default function PrivacyPage() {
                   data, please contact us at:
                 </p>
                 <p className="mt-3">
-                  <strong>Event Organizer:</strong> The Relocation Expo<br />
+                  <strong>Operated by:</strong> Malone Consultancy (ABN 45956177897)<br />
+                  <strong>Brand:</strong> The Relocation Expo<br />
                   <strong>Email:</strong>{' '}
                   <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow underline hover:no-underline">
                     {eventData.contactEmail}

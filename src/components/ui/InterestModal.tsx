@@ -57,7 +57,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
           email: formData.email,
           message: [
             `Ticket Type: ${formData.selectedTicket}`,
-            `Nationality: ${formData.nationality === 'Other' ? `Other — ${formData.nationalityOther}` : formData.nationality}`,
+            `Currently Based: ${formData.nationality === 'Other' ? `Other — ${formData.nationalityOther}` : formData.nationality}`,
             `Occupation: ${formData.occupation}`,
             `Year of Birth: ${formData.yearOfBirth}`,
             `Phone: ${formData.phone || 'Not provided'}`,
@@ -173,10 +173,10 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                 />
               </div>
 
-              {/* Nationality */}
+              {/* Currently Based */}
               <div>
                 <label htmlFor="nationality" className="block text-sm font-medium text-navy mb-1">
-                  Nationality *
+                  Where are you currently based? *
                 </label>
                 <select
                   id="nationality"
@@ -186,10 +186,10 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   className="w-full px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent bg-white text-navy"
                   disabled={isSubmitting}
                 >
-                  <option value="" disabled>Select your nationality</option>
-                  <option value="Irish">Irish</option>
-                  <option value="UK">UK</option>
-                  <option value="Other">Other (Please specify)</option>
+                  <option value="" disabled>Select your location</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Other">Other</option>
                 </select>
                 {formData.nationality === 'Other' && (
                   <input
@@ -198,7 +198,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                     value={formData.nationalityOther}
                     onChange={(e) => setFormData({ ...formData, nationalityOther: e.target.value })}
                     className="w-full mt-2 px-4 py-2 border border-muted-grey/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow focus:border-transparent text-navy placeholder-muted-grey"
-                    placeholder="Please specify your nationality"
+                    placeholder="Please specify your country"
                     disabled={isSubmitting}
                   />
                 )}

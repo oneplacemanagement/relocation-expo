@@ -28,9 +28,12 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
                   1. Acceptance of Terms
                 </h2>
+                <p className="mb-3">
+                  These Terms &amp; Conditions apply to The Relocation Expo, operated by Malone Consultancy (ABN 45956177897).
+                </p>
                 <p>
-                  By registering for and/or attending The Relocation Expo, you agree to be bound by these 
-                  Terms and Conditions. If you do not agree with any part of these terms, please do not 
+                  By registering for and/or attending The Relocation Expo, you agree to be bound by these
+                  Terms and Conditions. If you do not agree with any part of these terms, please do not
                   register or attend the event.
                 </p>
               </section>
@@ -177,6 +180,9 @@ export default function TermsPage() {
                   For questions about these Terms and Conditions, please contact:
                 </p>
                 <p className="mt-3">
+                  <strong>Operated by:</strong> Malone Consultancy (ABN 45956177897)<br />
+                  <strong>Brand:</strong> The Relocation Expo<br />
+                  <strong>Email:</strong>{' '}
                   <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow underline hover:no-underline">
                     {eventData.contactEmail}
                   </a>

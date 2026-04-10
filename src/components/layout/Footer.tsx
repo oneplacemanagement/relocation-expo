@@ -116,9 +116,14 @@ export function Footer() {
               {eventData.disclaimer}
             </p>
             <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-              <p className="text-off-white/50 text-sm">
-                © {currentYear} The Relocation Expo. All rights reserved.
-              </p>
+              <div>
+                <p className="text-off-white/50 text-sm">
+                  © {currentYear} The Relocation Expo. All rights reserved.
+                </p>
+                <p className="text-off-white/40 text-xs mt-1">
+                  The Relocation Expo is operated by Malone Consultancy (ABN 45956177897).
+                </p>
+              </div>
               <div className="flex space-x-4">
                 {footerLinks.legal.map((link) => (
                   <Link
