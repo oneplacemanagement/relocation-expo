@@ -45,7 +45,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
     setStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '80c173bd-29d8-4321-8b0c-857f9be53842';
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '7832ef81-4ebc-40da-b2c3-0e58eb2ba730';
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
