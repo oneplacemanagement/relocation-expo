@@ -45,8 +45,9 @@ export default function TermsPage() {
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Ticket prices are as displayed on the <a href="/tickets" className="text-accent-yellow underline hover:no-underline">tickets page</a> and are subject to change prior to the event</li>
                   <li>Pre-registration is strongly recommended to secure your place</li>
-                  <li>Walk-in attendees may be admitted subject to capacity limits and ticket availability</li>
+                  <li>Walk-in attendees may be admitted subject to capacity limits and ticket availability at the door</li>
                   <li>You must provide accurate information when registering</li>
+                  <li>The Family Pass covers 2 adults and up to 3 children aged under 16. Children aged 16 or over require their own ticket. Children under 16 must be accompanied by a ticket-holding adult at all times</li>
                   <li>Registration is non-transferable without prior approval</li>
                 </ul>
               </section>
@@ -130,51 +131,64 @@ export default function TermsPage() {
 
               <section>
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
-                  8. Cancellation Policy
+                  8. Refund Policy
+                </h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>All ticket sales are final.</strong> We do not offer refunds once a ticket has been purchased, except where required by applicable consumer protection law</li>
+                  <li><strong>Ticket transfers:</strong> If you are unable to attend, you may transfer your ticket to another person by contacting us at <a href="mailto:info@therelocationexpo.com" className="text-accent-yellow underline hover:no-underline">info@therelocationexpo.com</a> at least 7 days before the event. The replacement attendee must provide their details prior to the event</li>
+                  <li><strong>Event cancellation by us:</strong> In the event that The Relocation Expo is cancelled by the organiser and not rescheduled, ticket holders will receive a full refund of the ticket purchase price within 14 business days</li>
+                  <li><strong>Event postponement:</strong> If the event is postponed to a new date, your ticket will remain valid for the rescheduled date. If you are unable to attend the rescheduled date, you may request a refund by contacting us within 14 days of the postponement announcement</li>
+                  <li><strong>Expression of interest registrations</strong> are free and carry no financial obligation</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-accent-yellow mb-4">
+                  9. Force Majeure &amp; Cancellation
                 </h2>
                 <p>
-                  If we must cancel or postpone the event due to circumstances beyond our control (force majeure), 
-                  we will notify registered attendees as soon as possible. Refund policies will be communicated 
-                  based on ticket terms at the time of purchase. We will offer registration for a rescheduled 
-                  event where possible.
+                  If we must cancel or postpone the event due to circumstances beyond our control (including but not
+                  limited to severe weather, venue unavailability, government restrictions, or other force majeure events),
+                  we will notify registered attendees as soon as reasonably possible. Please refer to Section 8 for the
+                  applicable refund terms.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
-                  9. Data Protection
+                  10. Data Protection
                 </h2>
                 <p>
                   Your personal data will be processed in accordance with our{' '}
                   <a href="/privacy" className="text-accent-yellow underline hover:no-underline">
                     Privacy Policy
-                  </a>. By registering, you consent to the collection and use of your information as described.
+                  </a>. By registering, you consent to the collection and use of your information as described therein.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
-                  10. Changes to Terms
+                  11. Changes to Terms
                 </h2>
                 <p>
-                  We reserve the right to update these Terms and Conditions at any time. Changes will be 
+                  We reserve the right to update these Terms and Conditions at any time. Changes will be
                   posted on this page with an updated date.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
-                  11. Governing Law
+                  12. Governing Law
                 </h2>
                 <p>
-                  These Terms and Conditions are governed by the laws of Ireland. Any disputes will be 
+                  These Terms and Conditions are governed by the laws of Ireland. Any disputes will be
                   subject to the exclusive jurisdiction of the Irish courts.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">
-                  12. Contact Information
+                  13. Contact Information
                 </h2>
                 <p>
                   For questions about these Terms and Conditions, please contact:

@@ -14,7 +14,7 @@ export default function ContactPage() {
     subject: '',
     message: '',
   });
-
+  const [consentContact, setConsentContact] = useState(false);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: FormEvent) => {
@@ -48,6 +48,7 @@ export default function ContactPage() {
 
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setConsentContact(false);
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
@@ -167,6 +168,22 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 bg-navy border border-blue-grey/30 rounded-lg text-off-white placeholder-muted-grey focus:outline-none focus:ring-2 focus:ring-accent-yellow"
                         placeholder="Tell us how we can help..."
                       />
+                    </div>
+
+                    {/* GDPR consent checkbox */}
+                    <div className="flex items-start gap-3 pt-1">
+                      <input
+                        type="checkbox"
+                        id="consentContact"
+                        required
+                        checked={consentContact}
+                        onChange={(e) => setConsentContact(e.target.checked)}
+                        className="mt-1 h-4 w-4 accent-accent-yellow flex-shrink-0 cursor-pointer"
+                      />
+                      <label htmlFor="consentContact" className="text-sm text-off-white/80 leading-snug cursor-pointer">
+                        I consent to The Relocation Expo storing my details to respond to my enquiry and send relevant updates. See our{' '}
+                        <a href="/privacy" className="text-accent-yellow underline hover:no-underline">Privacy Policy</a>. <span className="text-red-400">*</span>
+                      </label>
                     </div>
 
                     <Button

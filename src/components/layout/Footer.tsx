@@ -16,6 +16,7 @@ export function Footer() {
     legal: [
       { href: '/privacy', label: 'Privacy Policy' },
       { href: '/terms', label: 'Terms & Conditions' },
+      { href: '/exhibitor-terms', label: 'Exhibitor Terms' },
     ],
   };
 

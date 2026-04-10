@@ -30,6 +30,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
     selectedTicket: deriveTicketValue(ticketType),
     phone: '',
   });
+  const [consentMarketing, setConsentMarketing] = useState(false);
+  const [consentExhibitor, setConsentExhibitor] = useState(false);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // When a different ticket button is clicked, update the dropdown to match
@@ -61,6 +63,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
             `Occupation: ${formData.occupation}`,
             `Year of Birth: ${formData.yearOfBirth}`,
             `Phone: ${formData.phone || 'Not provided'}`,
+            `Marketing Consent: ${consentMarketing ? 'Yes' : 'No'}`,
+            `Exhibitor Sharing Consent: ${consentExhibitor ? 'Yes' : 'No'}`,
           ].join('\n'),
         }),
       });
@@ -73,6 +77,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
 
       setStatus('success');
       setFormData({ name: '', email: '', occupation: '', nationality: '', nationalityOther: '', yearOfBirth: '', selectedTicket: initialTicket, phone: '' });
+      setConsentMarketing(false);
+      setConsentExhibitor(false);
 
       setTimeout(() => {
         onClose();
@@ -258,6 +264,43 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   disabled={isSubmitting}
                 />
               </div>
+
+              {/* Required marketing consent */}
+              <div className="flex items-start gap-3 pt-2">
+                <input
+                  type="checkbox"
+                  id="consentMarketing"
+                  required
+                  checked={consentMarketing}
+                  onChange={(e) => setConsentMarketing(e.target.checked)}
+                  className="mt-1 h-4 w-4 accent-accent-yellow flex-shrink-0 cursor-pointer"
+                  disabled={isSubmitting}
+                />
+                <label htmlFor="consentMarketing" className="text-sm text-navy leading-snug cursor-pointer">
+                  I consent to The Relocation Expo storing my details so I can be contacted regarding early bird ticket release, event updates, and important announcements relating to the expo. <span className="text-red-500">*</span>
+                </label>
+              </div>
+
+              {/* Optional exhibitor sharing consent */}
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="consentExhibitor"
+                  checked={consentExhibitor}
+                  onChange={(e) => setConsentExhibitor(e.target.checked)}
+                  className="mt-1 h-4 w-4 accent-accent-yellow flex-shrink-0 cursor-pointer"
+                  disabled={isSubmitting}
+                />
+                <label htmlFor="consentExhibitor" className="text-sm text-navy leading-snug cursor-pointer">
+                  I agree that The Relocation Expo may share my details with relevant exhibitors, recruiters, or sponsors where appropriate to my employment, relocation, or visa interests. <span className="text-muted-grey">(Optional)</span>
+                </label>
+              </div>
+
+              {/* Form note */}
+              <p className="text-xs text-muted-grey leading-relaxed border-t border-muted-grey/20 pt-3">
+                This is an expression of interest only and does not guarantee ticket availability. By submitting this form, you will be added to our priority list for early bird ticket release and important updates. Please review our{' '}
+                <a href="/privacy" className="underline hover:text-navy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+              </p>
 
               {status === 'error' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">

@@ -86,7 +86,7 @@ export default function TicketsPage() {
                   </tr>
                   <tr>
                     <td className="px-6 py-4 font-semibold text-navy">Early Bird Family Pass</td>
-                    <td className="px-6 py-4 text-muted-grey">2 adults + 3 children</td>
+                    <td className="px-6 py-4 text-muted-grey">2 adults + up to 3 children (under 16)</td>
                     <td className="px-6 py-4 text-right text-navy font-bold text-lg">€35</td>
                     <td className="px-6 py-4 text-center">
                       <button
