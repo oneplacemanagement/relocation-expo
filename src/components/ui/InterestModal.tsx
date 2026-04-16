@@ -54,6 +54,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: accessKey,
+          botcheck: '',
           subject: `Ticket Interest - ${formData.selectedTicket}`,
           from_name: formData.name,
           email: formData.email,
@@ -128,6 +129,8 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot — hidden from humans, bots fill it in and get rejected */}
+              <input type="checkbox" name="botcheck" className="hidden" aria-hidden="true" tabIndex={-1} />
               {/* Full Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-navy mb-1">
