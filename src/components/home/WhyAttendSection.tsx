@@ -117,8 +117,8 @@ export function WhyAttendSection() {
         </div>
 
         <div className="text-center">
-          <Button href="/tickets" size="lg">
-            Register Interest - Early Bird Tickets
+          <Button href="https://tickets.therelocationexpo.com/events/the-relocation-expo" size="lg">
+            Buy Your Tickets Now
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

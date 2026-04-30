@@ -10,8 +10,8 @@ export const eventData = {
   registrationLink: '/tickets',
   freeEntry: false,
   primaryCTA: {
-    text: 'Register Interest',
-    href: '/tickets',
+    text: 'Buy Your Tickets',
+    href: 'https://tickets.therelocationexpo.com/events/the-relocation-expo',
   },
   secondaryCTA: {
     text: 'Exhibitor Opportunities',
