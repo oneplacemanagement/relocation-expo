@@ -20,8 +20,6 @@ export function CountdownTimer() {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
           href={TICKET_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-accent-yellow hover:bg-yellow-400 text-navy font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
