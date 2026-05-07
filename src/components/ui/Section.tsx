@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Image from 'next/image';
 
 interface SectionProps {
   children: ReactNode;
@@ -37,17 +38,20 @@ export function Section({
         id={id}
         className={`relative overflow-hidden py-16 md:py-24 ${bgClasses[background]} ${className}`}
       >
-        {/* Background photo layer */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={backgroundImage}
             alt={backgroundImageAlt}
-            className="w-full h-full object-cover opacity-30"
+            fill
+            className="object-cover opacity-30"
+            sizes="100vw"
+            aria-hidden={!backgroundImageAlt}
+          />
+          <div
+            className={`absolute inset-0 ${overlayClasses[overlayIntensity]}`}
             aria-hidden="true"
           />
-          <div className={`absolute inset-0 ${overlayClasses[overlayIntensity]}`} aria-hidden="true" />
         </div>
-        {/* Content */}
         <div className="relative z-10">{children}</div>
       </section>
     );

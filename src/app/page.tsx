@@ -1,31 +1,25 @@
 import { HeroSection } from '@/components/home/HeroSection';
+import { SponsorsMarquee } from '@/components/home/SponsorsMarquee';
 import { AboutSection } from '@/components/home/AboutSection';
-import { WhatYouGetSection } from '@/components/home/WhatYouGetSection';
-import { WhoYouMeetSection } from '@/components/home/WhoYouMeetSection';
 import { WhyAttendSection } from '@/components/home/WhyAttendSection';
-import { WhyExhibitSection } from '@/components/home/WhyExhibitSection';
-import { ExhibitorsSection } from '@/components/home/ExhibitorsSection';
-import { WhatMakesDifferentSection } from '@/components/home/WhatMakesDifferentSection';
-import { WhatToExpectSection } from '@/components/home/WhatToExpectSection';
-import { EventHighlightsSection } from '@/components/home/EventHighlightsSection';
-import { RegisterSection } from '@/components/home/RegisterSection';
+import { CrokeParkVideoSection } from '@/components/home/CrokeParkVideoSection';
+import { SponsorsTieredSection } from '@/components/home/SponsorsTieredSection';
+import { PricingTiersSection } from '@/components/home/PricingTiersSection';
 import { FAQSection } from '@/components/home/FAQSection';
 import { VenueSection } from '@/components/home/VenueSection';
+import { SkylineDayOut } from '@/components/SkylineDayOut';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <SponsorsMarquee />
       <AboutSection />
-      <WhatYouGetSection />
-      <WhoYouMeetSection />
       <WhyAttendSection />
-      <WhyExhibitSection />
-      <ExhibitorsSection />
-      <WhatMakesDifferentSection />
-      <WhatToExpectSection />
-      <EventHighlightsSection />
-      <RegisterSection />
+      <SkylineDayOut variant="teaser" />
+      <CrokeParkVideoSection />
+      <SponsorsTieredSection />
+      <PricingTiersSection />
       <FAQSection />
       <VenueSection />
     </>

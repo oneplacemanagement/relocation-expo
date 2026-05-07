@@ -1,150 +1,183 @@
-
 'use client';
+
+import Image from 'next/image';
+import { useState } from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-import { useState } from 'react';
+import { Reveal } from '@/components/ui/Reveal';
+import { Calendar, MapPin, Train } from 'lucide-react';
+
+const galleryImages = [
+  {
+    src: '/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg',
+    label: 'Reception',
+  },
+  {
+    src: '/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg',
+    label: 'Hogan Mezzanine & Foyer',
+  },
+  {
+    src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
+    label: 'Hogan Suite',
+  },
+  {
+    src: '/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg',
+    label: 'Cusack Suite',
+  },
+  { src: '/images/Field View.jpg', label: 'Field View' },
+  { src: '/images/Small Room View.jpg', label: 'Small Room View' },
+];
+
 export function VenueSection() {
+  const [modal, setModal] = useState<number | null>(null);
+
   return (
-    <Section id="location" background="dark">
+    <Section id="location" background="dark" className="relative">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
-            Location
+        <Reveal className="text-center mb-14">
+          <div className="inline-block bg-accent-yellow/15 text-accent-yellow text-xs uppercase tracking-[0.18em] font-bold px-4 py-1.5 rounded-full mb-5">
+            Location & Travel
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-black text-off-white mb-4">
+            How to find us at <span className="text-accent-yellow">Croke Park</span>.
           </h2>
-          <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
-            The Relocation Expo 2026 takes place at <strong>Croke Park Conference Centre, Dublin</strong> — Ireland’s most iconic event venue, centrally located and fully accessible.
+          <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
+            Centrally located, fully accessible, and served by every major Dublin transport line.
           </p>
+        </Reveal>
+
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+          <Reveal>
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-grey/30 aspect-[4/3]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.527964232625!2d-6.249824684161057!3d53.3606949799787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9d53c0fc71%3A0x7c6c7c6c7c6c7c6c!2sCroke%20Park!5e0!3m2!1sen!2sie!4v1712420000000!5m2!1sen!2sie"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Croke Park, Dublin"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.05}>
+            <div className="space-y-5">
+              <div className="bg-off-white/[0.04] border border-blue-grey/30 rounded-2xl p-6">
+                <div className="inline-block bg-accent-yellow/15 border border-accent-yellow/30 text-accent-yellow px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest mb-3">
+                  Venue Confirmed
+                </div>
+                <h3 className="font-display text-2xl font-bold text-off-white mb-2">
+                  Croke Park Conference Centre
+                </h3>
+                <p className="text-off-white/70 text-sm leading-relaxed">
+                  Ireland&apos;s largest and most prestigious conference and events venue, just minutes from Dublin city centre.
+                </p>
+              </div>
+
+              <Detail icon={Calendar} title="Sunday 27 September 2026" body="11:00am – 5:30pm · One day only" />
+              <Detail icon={MapPin} title="Croke Park, Dublin 3" body="Jones' Road, Drumcondra, Dublin 3, D03 P6K7" />
+              <Detail
+                icon={Train}
+                title="Travel & Accessibility"
+                body={
+                  <>
+                    Wheelchair-accessible. On-site parking. Served by DART, LUAS and Dublin Bus.{' '}
+                    <a
+                      href="https://crokepark.ie/meetings-events/getting-here"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent-yellow underline hover:no-underline"
+                    >
+                      Travel info →
+                    </a>
+                  </>
+                }
+              />
+            </div>
+          </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
-          {/* Croke Park Map Embed */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-grey/30 min-h-[320px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.527964232625!2d-6.249824684161057!3d53.3606949799787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9d53c0fc71%3A0x7c6c7c6c7c6c7c6c!2sCroke%20Park!5e0!3m2!1sen!2sie!4v1712420000000!5m2!1sen!2sie"
-              width="100%"
-              height="100%"
-              style={{ border: 0, minHeight: '320px' }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Croke Park, Dublin — Expo Location"
-              aria-hidden="false"
+        {/* Gallery */}
+        <Reveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {galleryImages.map((img, i) => (
+              <button
+                key={img.label}
+                type="button"
+                onClick={() => setModal(i)}
+                className="group relative aspect-square rounded-xl overflow-hidden border border-blue-grey/30 hover:border-accent-yellow/50 transition-colors"
+                aria-label={`View ${img.label}`}
+              >
+                <Image
+                  src={img.src}
+                  alt={`${img.label}, Croke Park`}
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  sizes="(min-width: 1024px) 16vw, (min-width: 768px) 32vw, 48vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-2">
+                  <span className="text-off-white text-[10px] md:text-xs font-medium block">
+                    {img.label}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </Reveal>
+      </Container>
+
+      {/* Modal */}
+      {modal !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-navy/95 backdrop-blur-sm p-4"
+          onClick={() => setModal(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${galleryImages[modal].label}, full size`}
+        >
+          <div className="relative w-full max-w-5xl aspect-[4/3]">
+            <Image
+              src={galleryImages[modal].src}
+              alt={`${galleryImages[modal].label}, Croke Park`}
+              fill
+              className="object-contain rounded-2xl"
+              sizes="90vw"
             />
           </div>
-
-          {/* Location Details */}
-          <div className="flex flex-col justify-center space-y-6">
-            <div>
-              <div className="inline-block bg-accent-yellow/20 border border-accent-yellow/40 text-accent-yellow px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                Venue Confirmed: Croke Park
-              </div>
-              <h3 className="text-2xl font-bold text-off-white mb-2">
-                Croke Park Conference Centre, Dublin
-              </h3>
-              <p className="text-off-white/70 leading-relaxed">
-                Croke Park is Ireland’s largest and most prestigious conference and events venue, located just minutes from Dublin city centre. The venue is fully wheelchair accessible, with step-free access, accessible restrooms, and priority seating. Extensive on-site parking is available, and the stadium is easily reached by public transport (DART, LUAS, and multiple Dublin Bus routes). For full travel and accessibility details, visit <a href="https://crokepark.ie/meetings-events/getting-here" target="_blank" rel="noopener noreferrer" className="underline text-accent-yellow">crokepark.ie/meetings-events/getting-here</a>.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-off-white">Sunday 27th September 2026</h4>
-                  <p className="text-off-white/60 text-sm">Register your interest to be notified first</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-off-white">Croke Park, Dublin 3</h4>
-                  <p className="text-off-white/60 text-sm">Jones' Road, Drumcondra, Dublin 3, D03 P6K7</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-off-white">Travel & Accessibility</h4>
-                  <p className="text-off-white/60 text-sm">Fully wheelchair accessible. On-site parking. Served by DART, LUAS, and Dublin Bus. See <a href="https://crokepark.ie/meetings-events/getting-here" target="_blank" rel="noopener noreferrer" className="underline text-accent-yellow">Croke Park travel info</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button
+            type="button"
+            className="absolute top-6 right-6 text-accent-yellow font-bold w-12 h-12 rounded-full border-2 border-accent-yellow/50 hover:bg-accent-yellow hover:text-navy transition-colors flex items-center justify-center text-2xl"
+            aria-label="Close"
+            onClick={() => setModal(null)}
+          >
+            ×
+          </button>
         </div>
-        <VenueGallery />
-      </Container>
+      )}
     </Section>
   );
 }
 
-// VenueGallery component for clickable images
-function VenueGallery() {
-  const images = [
-    {
-      src: '/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg',
-      label: 'Reception',
-    },
-    {
-      src: '/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg',
-      label: 'Hogan Mezzanine & Foyer',
-    },
-    {
-      src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
-      label: 'Hogan Suite',
-    },
-    {
-      src: '/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg',
-      label: 'Cusack Suite',
-    },
-    {
-      src: '/images/Field View.jpg',
-      label: 'Field View',
-    },
-    {
-      src: '/images/Small Room View.jpg',
-      label: 'Small Room View',
-    },
-  ];
-  const [modal, setModal] = useState<number|null>(null);
+function Detail({
+  icon: Icon,
+  title,
+  body,
+}: {
+  icon: typeof Calendar;
+  title: string;
+  body: React.ReactNode;
+}) {
   return (
-    <>
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {images.map((img, i) => (
-          <div
-            key={img.label}
-            className="rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
-            onClick={() => setModal(i)}
-            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setModal(i)}
-            role="button"
-            tabIndex={0}
-            aria-label={`View ${img.label}`}
-          >
-            <img src={img.src} alt={img.label + ', Croke Park'} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-200 opacity-80" style={{background: 'transparent'}} />
-          </div>
-        ))}
+    <div className="flex items-start gap-4">
+      <div className="w-10 h-10 rounded-xl bg-accent-yellow/15 border border-accent-yellow/30 flex items-center justify-center text-accent-yellow flex-shrink-0">
+        <Icon className="w-5 h-5" />
       </div>
-      {modal !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy/90 bg-opacity-90" onClick={() => setModal(null)}>
-          <img src={images[modal].src} alt={images[modal].label + ', Croke Park'} className="max-w-3xl max-h-[80vh] rounded-2xl shadow-2xl border-4 border-accent-yellow opacity-90" style={{background: 'transparent'}} />
-          <button className="absolute top-8 right-8 text-3xl text-accent-yellow font-bold" aria-label="Close" onClick={() => setModal(null)}>&times;</button>
-        </div>
-      )}
-    </>
+      <div>
+        <h4 className="font-bold text-off-white">{title}</h4>
+        <p className="text-off-white/65 text-sm mt-0.5">{body}</p>
+      </div>
+    </div>
   );
 }
-

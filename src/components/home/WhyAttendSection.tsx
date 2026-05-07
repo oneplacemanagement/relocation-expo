@@ -1,130 +1,143 @@
+import Image from 'next/image';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
+import { Reveal } from '@/components/ui/Reveal';
+import { CountUp } from '@/components/ui/CountUp';
+import {
+  Users2,
+  ShieldCheck,
+  Briefcase,
+  Lightbulb,
+  GraduationCap,
+  Wallet,
+  Quote,
+} from 'lucide-react';
+
+const cards = [
+  {
+    icon: ShieldCheck,
+    title: 'Registered Migration Advice',
+    body: 'Speak directly with registered Australian migration agents — clear, plain-English answers about visas, sponsorship and timelines.',
+  },
+  {
+    icon: Briefcase,
+    title: 'Real Sponsorship Pathways',
+    body: 'Australian employers actively recruiting now — across mining, healthcare, civil, engineering, education, IT and more.',
+  },
+  {
+    icon: Users2,
+    title: 'Hear From People Who Did It',
+    body: 'Nurses, tradies, families and engineers who already moved — what worked, what didn’t, what they wish they’d known.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Save Time, Money & Stress',
+    body: 'The shortcuts, the pitfalls, the paperwork — every common mistake, demystified by people who’ve seen it all.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Education & Upskilling',
+    body: 'Pathways to retrain, top-up qualifications or move into a higher-demand industry before you go.',
+  },
+  {
+    icon: Wallet,
+    title: 'Find Your Place in Australia',
+    body: 'State-by-state lifestyle, salary, schools and cost-of-living deep dives — find where you actually want to live.',
+  },
+];
 
 export function WhyAttendSection() {
-  // Reception image as background
-  const backgroundUrl = "/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg";
-  const benefits = [
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      title: 'Migration Advice',
-      description: 'Speak directly with migration advisors offering practical, personalised guidance',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: 'Sponsorship Pathways',
-      description: 'Explore employer sponsorship pathways across multiple industries',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      ),
-      title: 'Relocation Services',
-      description: 'Meet relocation specialists covering housing, shipping, banking, insurance, and more',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
-      title: 'Education & Training',
-      description: 'Discover education and training options for upskilling or career changes',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
-      title: 'Sponsorship Opportunities',
-      description: 'Access sponsorship opportunities in mining, construction, civil, healthcare, education, tech, IT, and more',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-        </svg>
-      ),
-      title: 'Expert Discussions',
-      description: 'Join live discussions with experts who understand the realities of relocating',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: 'Save Time & Money',
-      description: 'Learn shortcuts that save time, money, and stress',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-        </svg>
-      ),
-      title: 'Find Your Perfect Location',
-      description: 'Understand which part of Australia best suits your lifestyle, goals, and career',
-    },
-  ];
-
   return (
-    <Section
-      id="why-attend"
-      background="dark"
-      backgroundImage={backgroundUrl}
-      backgroundImageAlt="Reception, Croke Park"
-    >
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-off-white mb-4">
+    <Section id="why-attend" background="dark" className="relative overflow-hidden">
+      {/* BG layer with soft photo */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/Reception_files/b322465c4acd45df904fee502d435a56_LARGE!_!0236342884f5cc63be90595fa4e7e88f.jpeg"
+          alt=""
+          aria-hidden="true"
+          fill
+          className="object-cover opacity-15"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
+      </div>
+
+      <Container className="relative z-10">
+        <Reveal className="text-center mb-12 md:mb-16">
+          <div className="inline-block bg-accent-yellow/15 text-accent-yellow text-xs uppercase tracking-[0.18em] font-bold px-4 py-1.5 rounded-full mb-5">
             Why Attend
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-black text-off-white mb-5 leading-[1.05]">
+            Everything you need to <span className="text-accent-yellow">make the move</span> — in one day.
           </h2>
-          <p className="text-xl text-off-white/70 max-w-3xl mx-auto">
-            The one-stop relocation experience
+          <p className="text-lg md:text-xl text-off-white/70 max-w-3xl mx-auto">
+            Six reasons most attendees walk out feeling clearer, calmer, and a hell of a lot closer to actually doing it.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {benefits.map((benefit, index) => (
-            <Card key={index} hover className="h-full">
-              <div className="flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-accent-yellow/20 flex items-center justify-center text-accent-yellow mb-4">
-                  {benefit.icon}
+        {/* Stat band */}
+        <Reveal>
+          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto mb-14 md:mb-20">
+            <StatBand value={14} suffix="+" label="Confirmed exhibitors" />
+            <StatBand value={6} suffix="+" label="Industries hiring" />
+            <StatBand value={1} label="Day at Croke Park" />
+          </div>
+        </Reveal>
+
+        {/* Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          {cards.map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <Reveal key={c.title} delay={i * 0.05}>
+                <div className="group relative h-full bg-off-white/[0.03] border border-blue-grey/30 hover:border-accent-yellow/40 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-off-white/[0.05]">
+                  <div className="w-12 h-12 rounded-xl bg-accent-yellow/15 border border-accent-yellow/30 flex items-center justify-center text-accent-yellow mb-5 group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-off-white mb-2.5 leading-tight">
+                    {c.title}
+                  </h3>
+                  <p className="text-off-white/70 text-sm leading-relaxed">{c.body}</p>
                 </div>
-                <h3 className="text-lg font-bold text-off-white mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-off-white/70 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            </Card>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
 
-        <div className="text-center">
-          <Button href="https://tickets.therelocationexpo.com/events/the-relocation-expo" size="lg">
-            Buy Your Tickets Now
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Button>
-        </div>
+        {/* Editorial quote */}
+        <Reveal delay={0.15} className="mt-16 max-w-3xl mx-auto">
+          <figure className="relative bg-gradient-to-br from-accent-yellow/[0.08] to-transparent border-l-4 border-accent-yellow rounded-r-2xl p-7 md:p-10">
+            <Quote className="absolute -top-4 left-6 w-10 h-10 text-accent-yellow/70" />
+            <blockquote className="font-display text-xl md:text-2xl text-off-white leading-snug italic">
+              This isn&apos;t a generic careers fair — it&apos;s a full relocation ecosystem. Real stories. Real people. Real advice.
+            </blockquote>
+            <figcaption className="mt-4 text-off-white/60 text-sm uppercase tracking-widest">
+              — The Relocation Expo Promise
+            </figcaption>
+          </figure>
+        </Reveal>
       </Container>
     </Section>
+  );
+}
+
+function StatBand({
+  value,
+  suffix,
+  label,
+}: {
+  value: number;
+  suffix?: string;
+  label: string;
+}) {
+  return (
+    <div className="text-center">
+      <div className="font-display font-black text-4xl md:text-6xl text-accent-yellow leading-none tabular-nums">
+        <CountUp to={value} suffix={suffix} />
+      </div>
+      <div className="mt-2 text-off-white/60 text-xs md:text-sm uppercase tracking-widest">
+        {label}
+      </div>
+    </div>
   );
 }

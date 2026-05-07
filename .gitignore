@@ -17,6 +17,11 @@ node_modules
 .DS_Store
 *.pem
 
+# Sensitive data — never commit email lists or pricing docs
+bcc_emails_csv.csv
+bcc_emails_list.txt
+public/RelocationExpo2026_ExhibitorPackages.pdf
+
 # Saved web pages (may contain third-party API keys)
 public/**/*.html
 public/**/*.htm
@@ -26,9 +31,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local env files
-.env*.local
+# Local env files — catch ALL env variants
 .env
+.env.*
+!.env.example
 
 # Vercel
 .vercel

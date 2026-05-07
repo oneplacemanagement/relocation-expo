@@ -47,17 +47,13 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
     setStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'c188ed1a-81bf-43a4-a3b4-5b531128a80a';
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: accessKey,
-          botcheck: '',
-          subject: `Ticket Interest - ${formData.selectedTicket}`,
-          from_name: formData.name,
+          name: formData.name,
           email: formData.email,
+          subject: `Ticket Interest - ${formData.selectedTicket}`,
           message: [
             `Ticket Type: ${formData.selectedTicket}`,
             `Currently Based: ${formData.nationality === 'Other' ? `Other — ${formData.nationalityOther}` : formData.nationality}`,

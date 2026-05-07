@@ -1,81 +1,105 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { eventData } from '@/data/event';
+import { Mail, MapPin, Calendar } from 'lucide-react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
-  const footerLinks = {
-    navigation: [
-      { href: '/', label: 'Home' },
-      { href: '/tickets', label: 'Tickets' },
-      { href: '/exhibitors', label: 'Exhibitors' },
-      { href: '/faq', label: 'FAQ' },
-      { href: '/contact', label: 'Contact' },
-    ],
-    legal: [
-      { href: '/privacy', label: 'Privacy Policy' },
-      { href: '/terms', label: 'Terms & Conditions' },
-      { href: '/exhibitor-terms', label: 'Exhibitor Terms' },
-    ],
-  };
+  const navigation = [
+    { href: '/', label: 'Home' },
+    { href: '/tickets', label: 'Tickets' },
+    { href: '/#whos-exhibiting', label: "Who's Exhibiting?" },
+    { href: '/exhibitors', label: 'Exhibitor Directory' },
+    { href: '/exhibit', label: 'Why Exhibit?' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
+  const legal = [
+    { href: '/privacy', label: 'Privacy Policy' },
+    { href: '/terms', label: 'Terms & Conditions' },
+    { href: '/exhibitor-terms', label: 'Exhibitor Terms' },
+  ];
 
   return (
-    <footer className="bg-navy border-t border-blue-grey/20">
+    <footer className="relative bg-navy-deep border-t border-blue-grey/20 overflow-hidden">
+      {/* Subtle decorative gradient */}
+      <div
+        aria-hidden="true"
+        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-accent-yellow/[0.04] blur-3xl rounded-full pointer-events-none"
+      />
+
+      {/* Top CTA strip */}
+      <div className="relative border-b border-blue-grey/20 bg-gradient-to-r from-accent-yellow/[0.06] via-transparent to-accent-yellow/[0.06]">
+        <Container>
+          <div className="py-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-off-white leading-tight">
+                Ready to start your{' '}
+                <span className="text-accent-yellow">Australian future?</span>
+              </h3>
+              <p className="text-off-white/60 text-sm mt-1">
+                Lock in your Early Bird seat before 31 May 2026.
+              </p>
+            </div>
+            <a
+              href={eventData.tickets.single.href}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-yellow to-accent-yellow-glow text-navy font-bold px-7 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-transform"
+            >
+              Buy Tickets — From €15
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </a>
+          </div>
+        </Container>
+      </div>
+
       <Container>
-        <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* About */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/images/White--Globe-Icon.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="h-10 w-auto mix-blend-screen"
-                />
-                <img
-                  src="/images/White-Text (1).png"
-                  alt="The Relocation Expo"
-                  className="h-7 w-auto mix-blend-screen"
-                />
-              </div>
-              <p className="text-off-white/70 text-sm mb-4">
-                {eventData.description}
-              </p>
-              <p className="text-off-white/70 text-sm">
-                <strong>Date:</strong> Sunday 27th September 2026
-              </p>
-              <p className="text-off-white/70 text-sm">
-                <strong>Venue:</strong> Croke Park, Dublin
-              </p>
+        <div className="py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-3 mb-5">
+              <Image
+                src="/images/White--Globe-Icon.png"
+                alt=""
+                aria-hidden="true"
+                width={48}
+                height={48}
+                className="h-11 w-auto mix-blend-screen"
+              />
+              <Image
+                src="/images/White-Text (1).png"
+                alt="The Relocation Expo"
+                width={180}
+                height={36}
+                className="h-7 w-auto mix-blend-screen"
+              />
             </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-accent-yellow font-bold text-lg mb-4">
-                Quick Links
-              </h3>
-              <ul className="space-y-2">
-                {footerLinks.navigation.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-off-white/70 hover:text-accent-yellow transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="text-accent-yellow font-bold text-lg mb-4">
-                Contact
-              </h3>
-              <p className="text-off-white/70 text-sm mb-4">
+            <p className="text-off-white/65 text-sm max-w-md leading-relaxed mb-6">
+              {eventData.description}
+            </p>
+            <div className="space-y-2 text-sm">
+              <p className="flex items-start gap-2 text-off-white/75">
+                <Calendar className="w-4 h-4 text-accent-yellow mt-0.5 flex-shrink-0" />
+                <span>
+                  <strong className="text-off-white">Sunday 27 September 2026</strong>
+                  <span className="text-off-white/50"> · 11am–5:30pm</span>
+                </span>
+              </p>
+              <p className="flex items-start gap-2 text-off-white/75">
+                <MapPin className="w-4 h-4 text-accent-yellow mt-0.5 flex-shrink-0" />
+                <span>{eventData.address}</span>
+              </p>
+              <p className="flex items-start gap-2 text-off-white/75">
+                <Mail className="w-4 h-4 text-accent-yellow mt-0.5 flex-shrink-0" />
                 <a
                   href={`mailto:${eventData.contactEmail}`}
                   className="hover:text-accent-yellow transition-colors"
@@ -83,62 +107,104 @@ export function Footer() {
                   {eventData.contactEmail}
                 </a>
               </p>
-              {/* Social placeholders */}
-              <div className="flex space-x-4">
-                {eventData.socialLinks.facebook && (
-                  <a
-                    href={eventData.socialLinks.facebook}
-                    className="text-off-white/70 hover:text-accent-yellow transition-colors"
-                    aria-label="Facebook"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </a>
-                )}
-                {eventData.socialLinks.instagram && (
-                  <a
-                    href={eventData.socialLinks.instagram}
-                    className="text-off-white/70 hover:text-accent-yellow transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                  </a>
-                )}
-              </div>
             </div>
           </div>
 
-          {/* Disclaimer */}
-          <div className="mt-8 pt-8 border-t border-blue-grey/20">
-            <p className="text-off-white/50 text-xs mb-4">
-              {eventData.disclaimer}
-            </p>
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-              <div>
-                <p className="text-off-white/50 text-sm">
-                  © {currentYear} The Relocation Expo. All rights reserved.
-                </p>
-                <p className="text-off-white/40 text-xs mt-1">
-                  The Relocation Expo is operated by Malone Consultancy (ABN 45956177897).
-                </p>
-              </div>
-              <div className="flex space-x-4">
-                {footerLinks.legal.map((link) => (
+          {/* Nav */}
+          <div>
+            <h3 className="text-accent-yellow font-bold text-sm uppercase tracking-widest mb-4">
+              Explore
+            </h3>
+            <ul className="space-y-2.5">
+              {navigation.map((l) => (
+                <li key={l.href}>
                   <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-off-white/50 hover:text-accent-yellow transition-colors text-sm"
+                    href={l.href}
+                    className="text-off-white/70 hover:text-accent-yellow transition-colors text-sm"
                   >
-                    {link.label}
+                    {l.label}
                   </Link>
-                ))}
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Partners + visiting Dublin */}
+          <div>
+            <h3 className="text-accent-yellow font-bold text-sm uppercase tracking-widest mb-4">
+              Partners
+            </h3>
+            <ul className="space-y-2.5 text-sm mb-7">
+              <li>
+                <a
+                  href={`mailto:${eventData.partnerEmail}?subject=Exhibitor%20Package%20Enquiry`}
+                  className="text-off-white/70 hover:text-accent-yellow transition-colors"
+                >
+                  Exhibitor packages
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${eventData.partnerEmail}?subject=Media%20Enquiry`}
+                  className="text-off-white/70 hover:text-accent-yellow transition-colors"
+                >
+                  Media enquiries
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/exhibit"
+                  className="text-off-white/70 hover:text-accent-yellow transition-colors"
+                >
+                  Why Exhibit?
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className="text-accent-yellow font-bold text-sm uppercase tracking-widest mb-4">
+              Visiting Dublin
+            </h3>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <a
+                  href="https://crokepark.ie/skyline"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  className="text-off-white/70 hover:text-accent-yellow transition-colors inline-flex items-center gap-1.5"
+                >
+                  Croke Park Skyline Tour
+                  <span aria-hidden="true" className="text-[10px]">↗</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+
+        {/* Bottom row */}
+        <div className="border-t border-blue-grey/20 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs">
+          <div className="text-off-white/45">
+            <p>© {year} The Relocation Expo. All rights reserved.</p>
+            <p className="mt-1">
+              Operated by Malone Consultancy · ABN 45956177897
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {legal.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="text-off-white/55 hover:text-accent-yellow transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <p className="text-off-white/35 text-[11px] pb-6 leading-relaxed max-w-4xl">
+          {eventData.disclaimer}
+        </p>
       </Container>
     </footer>
   );

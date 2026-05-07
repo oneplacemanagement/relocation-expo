@@ -22,19 +22,13 @@ export default function ContactPage() {
     setStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'c188ed1a-81bf-43a4-a3b4-5b531128a80a';
-
-      // Simple Web3Forms API - no DNS verification needed
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: accessKey,
-          subject: formData.subject || 'New Contact Form Submission',
-          from_name: formData.name,
+          name: formData.name,
           email: formData.email,
+          subject: formData.subject,
           message: formData.message,
         }),
       });
@@ -42,8 +36,8 @@ export default function ContactPage() {
       const result = await response.json();
 
       if (!response.ok || result.success === false) {
-        console.error('Web3Forms error:', result);
-        throw new Error(result.message || 'Failed to send message');
+        console.error('Contact form error:', result);
+        throw new Error(result.error || 'Failed to send message');
       }
 
       setStatus('success');
