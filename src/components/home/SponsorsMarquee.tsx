@@ -14,12 +14,12 @@ export function SponsorsMarquee() {
   const loop = [...sponsors, ...sponsors];
   return (
     <section
-      aria-label="Confirmed exhibitors"
+      aria-label="Exhibitors"
       className="relative bg-navy-deep border-y border-blue-grey/20 py-9 overflow-hidden"
     >
       <div className="text-center mb-7">
         <p className="text-xs uppercase tracking-[0.22em] text-accent-yellow font-bold">
-          {sponsors.length} confirmed exhibitors — and counting
+          Confirmed Exhibitors
         </p>
       </div>
       <div className="relative">

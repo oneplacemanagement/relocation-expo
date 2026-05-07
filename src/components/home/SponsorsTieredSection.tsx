@@ -6,23 +6,12 @@ import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
-import {
-  sponsorsByTier,
-  tierMeta,
-  TIER_ORDER,
-  type Sponsor,
-  type SponsorTier,
-} from '@/data/sponsors';
+import { sponsorsByTier, sponsors, type Sponsor } from '@/data/sponsors';
 
-/** Tier still drives the colour of the card top-border so hierarchy reads at a glance. */
-const tierAccent: Record<SponsorTier, string> = {
-  Sponsor: 'border-t-4 border-accent-yellow',
-  Platinum: 'border-t-2 border-accent-yellow/60',
-  Gold: 'border-t-2 border-amber-400/50',
-  Digital: 'border-t border-blue-grey/40',
-};
-
-function SponsorCard({ s, accent }: { s: Sponsor; accent: string }) {
+function SponsorCard({ s, highlighted }: { s: Sponsor; highlighted?: boolean }) {
+  const accent = highlighted
+    ? 'border-t-4 border-accent-yellow'
+    : 'border-t border-blue-grey/40';
   const inner = (
     <div
       className={`group relative bg-off-white/5 hover:bg-off-white/10 border border-blue-grey/30 hover:border-accent-yellow/50 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(239,197,68,0.25)] h-full ${accent}`}
@@ -63,7 +52,7 @@ function SponsorCard({ s, accent }: { s: Sponsor; accent: string }) {
         href={s.website}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${s.name} — visit website`}
+        aria-label={`${s.name} - visit website`}
         className="block h-full"
       >
         {inner}
@@ -74,10 +63,9 @@ function SponsorCard({ s, accent }: { s: Sponsor; accent: string }) {
 }
 
 export function SponsorsTieredSection() {
-  const totalCount = TIER_ORDER.reduce(
-    (acc, t) => acc + sponsorsByTier[t].length,
-    0,
-  );
+  const headlineSponsors = sponsorsByTier['Sponsor'];
+  const exhibitors = sponsors.filter((s) => s.tier !== 'Sponsor');
+
   return (
     <Section id="whos-exhibiting" background="navy" className="relative">
       <div
@@ -87,45 +75,53 @@ export function SponsorsTieredSection() {
       <Container>
         <Reveal className="text-center mb-14">
           <div className="inline-block bg-accent-yellow/15 text-accent-yellow text-xs uppercase tracking-[0.18em] font-bold px-4 py-1.5 rounded-full mb-5">
-            {totalCount} Confirmed Exhibitors
+            Confirmed Exhibitors
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-black text-off-white mb-4 leading-tight">
             Who&apos;s <span className="text-accent-yellow">Exhibiting</span>?
           </h2>
           <p className="text-lg md:text-xl text-off-white/70 max-w-2xl mx-auto">
-            The companies hiring you in Australia. Real Aussie employers, migration specialists and relocation partners — confirmed for 2026, with new names joining every week.
+            The companies hiring you in Australia. Real Aussie employers, migration specialists and relocation partners - confirmed for 2026, with new names joining every week.
           </p>
         </Reveal>
 
-        <div className="space-y-16">
-          {TIER_ORDER.map((tier) => {
-            const list = sponsorsByTier[tier];
-            if (list.length === 0) return null;
-            const meta = tierMeta[tier];
-            return (
-              <Reveal key={tier} className="space-y-6">
-                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
-                  <h3 className="text-accent-yellow font-display text-2xl md:text-3xl font-bold tracking-tight">
-                    {meta.label}
-                  </h3>
-                  <div className="h-px flex-1 mx-4 bg-gradient-to-r from-accent-yellow/40 via-blue-grey/30 to-transparent hidden md:block" />
-                  <span className="text-off-white/40 text-xs font-semibold uppercase tracking-widest">
-                    {list.length} {list.length === 1 ? 'partner' : 'partners'}
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-                  {list.map((s) => (
-                    <SponsorCard key={s.id} s={s} accent={tierAccent[tier]} />
-                  ))}
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
+        {/* Headline Sponsors */}
+        {headlineSponsors.length > 0 && (
+          <Reveal className="space-y-6 mb-16">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+              <h3 className="text-accent-yellow font-display text-2xl md:text-3xl font-bold tracking-tight">
+                Headline Sponsors
+              </h3>
+              <div className="h-px flex-1 mx-4 bg-gradient-to-r from-accent-yellow/40 via-blue-grey/30 to-transparent hidden md:block" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {headlineSponsors.map((s) => (
+                <SponsorCard key={s.id} s={s} highlighted />
+              ))}
+            </div>
+          </Reveal>
+        )}
+
+        {/* All other exhibitors - flat grid, no tier labels */}
+        {exhibitors.length > 0 && (
+          <Reveal className="space-y-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+              <h3 className="text-off-white font-display text-2xl md:text-3xl font-bold tracking-tight">
+                Exhibitors
+              </h3>
+              <div className="h-px flex-1 mx-4 bg-gradient-to-r from-blue-grey/30 to-transparent hidden md:block" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {exhibitors.map((s) => (
+                <SponsorCard key={s.id} s={s} />
+              ))}
+            </div>
+          </Reveal>
+        )}
 
         <Reveal className="text-center mt-16" delay={0.1}>
           <p className="text-off-white/70 mb-6 text-base md:text-lg">
-            Want to join them and reach a sponsorship-ready audience from Ireland &amp; the UK?
+            Want to join them and reach a sponsorship-ready audience from Ireland and the UK?
           </p>
           <Button href="/exhibit" size="lg" variant="outline">
             Why Exhibit?

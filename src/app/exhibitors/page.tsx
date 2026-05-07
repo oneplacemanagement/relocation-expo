@@ -3,12 +3,7 @@ import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
-import {
-  sponsorsByTier,
-  tierMeta,
-  TIER_ORDER,
-  type Sponsor,
-} from '@/data/sponsors';
+import { sponsorsByTier, sponsors, type Sponsor } from '@/data/sponsors';
 import { ExternalLink } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -20,6 +15,9 @@ export const metadata: Metadata = {
 };
 
 export default function ExhibitorsPage() {
+  const headlineSponsors = sponsorsByTier['Sponsor'];
+  const exhibitors = sponsors.filter((s) => s.tier !== 'Sponsor');
+
   return (
     <>
       <Section className="pt-32 md:pt-40 pb-12" background="navy">
@@ -40,38 +38,47 @@ export default function ExhibitorsPage() {
         </Container>
       </Section>
 
-      {TIER_ORDER.map((tier, idx) => {
-        const list = sponsorsByTier[tier];
-        if (!list.length) return null;
-        const meta = tierMeta[tier];
-        return (
-          <Section
-            key={tier}
-            background={idx % 2 === 0 ? 'dark' : 'navy'}
-            className="py-14"
-          >
-            <Container>
-              <Reveal className="mb-8">
-                <h2 className="font-display text-3xl md:text-4xl font-black text-accent-yellow mb-1">
-                  {meta.label}
-                </h2>
-                <p className="text-off-white/60 text-sm">
-                  {list.length} {list.length === 1 ? 'partner' : 'partners'}
-                </p>
-              </Reveal>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-                {list.map((s) => (
-                  <Reveal key={s.id}>
-                    <ExhibitorCard sponsor={s} />
-                  </Reveal>
-                ))}
-              </div>
-            </Container>
-          </Section>
-        );
-      })}
+      {/* Headline Sponsors */}
+      {headlineSponsors.length > 0 && (
+        <Section background="dark" className="py-14">
+          <Container>
+            <Reveal className="mb-8">
+              <h2 className="font-display text-3xl md:text-4xl font-black text-accent-yellow mb-1">
+                Headline Sponsors
+              </h2>
+            </Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {headlineSponsors.map((s) => (
+                <Reveal key={s.id}>
+                  <ExhibitorCard sponsor={s} isSponsor />
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
 
-      <Section background="navy" className="py-20">
+      {/* All other exhibitors - flat grid */}
+      {exhibitors.length > 0 && (
+        <Section background="navy" className="py-14">
+          <Container>
+            <Reveal className="mb-8">
+              <h2 className="font-display text-3xl md:text-4xl font-black text-off-white mb-1">
+                Exhibitors
+              </h2>
+            </Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {exhibitors.map((s) => (
+                <Reveal key={s.id}>
+                  <ExhibitorCard sponsor={s} />
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      <Section background="dark" className="py-20">
         <Container size="md">
           <div className="bg-gradient-to-br from-accent-yellow/[0.08] to-transparent border border-accent-yellow/30 rounded-3xl p-8 md:p-12 text-center">
             <h2 className="font-display text-3xl md:text-4xl font-black text-off-white mb-3">
@@ -90,9 +97,9 @@ export default function ExhibitorsPage() {
   );
 }
 
-function ExhibitorCard({ sponsor }: { sponsor: Sponsor }) {
+function ExhibitorCard({ sponsor, isSponsor }: { sponsor: Sponsor; isSponsor?: boolean }) {
   const card = (
-    <div className="group h-full bg-off-white/[0.04] border border-blue-grey/30 hover:border-accent-yellow/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-off-white/[0.06]">
+    <div className={`group h-full bg-off-white/[0.04] border border-blue-grey/30 hover:border-accent-yellow/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-off-white/[0.06] ${isSponsor ? 'border-t-4 border-t-accent-yellow' : ''}`}>
       <div
         className={`relative h-32 md:h-36 mb-5 rounded-lg flex items-center justify-center ${
           sponsor.hasBackground ? 'bg-white p-3' : ''
@@ -120,16 +127,11 @@ function ExhibitorCard({ sponsor }: { sponsor: Sponsor }) {
           {sponsor.industry}
         </p>
       )}
-      <div className="flex items-center justify-between mt-2">
-        <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-accent-yellow bg-accent-yellow/10 px-2.5 py-1 rounded-full">
-          {sponsor.tier}
+      {sponsor.website && (
+        <span className="flex items-center gap-1 text-accent-yellow/70 group-hover:text-accent-yellow text-[11px] font-semibold uppercase tracking-widest transition-colors mt-2">
+          View More <ExternalLink className="w-3 h-3" />
         </span>
-        {sponsor.website && (
-          <span className="flex items-center gap-1 text-accent-yellow/70 group-hover:text-accent-yellow text-[11px] font-semibold uppercase tracking-widest transition-colors">
-            View More <ExternalLink className="w-3 h-3" />
-          </span>
-        )}
-      </div>
+      )}
     </div>
   );
 
@@ -139,7 +141,7 @@ function ExhibitorCard({ sponsor }: { sponsor: Sponsor }) {
         href={sponsor.website}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${sponsor.name} — visit website`}
+        aria-label={`${sponsor.name} - visit website`}
       >
         {card}
       </a>

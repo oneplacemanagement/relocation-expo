@@ -14,7 +14,7 @@ const galleryImages = [
   },
   {
     src: '/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg',
-    label: 'Hogan Mezzanine & Foyer',
+    label: 'Hogan Mezzanine',
   },
   {
     src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
@@ -22,7 +22,7 @@ const galleryImages = [
   },
   {
     src: '/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg',
-    label: 'Cusack Suite',
+    label: 'Davin Suite',
   },
   { src: '/images/Field View.jpg', label: 'Field View' },
   { src: '/images/Small Room View.jpg', label: 'Small Room View' },

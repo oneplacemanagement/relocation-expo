@@ -52,7 +52,7 @@ export function CrokeParkVideoSection() {
               {[
                 'Wheelchair-accessible across all suites',
                 'On-site parking + DART, LUAS, Dublin Bus',
-                'Hogan, Cusack & Mezzanine suites — all reserved',
+                'Hogan Suite and Mezzanine, Davin Suite and Nally Suite',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg

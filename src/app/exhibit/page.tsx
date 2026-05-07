@@ -5,7 +5,6 @@ import { Reveal } from '@/components/ui/Reveal';
 import { CountUp } from '@/components/ui/CountUp';
 import { Button } from '@/components/ui/Button';
 import { eventData } from '@/data/event';
-import { sponsors } from '@/data/sponsors';
 import {
   Users2,
   Award,
@@ -151,8 +150,8 @@ export default function ExhibitPage() {
                 </Button>
               </div>
               <div className="grid grid-cols-3 gap-3 max-w-md">
-                <Stat value={sponsors.length} suffix="+" label="Confirmed" />
                 <Stat value={6} suffix="+" label="Industries" />
+                <Stat value={4} label="Suites" />
                 <Stat value={1} label="Day" />
               </div>
             </Reveal>
@@ -161,7 +160,7 @@ export default function ExhibitPage() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg"
-                  alt="Cusack Suite at Croke Park — exhibitor space"
+                  alt="Exhibitor suite at Croke Park"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
@@ -173,7 +172,7 @@ export default function ExhibitPage() {
                       Exhibitor Suites
                     </div>
                     <p className="text-off-white font-display text-xl font-bold">
-                      Hogan, Cusack &amp; Mezzanine — fully reserved
+                      Hogan Suite and Mezzanine, Davin Suite and Nally Suite
                     </p>
                   </div>
                 </div>
@@ -285,7 +284,7 @@ export default function ExhibitPage() {
 
           <Reveal className="text-center mt-10">
             <p className="text-off-white/45 text-xs">
-              All packages include access to the Cusack Suite at Croke Park, Wi-Fi, power, and event-day staffing. Ask us for the full pack including pricing.
+              All packages include access to venue suites at Croke Park, Wi-Fi, power, and event-day staffing. Ask us for the full pack including pricing.
             </p>
           </Reveal>
         </Container>

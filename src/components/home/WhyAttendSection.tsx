@@ -78,9 +78,9 @@ export function WhyAttendSection() {
         {/* Stat band */}
         <Reveal>
           <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto mb-14 md:mb-20">
-            <StatBand value={14} suffix="+" label="Confirmed exhibitors" />
             <StatBand value={6} suffix="+" label="Industries hiring" />
             <StatBand value={1} label="Day at Croke Park" />
+            <StatBand value={4} label="Venue suites" />
           </div>
         </Reveal>
 

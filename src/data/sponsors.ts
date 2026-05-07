@@ -105,7 +105,7 @@ export const sponsors: Sponsor[] = [
   {
     id: 'aussieos-global-mobility',
     name: 'AussieOS Global Mobility',
-    tier: 'Sponsor',
+    tier: 'Platinum',
     logo: '/sponsors/aussieos-global-mobility.png',
     website: 'https://www.aussieos.com.au',
     industry: 'Relocation Services',
@@ -113,7 +113,7 @@ export const sponsors: Sponsor[] = [
   {
     id: 'cailin-mining',
     name: 'Cailin Mining & Civil',
-    tier: 'Sponsor',
+    tier: 'Gold',
     logo: '/sponsors/cailin-mining-mark.svg',
     website: 'https://www.cailinminingcivil.com',
     industry: 'Mining & Civil Training',

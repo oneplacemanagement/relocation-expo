@@ -9,7 +9,6 @@ import { Container } from '@/components/ui/Container';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { CountUp } from '@/components/ui/CountUp';
 import { eventData } from '@/data/event';
-import { sponsors } from '@/data/sponsors';
 
 const HERO_POSTER =
   '/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg';
@@ -222,8 +221,8 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.55 }}
               className="grid grid-cols-3 gap-3 md:gap-6 max-w-2xl mx-auto mb-12"
             >
-              <Stat value={sponsors.length} suffix="+" label="Exhibitors" />
               <Stat value={6} suffix="+" label="Industries" />
+              <Stat value={1} label="Day Only" />
               <Stat prefix="€" value={15} label="From" />
             </motion.div>
 
