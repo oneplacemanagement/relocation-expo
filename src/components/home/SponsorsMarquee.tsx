@@ -26,27 +26,26 @@ export function SponsorsMarquee() {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-navy-deep to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-navy-deep to-transparent z-10" />
 
-        <div className="flex w-max gap-12 animate-marquee-slow hover:[animation-play-state:paused]">
+        <div className="flex w-max gap-10 animate-marquee-slow hover:[animation-play-state:paused]">
           {loop.map((s, i) => (
             <div
               key={`${s.id}-${i}`}
-              className="flex items-center justify-center gap-3 h-20 md:h-24 min-w-[200px] md:min-w-[240px]"
+              className="flex items-center justify-center gap-3"
               title={s.name}
             >
               <div
-                className={`relative h-full flex items-center justify-center flex-shrink-0 ${
+                className={`relative flex items-center justify-center flex-shrink-0 w-[180px] h-[80px] md:w-[220px] md:h-[96px] rounded-xl ${
                   s.hasBackground
-                    ? 'bg-white rounded-xl px-4 py-2'
-                    : 'opacity-90 hover:opacity-100 transition-opacity'
+                    ? 'bg-white'
+                    : 'bg-transparent'
                 }`}
-                style={{ width: s.markOnly ? '64px' : '100%' }}
               >
                 <Image
                   src={s.logo}
                   alt={`${s.name} logo`}
-                  width={220}
-                  height={96}
-                  className="object-contain max-h-14 md:max-h-16 w-auto"
+                  width={240}
+                  height={120}
+                  className="object-contain max-h-16 md:max-h-20 max-w-[160px] md:max-w-[200px]"
                   unoptimized={s.logo.endsWith('.svg')}
                 />
               </div>

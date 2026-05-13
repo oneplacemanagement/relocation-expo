@@ -41,6 +41,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/innovent-engineering.png',
     website: 'https://innoventeng.com',
     industry: 'Engineering',
+    hasBackground: true,
   },
   {
     id: 'edmc',
@@ -70,6 +71,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/workforce-training-group.jpg',
     website: 'https://workforcetraining.com.au',
     industry: 'Training & Upskilling',
+    hasBackground: true,
   },
 
   // ─── SPONSOR ──────────────────────────────────────────────────────────
@@ -114,6 +116,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/aussieos-global-mobility.png',
     website: 'https://www.aussieos.com.au',
     industry: 'Relocation Services',
+    hasBackground: true,
   },
   {
     id: 'cailin-mining',
@@ -134,6 +137,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/labour-wave.png',
     website: 'https://labourwave.com.au',
     industry: 'Mechanical, Fabrication & Labour Hire',
+    hasBackground: true,
   },
   {
     id: 'journee-agency',

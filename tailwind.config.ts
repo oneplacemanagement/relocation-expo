@@ -43,7 +43,7 @@ const config: Config = {
       animation: {
         'ken-burns': 'ken-burns 18s ease-in-out infinite alternate',
         marquee: 'marquee 40s linear infinite',
-        'marquee-slow': 'marquee 70s linear infinite',
+        'marquee-slow': 'marquee 40s linear infinite',
         'fade-up': 'fade-up 0.7s ease-out both',
         shimmer: 'shimmer 2s ease-in-out infinite',
       },
