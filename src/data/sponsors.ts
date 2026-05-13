@@ -99,9 +99,10 @@ export const sponsors: Sponsor[] = [
     id: 'kilmore-group',
     name: 'Kilmore Group',
     tier: 'Sponsor',
-    logo: '/sponsors/kilmore-group.svg',
+    logo: '/sponsors/kilmore-group.jpg',
     website: 'https://kilmoregroup.com.au',
     industry: 'Construction & Remediation',
+    hasBackground: true,
   },
   {
     id: 'long-reach-recruitment',
@@ -110,6 +111,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/long-reach-recruitment.svg',
     website: 'https://www.longreachrecruitment.com.au',
     industry: 'Property & Construction Recruitment',
+    hasBackground: true,
   },
   {
     id: 'aussieos-global-mobility',
@@ -146,7 +148,7 @@ export const sponsors: Sponsor[] = [
     id: 'journee-agency',
     name: 'Journee Agency',
     tier: 'Digital',
-    logo: '/sponsors/journee-agency.jpg',
+    logo: '/sponsors/journee-agency.png',
     website: 'https://www.journeeagency.com',
     industry: 'Perth Relocation Specialists',
     hasBackground: true,
