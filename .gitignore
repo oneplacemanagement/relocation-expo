@@ -38,7 +38,7 @@ yarn-error.log*
 
 # Source logo assets — keep out of repo
 Logos/
-Logos 2/
+Logos */
 *.zip
 
 # Vercel

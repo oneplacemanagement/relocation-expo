@@ -30,30 +30,41 @@ export function SponsorsMarquee() {
           {loop.map((s, i) => (
             <div
               key={`${s.id}-${i}`}
-              className="flex items-center justify-center gap-3"
+              className="flex items-center justify-center"
               title={s.name}
             >
               <div
-                className={`relative flex items-center justify-center flex-shrink-0 w-[180px] h-[80px] md:w-[220px] md:h-[96px] rounded-xl ${
-                  s.hasBackground
-                    ? 'bg-white'
-                    : 'bg-transparent'
-                }`}
+                className={`flex items-center justify-center flex-shrink-0 w-[180px] h-[80px] md:w-[220px] md:h-[96px] rounded-xl overflow-hidden ${
+                  s.hasBackground ? 'bg-white' : 'bg-transparent'
+                } ${s.markOnly ? 'gap-2 px-3' : ''}`}
               >
-                <Image
-                  src={s.logo}
-                  alt={`${s.name} logo`}
-                  width={240}
-                  height={120}
-                  className="object-contain max-h-16 md:max-h-20 max-w-[160px] md:max-w-[200px]"
-                  unoptimized={s.logo.endsWith('.svg')}
-                />
+                {s.markOnly ? (
+                  <>
+                    <Image
+                      src={s.logo}
+                      alt={`${s.name} logo`}
+                      width={60}
+                      height={60}
+                      className="object-contain h-[50px] md:h-[60px] w-auto flex-shrink-0"
+                      unoptimized={s.logo.endsWith('.svg')}
+                      style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
+                    />
+                    <span className="text-navy font-bold text-xs md:text-sm leading-tight text-center">
+                      Cailin Mining<br />&amp;<br />Civil
+                    </span>
+                  </>
+                ) : (
+                  <Image
+                    src={s.logo}
+                    alt={`${s.name} logo`}
+                    width={240}
+                    height={120}
+                    className="object-contain max-h-16 md:max-h-20 max-w-[160px] md:max-w-[200px]"
+                    unoptimized={s.logo.endsWith('.svg')}
+                    style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
+                  />
+                )}
               </div>
-              {s.markOnly && (
-                <span className="text-off-white/85 text-sm md:text-base font-semibold whitespace-nowrap">
-                  {s.name}
-                </span>
-              )}
             </div>
           ))}
         </div>

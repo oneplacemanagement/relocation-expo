@@ -51,6 +51,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://www.edmcgroup.com',
     industry: 'Mining & Civil Maintenance',
     hasBackground: true,
+    logoScale: 1.5,
   },
 
   // ─── GOLD ─────────────────────────────────────────────────────────────
@@ -62,7 +63,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://a-1engineering.com.au',
     industry: 'Engineering',
     hasBackground: true,
-    logoScale: 1.35,
+    logoScale: 1.8,
   },
   {
     id: 'workforce-training-group',
@@ -83,6 +84,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://www.sevenmigration.com.au',
     industry: 'Migration & Visas',
     hasBackground: true,
+    logoScale: 1.5,
   },
   {
     id: 'westforce-construction',
@@ -127,6 +129,7 @@ export const sponsors: Sponsor[] = [
     industry: 'Mining & Civil Training',
     markOnly: true,
     hasBackground: true,
+    logoScale: 1.2,
   },
 
   // ─── DIGITAL ──────────────────────────────────────────────────────────
@@ -147,6 +150,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://www.journeeagency.com',
     industry: 'Perth Relocation Specialists',
     hasBackground: true,
+    logoScale: 1.5,
   },
   {
     id: 'kemmy-construction',

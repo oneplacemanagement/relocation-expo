@@ -21,8 +21,8 @@ const galleryImages = [
     label: 'Hogan Suite',
   },
   {
-    src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
-    label: 'Hogan Suite (Setup)',
+    src: '/images/croke-park-events-suite.png',
+    label: 'Events Suite',
   },
   { src: '/images/Field View.jpg', label: 'Field View' },
   { src: '/images/Small Room View.jpg', label: 'Small Room View' },
@@ -85,7 +85,7 @@ export function VenueSection() {
                   <>
                     Wheelchair-accessible. On-site parking. Served by DART, LUAS and Dublin Bus.{' '}
                     <a
-                      href="https://crokepark.ie/meetings-events/getting-here"
+                      href="https://crokepark.ie/Getting-Here"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent-yellow underline hover:no-underline"
