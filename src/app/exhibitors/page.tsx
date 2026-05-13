@@ -47,7 +47,7 @@ export default function ExhibitorsPage() {
                 Headline Sponsors
               </h2>
             </Reveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
               {headlineSponsors.map((s) => (
                 <Reveal key={s.id}>
                   <ExhibitorCard sponsor={s} isSponsor />
@@ -67,7 +67,7 @@ export default function ExhibitorsPage() {
                 Exhibitors
               </h2>
             </Reveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
               {exhibitors.map((s) => (
                 <Reveal key={s.id}>
                   <ExhibitorCard sponsor={s} />

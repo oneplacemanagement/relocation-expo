@@ -95,7 +95,7 @@ export function SponsorsTieredSection() {
               </h3>
               <div className="h-px flex-1 mx-4 bg-gradient-to-r from-accent-yellow/40 via-blue-grey/30 to-transparent hidden md:block" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
               {headlineSponsors.map((s) => (
                 <SponsorCard key={s.id} s={s} highlighted />
               ))}
@@ -112,7 +112,7 @@ export function SponsorsTieredSection() {
               </h3>
               <div className="h-px flex-1 mx-4 bg-gradient-to-r from-blue-grey/30 to-transparent hidden md:block" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
               {exhibitors.map((s) => (
                 <SponsorCard key={s.id} s={s} />
               ))}

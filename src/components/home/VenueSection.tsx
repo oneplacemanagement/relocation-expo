@@ -117,11 +117,6 @@ export function VenueSection() {
                   className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   sizes="(min-width: 1024px) 16vw, (min-width: 768px) 32vw, 48vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-2">
-                  <span className="text-off-white text-[10px] md:text-xs font-medium block">
-                    {img.label}
-                  </span>
-                </div>
               </button>
             ))}
           </div>

@@ -139,9 +139,10 @@ export const sponsors: Sponsor[] = [
     id: 'journee-agency',
     name: 'Journee Agency',
     tier: 'Digital',
-    logo: '/sponsors/journee-agency.png',
+    logo: '/sponsors/journee-agency.jpg',
     website: 'https://www.journeeagency.com',
     industry: 'Perth Relocation Specialists',
+    hasBackground: true,
   },
   {
     id: 'kemmy-construction',
