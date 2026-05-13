@@ -166,7 +166,7 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-off-white mb-5 leading-[0.95] tracking-tight"
             >
-              Move to Australia.
+              Moving to Australia?
               <br />
               <span className="bg-gradient-to-r from-accent-yellow via-accent-yellow-glow to-accent-yellow bg-clip-text text-transparent">
                 Start at Croke Park.
@@ -219,9 +219,8 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="grid grid-cols-3 gap-3 md:gap-6 max-w-2xl mx-auto mb-12"
+              className="grid grid-cols-2 gap-3 md:gap-6 max-w-md mx-auto mb-12"
             >
-              <Stat value={6} suffix="+" label="Industries" />
               <Stat value={1} label="Day Only" />
               <Stat prefix="€" value={15} label="From" />
             </motion.div>

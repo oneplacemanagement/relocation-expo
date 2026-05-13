@@ -112,6 +112,7 @@ function ExhibitorCard({ sponsor, isSponsor }: { sponsor: Sponsor; isSponsor?: b
           className="object-contain p-2"
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw"
           unoptimized={sponsor.logo.endsWith('.svg')}
+          style={sponsor.logoScale ? { transform: `scale(${sponsor.logoScale})` } : undefined}
         />
       </div>
       <div className="flex items-start justify-between gap-3 mb-1">

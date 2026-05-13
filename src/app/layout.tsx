@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Relocation Expo 2026 | Croke Park, Dublin',
     description:
-      "Move to Australia. Start at Croke Park. Sunday 27th September 2026 — meet employers, migration agents, and relocation experts in one day.",
+      "Moving to Australia? Start at Croke Park. Sunday 27th September 2026 — meet employers, migration agents, and relocation experts in one day.",
     images: ['/og-image.jpg'],
   },
   robots: {

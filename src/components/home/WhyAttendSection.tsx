@@ -71,16 +71,14 @@ export function WhyAttendSection() {
             Everything you need to <span className="text-accent-yellow">make the move</span> — in one day.
           </h2>
           <p className="text-lg md:text-xl text-off-white/70 max-w-3xl mx-auto">
-            Six reasons most attendees walk out feeling clearer, calmer, and a hell of a lot closer to actually doing it.
+            Here&apos;s why most attendees leave feeling clearer, more confident, and genuinely closer to making it happen.
           </p>
         </Reveal>
 
         {/* Stat band */}
         <Reveal>
-          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto mb-14 md:mb-20">
-            <StatBand value={6} suffix="+" label="Industries hiring" />
+          <div className="flex justify-center mb-14 md:mb-20">
             <StatBand value={1} label="Day at Croke Park" />
-            <StatBand value={4} label="Venue suites" />
           </div>
         </Reveal>
 
@@ -104,12 +102,13 @@ export function WhyAttendSection() {
           })}
         </div>
 
-        {/* Editorial quote */}
+        {/* Tagline callout */}
         <Reveal delay={0.15} className="mt-16 max-w-3xl mx-auto">
           <figure className="relative bg-gradient-to-br from-accent-yellow/[0.08] to-transparent border-l-4 border-accent-yellow rounded-r-2xl p-7 md:p-10">
             <Quote className="absolute -top-4 left-6 w-10 h-10 text-accent-yellow/70" />
-            <blockquote className="font-display text-xl md:text-2xl text-off-white leading-snug italic">
-              This isn&apos;t a generic careers fair — it&apos;s a full relocation ecosystem. Real stories. Real people. Real advice.
+            <blockquote className="font-display text-2xl md:text-3xl text-off-white leading-snug font-bold">
+              Real People. Real Stories.{' '}
+              <span className="text-accent-yellow">Real Opportunities.</span>
             </blockquote>
             <figcaption className="mt-4 text-off-white/60 text-sm uppercase tracking-widest">
               — The Relocation Expo Promise

@@ -18,7 +18,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Exhibit',
   description:
-    "Real People. Real Stories. Real Opportunities. Reach Irish & UK talent ready to relocate to Australia at Ireland's first one-stop relocation event — Croke Park, 27 September 2026.",
+    "Connect with thousands of Irish & UK professionals ready to relocate to Australia at Ireland's first one-stop relocation event — Croke Park, 27 September 2026.",
   alternates: { canonical: '/exhibit' },
 };
 
@@ -127,11 +127,8 @@ export default function ExhibitPage() {
                 Why Exhibit?
               </div>
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-off-white mb-6 leading-[1.02]">
-                Real People.
-                <br />
-                Real Stories.
-                <br />
-                <span className="text-accent-yellow">Real Opportunities.</span>
+                Connect With Thousands{' '}
+                <span className="text-accent-yellow">Ready to Relocate.</span>
               </h1>
               <p className="text-lg md:text-xl text-off-white/80 mb-4 leading-relaxed">
                 <span className="text-accent-yellow font-semibold">
@@ -149,9 +146,7 @@ export default function ExhibitPage() {
                   See Packages
                 </Button>
               </div>
-              <div className="grid grid-cols-3 gap-3 max-w-md">
-                <Stat value={6} suffix="+" label="Industries" />
-                <Stat value={4} label="Suites" />
+              <div className="flex gap-6 max-w-md">
                 <Stat value={1} label="Day" />
               </div>
             </Reveal>
@@ -159,8 +154,8 @@ export default function ExhibitPage() {
             <Reveal delay={0.1}>
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg"
-                  alt="Exhibitor suite at Croke Park"
+                  src="/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg"
+                  alt="Hogan Suite at Croke Park - exhibitor space"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"

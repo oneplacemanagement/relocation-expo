@@ -21,8 +21,8 @@ const galleryImages = [
     label: 'Hogan Suite',
   },
   {
-    src: '/images/Cusack Suite_files/154e82724ae04cbeabecea3a6ad660a1_LARGE!_!5e2be352b35c4fefb22cc5998309d3ee.jpeg',
-    label: 'Davin Suite',
+    src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
+    label: 'Hogan Suite (Setup)',
   },
   { src: '/images/Field View.jpg', label: 'Field View' },
   { src: '/images/Small Room View.jpg', label: 'Small Room View' },

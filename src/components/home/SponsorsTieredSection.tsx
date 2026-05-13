@@ -28,6 +28,7 @@ function SponsorCard({ s, highlighted }: { s: Sponsor; highlighted?: boolean }) 
           className="object-contain p-2"
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw"
           unoptimized={s.logo.endsWith('.svg')}
+          style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
         />
       </div>
       <div className="mt-5 text-center">

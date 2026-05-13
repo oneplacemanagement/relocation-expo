@@ -19,6 +19,8 @@ export interface Sponsor {
   hasBackground?: boolean;
   /** Logo is a mark / icon only (no readable company name in the artwork). Marquee will render the name as a caption beside it. */
   markOnly?: boolean;
+  /** Scale multiplier for logos that need to be displayed larger (e.g. 1.3 = 130%) */
+  logoScale?: number;
 }
 
 export const sponsors: Sponsor[] = [
@@ -59,6 +61,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://a-1engineering.com.au',
     industry: 'Engineering',
     hasBackground: true,
+    logoScale: 1.35,
   },
   {
     id: 'workforce-training-group',
@@ -77,6 +80,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/seven-migration.png',
     website: 'https://www.sevenmigration.com.au',
     industry: 'Migration & Visas',
+    hasBackground: true,
   },
   {
     id: 'westforce-construction',
@@ -85,6 +89,7 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/westforce-construction.png',
     website: 'https://westforce.com.au',
     industry: 'Construction',
+    hasBackground: true,
   },
   {
     id: 'kilmore-group',
@@ -118,6 +123,7 @@ export const sponsors: Sponsor[] = [
     website: 'https://www.cailinminingcivil.com',
     industry: 'Mining & Civil Training',
     markOnly: true,
+    hasBackground: true,
   },
 
   // ─── DIGITAL ──────────────────────────────────────────────────────────
