@@ -126,12 +126,10 @@ export const sponsors: Sponsor[] = [
     id: 'cailin-mining',
     name: 'Cailin Mining & Civil',
     tier: 'Gold',
-    logo: '/sponsors/cailin-mining-mark.svg',
+    logo: '/sponsors/cailin-mining.png',
     website: 'https://www.cailinminingcivil.com',
     industry: 'Mining & Civil Training',
-    markOnly: true,
     hasBackground: true,
-    logoScale: 1.2,
   },
 
   // ─── DIGITAL ──────────────────────────────────────────────────────────

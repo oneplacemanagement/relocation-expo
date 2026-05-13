@@ -17,7 +17,7 @@ function SponsorCard({ s, highlighted }: { s: Sponsor; highlighted?: boolean }) 
       className={`group relative bg-off-white/5 hover:bg-off-white/10 border border-blue-grey/30 hover:border-accent-yellow/50 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(239,197,68,0.25)] h-full ${accent}`}
     >
       <div
-        className={`relative w-full h-40 md:h-44 flex items-center justify-center ${
+        className={`relative w-full h-40 md:h-44 flex items-center justify-center overflow-hidden ${
           s.hasBackground ? 'bg-white rounded-xl p-4' : ''
         }`}
       >
@@ -25,10 +25,9 @@ function SponsorCard({ s, highlighted }: { s: Sponsor; highlighted?: boolean }) 
           src={s.logo}
           alt={`${s.name} logo`}
           fill
-          className="object-contain p-2"
+          className={`object-contain ${s.logoScale ? 'p-1' : 'p-2'}`}
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw"
           unoptimized={s.logo.endsWith('.svg')}
-          style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
         />
       </div>
       <div className="mt-5 text-center">

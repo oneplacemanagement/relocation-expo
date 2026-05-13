@@ -47,7 +47,6 @@ export function SponsorsMarquee() {
                       height={60}
                       className="object-contain h-[50px] md:h-[60px] w-auto flex-shrink-0"
                       unoptimized={s.logo.endsWith('.svg')}
-                      style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
                     />
                     <span className="text-navy font-bold text-xs md:text-sm leading-tight text-center">
                       Cailin Mining<br />&amp;<br />Civil
@@ -59,9 +58,12 @@ export function SponsorsMarquee() {
                     alt={`${s.name} logo`}
                     width={240}
                     height={120}
-                    className="object-contain max-h-16 md:max-h-20 max-w-[160px] md:max-w-[200px]"
+                    className={`object-contain ${
+                      s.logoScale
+                        ? 'max-h-[72px] md:max-h-[88px] max-w-[170px] md:max-w-[210px]'
+                        : 'max-h-16 md:max-h-20 max-w-[160px] md:max-w-[200px]'
+                    }`}
                     unoptimized={s.logo.endsWith('.svg')}
-                    style={s.logoScale ? { transform: `scale(${s.logoScale})` } : undefined}
                   />
                 )}
               </div>

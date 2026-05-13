@@ -101,7 +101,7 @@ function ExhibitorCard({ sponsor, isSponsor }: { sponsor: Sponsor; isSponsor?: b
   const card = (
     <div className={`group h-full bg-off-white/[0.04] border border-blue-grey/30 hover:border-accent-yellow/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-off-white/[0.06] ${isSponsor ? 'border-t-4 border-t-accent-yellow' : ''}`}>
       <div
-        className={`relative h-32 md:h-36 mb-5 rounded-lg flex items-center justify-center ${
+        className={`relative h-32 md:h-36 mb-5 rounded-lg flex items-center justify-center overflow-hidden ${
           sponsor.hasBackground ? 'bg-white p-3' : ''
         }`}
       >
@@ -109,10 +109,9 @@ function ExhibitorCard({ sponsor, isSponsor }: { sponsor: Sponsor; isSponsor?: b
           src={sponsor.logo}
           alt={`${sponsor.name} logo`}
           fill
-          className="object-contain p-2"
+          className={`object-contain ${sponsor.logoScale ? 'p-1' : 'p-2'}`}
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 90vw"
           unoptimized={sponsor.logo.endsWith('.svg')}
-          style={sponsor.logoScale ? { transform: `scale(${sponsor.logoScale})` } : undefined}
         />
       </div>
       <div className="flex items-start justify-between gap-3 mb-1">
