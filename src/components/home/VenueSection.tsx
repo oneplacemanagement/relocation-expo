@@ -17,10 +17,6 @@ const galleryImages = [
     label: 'Hogan Mezzanine',
   },
   {
-    src: '/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg',
-    label: 'Hogan Suite',
-  },
-  {
     src: '/images/croke-park-events-suite.png',
     label: 'Events Suite',
   },
@@ -85,7 +81,7 @@ export function VenueSection() {
                   <>
                     Wheelchair-accessible. On-site parking. Served by DART, LUAS and Dublin Bus.{' '}
                     <a
-                      href="https://crokepark.ie/Getting-Here"
+                      href="https://crokepark.ie/getting-here"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent-yellow underline hover:no-underline"
@@ -101,7 +97,7 @@ export function VenueSection() {
 
         {/* Gallery */}
         <Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {galleryImages.map((img, i) => (
               <button
                 key={img.label}
