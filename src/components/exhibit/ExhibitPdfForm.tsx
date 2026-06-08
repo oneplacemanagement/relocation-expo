@@ -14,21 +14,21 @@ export function ExhibitPdfForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const payload = {
-      name: data.get('name') as string,
-      email: data.get('email') as string,
-      subject: 'Exhibitor Pack PDF Download Request',
-      message: `PDF Download Request\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nCompany: ${data.get('company') || 'Not provided'}\n\nPlease send the Exhibitor Packages PDF.`,
-      honeypot: data.get('honeypot') as string,
-    };
-
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          access_key: 'c188ed1a-81bf-43a4-a3b4-5b531128a80a',
+          subject: 'Exhibitor Pack PDF Download Request',
+          from_name: data.get('name') as string,
+          email: data.get('email') as string,
+          message: `PDF Download Request\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nCompany: ${data.get('company') || 'Not provided'}\n\nPlease send the Exhibitor Packages PDF.`,
+          botcheck: data.get('honeypot') as string,
+        }),
       });
-      if (!res.ok) throw new Error('Submission failed');
+      const result = await res.json();
+      if (!result.success) throw new Error('Submission failed');
       setStatus('success');
       form.reset();
     } catch {
