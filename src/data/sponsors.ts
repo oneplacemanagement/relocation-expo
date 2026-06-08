@@ -132,6 +132,34 @@ export const sponsors: Sponsor[] = [
     hasBackground: true,
   },
 
+  {
+    id: 'train-and-retain',
+    name: 'Train & Retain',
+    tier: 'Gold',
+    logo: '/sponsors/train-and-retain.png',
+    website: 'https://trainandretain.com.au',
+    industry: 'Apprentice & Trainee Management',
+    hasBackground: true,
+  },
+  {
+    id: 'hlh-group',
+    name: 'HLH Group',
+    tier: 'Gold',
+    logo: '/sponsors/hlh-group.png',
+    website: 'https://www.hunterlabourhire.com.au',
+    industry: 'Construction Labour Hire',
+    hasBackground: true,
+  },
+  {
+    id: 'tradie-pass',
+    name: 'Tradie Pass',
+    tier: 'Gold',
+    logo: '/sponsors/tradie-pass.png',
+    website: 'https://www.tradiepass.com.au',
+    industry: 'Trade Compliance & Licensing',
+    hasBackground: true,
+  },
+
   // ─── DIGITAL ──────────────────────────────────────────────────────────
   {
     id: 'labour-wave',
