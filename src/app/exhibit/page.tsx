@@ -245,15 +245,31 @@ export default function ExhibitPage() {
 
             <Reveal delay={0.1}>
               <div className="flex justify-center">
-                <div className="w-full max-w-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-blue-grey/30">
-                  <iframe
-                    src="https://www.tiktok.com/embed/v2/7626386051665284360"
-                    className="w-full h-full"
-                    allowFullScreen
-                    allow="encrypted-media"
-                    title="TikTok relocation content"
-                  />
-                </div>
+                <a
+                  href="https://www.tiktok.com/@operatortrainingperth/video/7626386051665284360"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative w-full max-w-[320px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-blue-grey/30 bg-gradient-to-br from-navy-deep to-navy block"
+                >
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
+                    <div className="w-20 h-20 rounded-full bg-accent-yellow/90 group-hover:bg-accent-yellow flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110">
+                      <svg className="w-8 h-8 text-navy ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <div className="text-center px-6">
+                      <p className="text-off-white font-bold text-base">Watch on TikTok</p>
+                      <p className="text-off-white/60 text-xs mt-1">630K+ views</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy to-blue-grey/30 opacity-80" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 z-10">
+                    <svg className="w-5 h-5 text-off-white/80" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.88 2.89 2.89 0 01-2.88-2.88 2.89 2.89 0 012.88-2.88c.28 0 .55.04.81.1v-3.5a6.37 6.37 0 00-.81-.05A6.34 6.34 0 003.15 15.6a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.26a8.28 8.28 0 004.76 1.5v-3.4a4.85 4.85 0 01-1-.67z" />
+                    </svg>
+                    <span className="text-off-white/70 text-xs">@operatortrainingperth</span>
+                  </div>
+                </a>
               </div>
             </Reveal>
           </div>
