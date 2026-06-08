@@ -77,7 +77,7 @@ export const faqs: FAQ[] = [
         'Meet employers who are actively hiring right now',
         'Discuss 482 sponsorship pathways and long‑term career options',
         'Explore roles across mining, construction, civil, healthcare, education, tech, IT, trades, engineering, and more',
-        'Speak directly with recruiters who understand the Irish skillset and are ready to match you with opportunities',
+        'Speak directly with recruiters who are ready to match you with opportunities in Australia',
         'Attend industry‑specific sessions where employers outline exact skills they need and how to stand out',
         'Join job‑matching conversations designed to help you take the next step',
         'Learn what salaries, rosters, benefits, and lifestyle packages look like across different states',

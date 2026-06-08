@@ -121,7 +121,7 @@ export function SponsorsTieredSection() {
 
         <Reveal className="text-center mt-16" delay={0.1}>
           <p className="text-off-white/70 mb-6 text-base md:text-lg">
-            Want to join them and reach a sponsorship-ready audience from Ireland and the UK?
+            Want to join them and reach a motivated, relocation-ready audience?
           </p>
           <Button href="/exhibit" size="lg" variant="outline">
             Why Exhibit?
