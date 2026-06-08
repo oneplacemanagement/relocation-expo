@@ -25,7 +25,7 @@ export default function PrivacyPage() {
 
               <section>
                 <p>
-                  The Relocation Expo is operated by Malone Consultancy (ABN 45956177897) ("we," "us," or "our") and is committed
+                  The Relocation Expo is operated by Malone Consultancy WA Pty Ltd (ABN 14697839642) ("we," "us," or "our") and is committed
                   to protecting your privacy and handling your personal information responsibly.
                 </p>
                 <p className="mt-3">This Privacy Policy explains how we collect, use, store, disclose, and protect your personal
@@ -223,7 +223,7 @@ export default function PrivacyPage() {
                   please contact us at:
                 </p>
                 <p className="mt-3">
-                  <strong>Operated by:</strong> Malone Consultancy (ABN 45956177897)<br />
+                  <strong>Operated by:</strong> Malone Consultancy WA Pty Ltd (ABN 14697839642)<br />
                   <strong>Brand:</strong> The Relocation Expo<br />
                   <strong>Email:</strong>{' '}
                   <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow underline hover:no-underline">

@@ -204,8 +204,8 @@ export default function ContactPage() {
                       🏢 Organiser
                     </h3>
                     <p className="text-off-white/70">
-                      Malone Consultancy<br />
-                      ABN 45956177897
+                      Malone Consultancy WA Pty Ltd<br />
+                      ABN 14697839642
                     </p>
                   </div>
 

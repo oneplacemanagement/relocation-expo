@@ -29,7 +29,7 @@ export default function TermsPage() {
                   1. Acceptance of Terms
                 </h2>
                 <p className="mb-3">
-                  These Terms &amp; Conditions apply to The Relocation Expo, operated by Malone Consultancy (ABN 45956177897).
+                  These Terms &amp; Conditions apply to The Relocation Expo, operated by Malone Consultancy WA Pty Ltd (ABN 14697839642).
                 </p>
                 <p>
                   By registering for and/or attending The Relocation Expo, you agree to be bound by these
@@ -194,7 +194,7 @@ export default function TermsPage() {
                   For questions about these Terms and Conditions, please contact:
                 </p>
                 <p className="mt-3">
-                  <strong>Operated by:</strong> Malone Consultancy (ABN 45956177897)<br />
+                  <strong>Operated by:</strong> Malone Consultancy WA Pty Ltd (ABN 14697839642)<br />
                   <strong>Brand:</strong> The Relocation Expo<br />
                   <strong>Email:</strong>{' '}
                   <a href={`mailto:${eventData.contactEmail}`} className="text-accent-yellow underline hover:no-underline">

@@ -20,7 +20,6 @@ export function Footer() {
   const legal = [
     { href: '/privacy', label: 'Privacy Policy' },
     { href: '/terms', label: 'Terms & Conditions' },
-    { href: '/exhibitor-terms', label: 'Exhibitor Terms' },
   ];
 
   return (
@@ -185,7 +184,7 @@ export function Footer() {
           <div className="text-off-white/45">
             <p>© {year} The Relocation Expo. All rights reserved.</p>
             <p className="mt-1">
-              Operated by Malone Consultancy · ABN 45956177897
+              Operated by Malone Consultancy WA Pty Ltd · ABN 14697839642
             </p>
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
