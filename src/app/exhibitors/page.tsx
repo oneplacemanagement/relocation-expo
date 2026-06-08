@@ -67,9 +67,9 @@ export default function ExhibitorsPage() {
                 Exhibitors
               </h2>
             </Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-5">
               {exhibitors.map((s) => (
-                <Reveal key={s.id}>
+                <Reveal key={s.id} className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.875rem)] lg:w-[calc(20%-1rem)]">
                   <ExhibitorCard sponsor={s} />
                 </Reveal>
               ))}
