@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Buy Tickets',
   description:
-    'Single €15, Couple €25, Family €35. Buy your Early Bird tickets for The Relocation Expo 2026 at Croke Park, Dublin. Limited availability.',
+    'Single €15, Couple €25, Family €35. Buy your tickets for The Relocation Expo 2026 at Croke Park, Dublin. Limited availability.',
   alternates: { canonical: '/tickets' },
 };
 
@@ -21,10 +21,10 @@ export default function TicketsPage() {
         <Container size="md">
           <div className="text-center">
             <div className="inline-block bg-accent-yellow/15 text-accent-yellow text-xs uppercase tracking-[0.2em] font-bold px-4 py-1.5 rounded-full mb-5">
-              Early Bird Tickets
+              Buy Tickets
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-black text-off-white mb-5 leading-[1.05]">
-              Lock in your seat at <span className="text-accent-yellow">Early Bird pricing</span>.
+              Secure your seat at <span className="text-accent-yellow">Croke Park</span>.
             </h1>
             <p className="text-lg text-off-white/75 max-w-2xl mx-auto mb-8">
               Sunday 27th September 2026 · Croke Park, Dublin. Three ticket types — pick the one that fits.
@@ -69,7 +69,7 @@ export default function TicketsPage() {
               Can&apos;t buy online?
             </h3>
             <p className="text-off-white/70 text-sm md:text-base">
-              Walk-in tickets are limited on the day at the door (cash only, subject to availability) — and priced higher than Early Bird. We strongly recommend buying online to save money, guarantee your spot and skip the queue.
+              Walk-in tickets are limited on the day at the door (cash only, subject to availability) — and priced higher than online. We strongly recommend buying online to save money, guarantee your spot and skip the queue.
             </p>
           </div>
         </Container>

@@ -9,9 +9,9 @@ interface InterestModalProps {
 }
 
 const TICKET_OPTIONS = [
-  { label: 'Single — €15', value: 'Early Bird Single - €15' },
-  { label: 'Couple — €25', value: 'Early Bird Couple - €25' },
-  { label: 'Family Pass — €35 (2 adults + 3 children)', value: 'Early Bird Family Pass - €35' },
+  { label: 'Single — €15', value: 'Single - €15' },
+  { label: 'Couple — €25', value: 'Couple - €25' },
+  { label: 'Family Pass — €35 (2 adults + 3 children)', value: 'Family Pass - €35' },
 ];
 
 function deriveTicketValue(ticketType: string): string {
@@ -276,7 +276,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
                   disabled={isSubmitting}
                 />
                 <label htmlFor="consentMarketing" className="text-sm text-navy leading-snug cursor-pointer">
-                  I consent to The Relocation Expo storing my details so I can be contacted regarding early bird ticket release, event updates, and important announcements relating to the expo. <span className="text-red-500">*</span>
+                  I consent to The Relocation Expo storing my details so I can be contacted regarding ticket availability, event updates, and important announcements relating to the expo. <span className="text-red-500">*</span>
                 </label>
               </div>
 
@@ -297,7 +297,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
 
               {/* Form note */}
               <p className="text-xs text-muted-grey leading-relaxed border-t border-muted-grey/20 pt-3">
-                This is an expression of interest only and does not guarantee ticket availability. By submitting this form, you will be added to our priority list for early bird ticket release and important updates. Please review our{' '}
+                This is an expression of interest only and does not guarantee ticket availability. By submitting this form, you will be added to our list for ticket updates and important announcements. Please review our{' '}
                 <a href="/privacy" className="underline hover:text-navy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
               </p>
 

@@ -13,7 +13,7 @@ const ticketUrl = (
   const params = new URLSearchParams({
     utm_source: 'site',
     utm_medium: 'cta',
-    utm_campaign: 'earlybird-2026',
+    utm_campaign: 'tickets-2026',
     utm_content: utmContent,
   });
   if (variant) params.set('ticket', variant);
@@ -43,7 +43,7 @@ export const eventData = {
   partnerEmail: 'partner@therelocationexpo.com',
   registrationLink: '/tickets',
   freeEntry: false,
-  /** Early-bird pricing ends — used by CountdownTimer */
+  /** Kept for reference; early-bird period has expired */
   earlyBirdEndsISO: '2026-05-31T23:59:00+01:00',
   ticketUrl: TICKET_BASE,
   primaryCTA: {

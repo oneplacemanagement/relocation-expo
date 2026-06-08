@@ -29,7 +29,7 @@ export function StickyMobileCTA() {
       <div className="mx-3 mb-3 rounded-2xl bg-navy/95 backdrop-blur-md border border-accent-yellow/40 shadow-2xl flex items-center justify-between px-4 py-3 gap-3">
         <div className="flex flex-col leading-tight">
           <span className="text-off-white font-bold text-sm">From €15</span>
-          <span className="text-off-white/60 text-[11px]">Early Bird tickets</span>
+          <span className="text-off-white/60 text-[11px]">From €15</span>
         </div>
         <Link
           href={eventData.tickets.single.href}

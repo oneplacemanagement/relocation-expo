@@ -31,7 +31,7 @@ export function LiveChatWidget() {
     } else if (question.includes('job opportunities')) {
       response = "Yes! Australian employers attending are recruiting now and many are visa sponsors. Bring your CV and be ready to talk about your skills and experience. 💼";
     } else if (question.includes('door')) {
-      response = "Yes, Walk-In tickets will be available at the door (cash only) on the day. However, they're more expensive than Early Bird tickets (€15-35). Early Bird tickets launch 1st May 2026 — register your interest now! 🎟️";
+      response = "Yes, Walk-In tickets will be available at the door (cash only) on the day. However, they're more expensive than online tickets (€15-35). We recommend buying online to guarantee your spot and skip the queue! 🎟️";
     }
     
     setTimeout(() => {

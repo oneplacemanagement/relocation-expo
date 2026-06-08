@@ -64,7 +64,7 @@ export default function PrivacyPage() {
                 <p className="mb-3">We may use your personal information for the following purposes:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>To process and manage your expression of interest, event registration, or ticket purchase</li>
-                  <li>To contact you regarding early bird ticket release, event updates, schedule changes, and important announcements</li>
+                  <li>To contact you regarding ticket availability, event updates, schedule changes, and important announcements</li>
                   <li>To provide information relevant to your relocation or employment interests</li>
                   <li>To improve our website, event planning, communications, and future offerings</li>
                   <li>To manage customer service enquiries and respond to questions submitted through our website or social channels</li>
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Consent</strong> — where you have given us permission to contact you or use your information for a
-                    specific purpose (for example, joining our early bird list or opting in to exhibitor contact)</li>
+                    specific purpose (for example, registering interest or opting in to exhibitor contact)</li>
                   <li><strong>Contract</strong> — where processing is necessary to fulfil a contract with you (for example,
                     ticket purchases or event attendance)</li>
                   <li><strong>Legitimate Interests</strong> — where processing is necessary for our legitimate business interests
@@ -124,10 +124,10 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">6. Data Retention</h2>
                 <p>
                   We retain your personal information only for as long as reasonably necessary to fulfil the purposes outlined
-                  in this Privacy Policy, including managing event enquiries, early bird registrations, ticketing, communications,
+                  in this Privacy Policy, including managing event enquiries, registrations, ticketing, communications,
                   and post-event administration, unless a longer retention period is required or permitted by law.
                 </p>
-                <p className="mt-3">If you register your interest for early bird tickets or updates, we may retain your information until:</p>
+                <p className="mt-3">If you register your interest for tickets or updates, we may retain your information until:</p>
                 <ul className="list-disc pl-6 space-y-1 mt-2">
                   <li>you unsubscribe from communications</li>
                   <li>you request deletion of your information</li>

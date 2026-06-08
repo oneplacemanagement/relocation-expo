@@ -41,7 +41,7 @@ export function Footer() {
                 <span className="text-accent-yellow">Australian future?</span>
               </h3>
               <p className="text-off-white/60 text-sm mt-1">
-                Lock in your Early Bird seat before 31 May 2026.
+                Tickets on sale now — limited availability.
               </p>
             </div>
             <a

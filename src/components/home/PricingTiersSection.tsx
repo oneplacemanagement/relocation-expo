@@ -26,13 +26,13 @@ export function PricingTiersSection() {
       <Container>
         <Reveal className="text-center mb-12 relative">
           <div className="inline-block bg-accent-yellow/15 text-accent-yellow text-xs uppercase tracking-[0.18em] font-bold px-4 py-1.5 rounded-full mb-5">
-            Early Bird Pricing — Limited Time
+            Tickets
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-black text-off-white mb-5 leading-[1.05]">
             One Day. <span className="text-accent-yellow">Three Ways</span> to Be There.
           </h2>
           <p className="text-lg md:text-xl text-off-white/70 max-w-2xl mx-auto">
-            Pick the ticket that fits — every option includes full-day access, all stages, and migration clinics. Buy now to lock in early-bird pricing before 31 May.
+            Pick the ticket that fits — every option includes full-day access, all stages, and migration clinics.
           </p>
         </Reveal>
 
