@@ -23,7 +23,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Exhibit',
   description:
-    "Connect with hundreds of Irish & UK professionals ready to relocate to Australia at Ireland's first one-stop relocation event — Croke Park, 27 September 2026.",
+    "Connect with hundreds of professionals ready to relocate to Australia at Ireland's first one-stop relocation event — Croke Park, 27 September 2026.",
   alternates: { canonical: '/exhibit' },
 };
 
@@ -141,7 +141,7 @@ export default function ExhibitPage() {
                 </span>
               </p>
               <p className="text-base md:text-lg text-off-white/75 mb-8 leading-relaxed">
-                The Relocation Expo brings together Irish and UK talent ready to move, Australian employers hungry for skills, and industry experts who make relocation seamless. Real conversations. Real connections. Real hiring pipelines.
+                The Relocation Expo brings together talent ready to move, Australian employers hungry for skills, and industry experts who make relocation seamless. Real conversations. Real connections. Real hiring pipelines.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
                 <Button href="#enquiry" size="lg">
@@ -307,8 +307,8 @@ export default function ExhibitPage() {
                 icon={<MapPin className="w-6 h-6" />}
                 title="Location"
                 points={[
-                  'Primarily Ireland-based',
-                  'UK-based professionals',
+                  'Local and international attendees',
+                  'Professionals ready to relocate',
                   'Returning Australians',
                   'Dual citizens and PR holders',
                   'Partners & families relocating together',

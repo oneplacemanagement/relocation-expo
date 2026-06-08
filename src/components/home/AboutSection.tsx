@@ -10,7 +10,7 @@ const POINTS = [
   },
   {
     title: 'Registered migration experts',
-    body: 'Plain-English visa advice from agents who specialise in the Ireland & UK to Australia pathway.',
+    body: 'Plain-English visa advice from agents who specialise in the relocation pathway to Australia.',
   },
   {
     title: 'Real stories, no sales pitch',

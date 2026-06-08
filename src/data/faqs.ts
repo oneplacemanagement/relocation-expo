@@ -37,7 +37,7 @@ export const faqs: FAQ[] = [
       { type: 'paragraph', text: 'Yes — throughout the entire event, you\'ll have access to migration advice clinics run by registered, experienced migration professionals. These aren\'t generic information desks; they\'re real one‑to‑one conversations where you can ask specific questions about your situation and get clear, practical guidance.' },
       { type: 'paragraph', text: 'Across the day, you\'ll be able to:' },
       { type: 'list', items: [
-        'Speak directly with registered migration agents who understand the Irish/UK–to–Australia pathway',
+        'Speak directly with registered migration agents who understand the relocation pathway to Australia',
         'Get clarity on visa options, eligibility, timelines, and costs',
         'Understand how employer sponsorship works and what you need to prepare',
         'Ask about family visas, partner visas, skilled visas, and regional pathways',

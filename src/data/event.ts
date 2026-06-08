@@ -109,7 +109,7 @@ export const eventData = {
   },
   /** SEO-friendly description (kept tight) */
   description:
-    'The Relocation Expo brings Australia’s leading employers, registered migration agents, and relocation specialists to Croke Park, Dublin — one day, one roof, all the answers for Irish and UK people moving to Australia.',
+    'The Relocation Expo brings Australia’s leading employers, registered migration agents, and relocation specialists to Croke Park, Dublin — one day, one roof, all the answers for people moving to Australia.',
   disclaimer:
     'Information provided at The Relocation Expo is general in nature and does not constitute legal advice. Always confirm visa requirements and eligibility with licensed migration agents or legal professionals.',
   /** YouTube video ID for the Croke Park aerial section (also used as ambient hero bg). */
