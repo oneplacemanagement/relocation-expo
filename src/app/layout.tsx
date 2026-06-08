@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | The Relocation Expo',
   },
   description:
-    "Australia's leading employers, registered migration agents, and relocation specialists — all under one roof at Croke Park, Dublin, on Sunday 27th September 2026.",
+    "Australia's leading employers, registered migration agents, and relocation specialists - all under one roof at Croke Park, Dublin, on Sunday 27th September 2026.",
   keywords: [
     'relocation expo',
     'move to Australia',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Relocation Expo 2026',
     description:
-      "Australia's leading employers, registered migration agents, and relocation specialists — all under one roof at Croke Park, Dublin, on Sunday 27th September 2026.",
+      "Australia's leading employers, registered migration agents, and relocation specialists - all under one roof at Croke Park, Dublin, on Sunday 27th September 2026.",
     type: 'website',
     locale: 'en_IE',
     siteName: 'The Relocation Expo',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'The Relocation Expo — Sunday 27th September 2026 at Croke Park, Dublin',
+        alt: 'The Relocation Expo - Sunday 27th September 2026 at Croke Park, Dublin',
       },
     ],
   },
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Relocation Expo 2026 | Croke Park, Dublin',
     description:
-      "Moving to Australia? Start at Croke Park. Sunday 27th September 2026 — meet employers, migration agents, and relocation experts in one day.",
+      "Moving to Australia? Start at Croke Park. Sunday 27th September 2026 - meet employers, migration agents, and relocation experts in one day.",
     images: ['/og-image.jpg'],
   },
   robots: {

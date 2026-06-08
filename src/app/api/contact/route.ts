@@ -11,7 +11,7 @@ interface Body {
   email?: string;
   subject?: string;
   message?: string;
-  /** honeypot — bots fill this, humans don't */
+  /** honeypot - bots fill this, humans don't */
   honeypot?: string;
 }
 
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
   const { name, email, subject, message, honeypot } = body;
 
   if (honeypot) {
-    // Silent success — fool the bot
+    // Silent success - fool the bot
     return NextResponse.json({ success: true });
   }
 

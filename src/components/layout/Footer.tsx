@@ -41,14 +41,14 @@ export function Footer() {
                 <span className="text-accent-yellow">Australian future?</span>
               </h3>
               <p className="text-off-white/60 text-sm mt-1">
-                Tickets on sale now — limited availability.
+                Tickets on sale now - limited availability.
               </p>
             </div>
             <a
               href={eventData.tickets.single.href}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-yellow to-accent-yellow-glow text-navy font-bold px-7 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-transform"
             >
-              Buy Tickets — From €15
+              Buy Tickets - From €15
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
@@ -91,7 +91,7 @@ export function Footer() {
                 <Calendar className="w-4 h-4 text-accent-yellow mt-0.5 flex-shrink-0" />
                 <span>
                   <strong className="text-off-white">Sunday 27 September 2026</strong>
-                  <span className="text-off-white/50"> · 11am–5:30pm</span>
+                  <span className="text-off-white/50"> · 11am-5:30pm</span>
                 </span>
               </p>
               <p className="flex items-start gap-2 text-off-white/75">

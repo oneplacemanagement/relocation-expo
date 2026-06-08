@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 
 /**
  * Thin animated progress bar fixed under the header. Gives the site
- * a premium "we know what we're at" feel — visitors see exactly how much
+ * a premium "we know what we're at" feel - visitors see exactly how much
  * content is below them.
  */
 export function ScrollProgress() {

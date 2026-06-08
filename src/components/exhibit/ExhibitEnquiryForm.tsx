@@ -17,7 +17,7 @@ export function ExhibitEnquiryForm() {
     const payload = {
       name: data.get('name') as string,
       email: data.get('email') as string,
-      subject: `Exhibitor Enquiry — ${data.get('company')}`,
+      subject: `Exhibitor Enquiry - ${data.get('company')}`,
       message: `Company: ${data.get('company')}\nIndustry: ${data.get('industry')}\nMessage: ${data.get('message') || 'N/A'}`,
       honeypot: data.get('honeypot') as string,
     };

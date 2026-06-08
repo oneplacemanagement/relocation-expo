@@ -23,7 +23,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Exhibit',
   description:
-    "Connect with hundreds of professionals ready to relocate to Australia at the first one-stop relocation event — Croke Park, 27 September 2026.",
+    "Connect with hundreds of professionals ready to relocate to Australia at the first one-stop relocation event - Croke Park, 27 September 2026.",
   alternates: { canonical: '/exhibit' },
 };
 
@@ -41,7 +41,7 @@ const reasons = [
   {
     icon: Layers3,
     title: 'One Powerful Hiring Pipeline',
-    body: 'Healthcare to trades, engineering to tech — broad motivated audience.',
+    body: 'Healthcare to trades, engineering to tech - broad motivated audience.',
   },
   {
     icon: HeartHandshake,
@@ -55,9 +55,9 @@ const packages = [
     id: 'sponsor',
     name: 'Sponsor',
     tagline: 'Maximum Impact',
-    blurb: 'Headline partner — main stage, corner booth, branded everywhere.',
+    blurb: 'Headline partner - main stage, corner booth, branded everywhere.',
     perks: [
-      'Corner Booth — two open sides',
+      'Corner Booth - two open sides',
       'Main Stage speaking slot',
       'Social media brand promotion',
       'Industry-Relevant Partner title across branding, screens & social channels',
@@ -99,7 +99,7 @@ const packages = [
     id: 'digital',
     name: 'Digital',
     tagline: 'Online Exposure',
-    blurb: 'No physical presence — featured across digital channels only.',
+    blurb: 'No physical presence - featured across digital channels only.',
     perks: [
       'No physical presence needed',
       'Logo on Expo website',
@@ -225,7 +225,7 @@ export default function ExhibitPage() {
                 <span className="text-accent-yellow">630,000+ views</span> on relocation content and counting.
               </h2>
               <p className="text-off-white/75 text-base md:text-lg leading-relaxed mb-6">
-                Our audience is actively consuming Australian relocation content. This isn&apos;t cold outreach — these are people deep in the decision process, researching visas, jobs, and logistics right now.
+                Our audience is actively consuming Australian relocation content. This isn&apos;t cold outreach - these are people deep in the decision process, researching visas, jobs, and logistics right now.
               </p>
               <ul className="space-y-3 text-off-white/80 text-sm">
                 <li className="flex items-start gap-2.5">
@@ -234,7 +234,7 @@ export default function ExhibitPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-accent-yellow flex-shrink-0 mt-0.5" />
-                  <span>Highly engaged audience — 80%+ watch-through rates</span>
+                  <span>Highly engaged audience - 80%+ watch-through rates</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-accent-yellow flex-shrink-0 mt-0.5" />
@@ -260,7 +260,7 @@ export default function ExhibitPage() {
         </Container>
       </Section>
 
-      {/* WHO'S ATTENDING — ATTENDEE PERSONA */}
+      {/* WHO'S ATTENDING - ATTENDEE PERSONA */}
       <Section background="dark" className="py-16 md:py-20">
         <Container>
           <Reveal className="text-center mb-12">
@@ -271,7 +271,7 @@ export default function ExhibitPage() {
               Who&apos;s in the room on the day?
             </h2>
             <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-              Qualified candidates who are actively exploring relocation to Australia — not casual browsers.
+              Qualified candidates who are actively exploring relocation to Australia - not casual browsers.
             </p>
           </Reveal>
 
@@ -298,7 +298,7 @@ export default function ExhibitPage() {
                   'Ready to speak with employers',
                   'Visa-eligible or visa-aware',
                   'Decision-makers (individuals & families)',
-                  'Timeline: next 6–18 months',
+                  'Timeline: next 6-18 months',
                 ]}
               />
             </Reveal>
@@ -362,7 +362,7 @@ export default function ExhibitPage() {
         </Container>
       </Section>
 
-      {/* WHY EXHIBIT — PDF reasons */}
+      {/* WHY EXHIBIT - PDF reasons */}
       <Section background="dark" className="relative">
         <Container>
           <Reveal className="text-center mb-12">
@@ -397,7 +397,7 @@ export default function ExhibitPage() {
         </Container>
       </Section>
 
-      {/* PACKAGES — PDF perks, no pricing */}
+      {/* PACKAGES - PDF perks, no pricing */}
       <Section id="packages" background="navy">
         <Container>
           <Reveal className="text-center mb-12">
@@ -408,7 +408,7 @@ export default function ExhibitPage() {
               Four ways to be part of the day.
             </h2>
             <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-              Pricing is allocated on a first-come basis and shared on enquiry. Limited stands — particularly in prime locations — remain.
+              Pricing is allocated on a first-come basis and shared on enquiry. Limited stands - particularly in prime locations - remain.
             </p>
           </Reveal>
 

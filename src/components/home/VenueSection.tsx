@@ -72,7 +72,7 @@ export function VenueSection() {
                 </p>
               </div>
 
-              <Detail icon={Calendar} title="Sunday 27 September 2026" body="11:00am – 5:30pm · One day only" />
+              <Detail icon={Calendar} title="Sunday 27 September 2026" body="11:00am - 5:30pm · One day only" />
               <Detail icon={MapPin} title="Croke Park, Dublin 3" body="Jones' Road, Drumcondra, Dublin 3, D03 P6K7" />
               <Detail
                 icon={Train}

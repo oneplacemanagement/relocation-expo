@@ -2,7 +2,7 @@ import Script from 'next/script';
 
 /**
  * Loads Google Analytics 4 + Meta Pixel only when env vars are present.
- * Keeps cookie/consent flow simple — these load after page hydration so
+ * Keeps cookie/consent flow simple - these load after page hydration so
  * the Cookie Banner can disable them in future via a global flag.
  */
 export function Analytics() {

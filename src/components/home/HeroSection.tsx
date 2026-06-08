@@ -76,7 +76,7 @@ export function HeroSection() {
         style={{ y: imgY }}
         aria-hidden="true"
       >
-        {/* Video layer sits behind the poster — revealed as poster fades.
+        {/* Video layer sits behind the poster - revealed as poster fades.
             Over-scaled 140 % in each axis so YouTube's title, watermark
             and pause/skip chrome all fall outside the visible crop. */}
         {showVideo && (
@@ -103,7 +103,7 @@ export function HeroSection() {
           </div>
         )}
 
-        {/* Poster — fades + scales down once video is confirmed playing,
+        {/* Poster - fades + scales down once video is confirmed playing,
             creating the "phase-out / narrowing" reveal the user requested. */}
         <div
           className="absolute inset-0 transition-all duration-[2500ms] ease-[cubic-bezier(0.4,0,0.2,1)] origin-center"
@@ -179,7 +179,7 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="text-lg md:text-2xl text-off-white/85 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Australia&apos;s leading employers, registered migration agents, and relocation specialists — all under one roof, for one unforgettable day.
+              Australia&apos;s leading employers, registered migration agents, and relocation specialists - all under one roof, for one unforgettable day.
             </motion.p>
 
             <motion.div
@@ -192,7 +192,7 @@ export function HeroSection() {
                 href={eventData.tickets.single.href}
                 className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-yellow to-accent-yellow-glow hover:to-accent-yellow text-navy font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                Buy Tickets — From €15
+                Buy Tickets - From €15
                 <svg
                   className="w-5 h-5 transition-transform group-hover:translate-x-1"
                   fill="none"

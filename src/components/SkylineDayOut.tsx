@@ -24,7 +24,7 @@ interface SkylineDayOutProps {
 
 /**
  * "Make a day of it" cross-sell to the Croke Park Skyline Tour.
- * Always presented as a *bonus* — never above our own Expo CTAs.
+ * Always presented as a *bonus* - never above our own Expo CTAs.
  */
 export function SkylineDayOut({ variant = 'teaser' }: SkylineDayOutProps) {
   if (variant === 'compact') {
@@ -41,7 +41,7 @@ export function SkylineDayOut({ variant = 'teaser' }: SkylineDayOutProps) {
             Climb 17 storeys above the pitch
           </h3>
           <p className="text-off-white/70 text-sm leading-relaxed">
-            Already coming to Dublin? Add Croke Park&apos;s Skyline Tour before or after the Expo. Slots are limited &mdash; booked direct with Croke Park.
+            Already coming to Dublin? Add Croke Park&apos;s Skyline Tour before or after the Expo. Slots are limited - booked direct with Croke Park.
           </p>
         </div>
         <a
@@ -127,7 +127,7 @@ function SkylineTeaser() {
               Climb <span className="text-accent-yellow">17 storeys</span> above the Croke Park pitch.
             </h2>
             <p className="text-off-white/70 leading-relaxed mb-5 text-sm md:text-base">
-              In Dublin for the Expo? Time the Skyline Tour before or after &mdash; panoramic Dublin from mountains to sea, plus a head-spinning look down the pitch. Slots are limited.
+              In Dublin for the Expo? Time the Skyline Tour before or after - panoramic Dublin from mountains to sea, plus a head-spinning look down the pitch. Slots are limited.
             </p>
             <div>
               <a
@@ -141,7 +141,7 @@ function SkylineTeaser() {
               </a>
             </div>
             <p className="text-off-white/35 text-[11px] mt-4">
-              Booked direct with Croke Park &mdash; separate from your Expo ticket.
+              Booked direct with Croke Park - separate from your Expo ticket.
             </p>
           </div>
         </div>

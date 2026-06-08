@@ -5,7 +5,7 @@ import { sponsors } from '@/data/sponsors';
 
 /**
  * Auto-scrolling logo marquee. The list is duplicated so the loop is seamless.
- * Sits just below the hero as a "trust strip" — instantly signals "this is real."
+ * Sits just below the hero as a "trust strip" - instantly signals "this is real."
  *
  * Logos that are wordmark-less (mark-only, e.g. Cailin) get a small caption
  * rendered alongside so visitors can read the company name as it scrolls past.

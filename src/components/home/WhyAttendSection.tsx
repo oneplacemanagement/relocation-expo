@@ -17,22 +17,22 @@ const cards = [
   {
     icon: ShieldCheck,
     title: 'Registered Migration Advice',
-    body: 'Speak directly with registered Australian migration agents — clear, plain-English answers about visas, sponsorship and timelines.',
+    body: 'Speak directly with registered Australian migration agents - clear, plain-English answers about visas, sponsorship and timelines.',
   },
   {
     icon: Briefcase,
     title: 'Real Sponsorship Pathways',
-    body: 'Australian employers actively recruiting now — across mining, healthcare, civil, engineering, education, IT and more.',
+    body: 'Australian employers actively recruiting now - across mining, healthcare, civil, engineering, education, IT and more.',
   },
   {
     icon: Users2,
     title: 'Hear From People Who Did It',
-    body: 'Nurses, tradies, families and engineers who already moved — what worked, what didn’t, what they wish they’d known.',
+    body: 'Nurses, tradies, families and engineers who already moved - what worked, what didn’t, what they wish they’d known.',
   },
   {
     icon: Lightbulb,
     title: 'Save Time, Money & Stress',
-    body: 'The shortcuts, the pitfalls, the paperwork — every common mistake, demystified by people who’ve seen it all.',
+    body: 'The shortcuts, the pitfalls, the paperwork - every common mistake, demystified by people who’ve seen it all.',
   },
   {
     icon: GraduationCap,
@@ -42,7 +42,7 @@ const cards = [
   {
     icon: Wallet,
     title: 'Find Your Place in Australia',
-    body: 'State-by-state lifestyle, salary, schools and cost-of-living deep dives — find where you actually want to live.',
+    body: 'State-by-state lifestyle, salary, schools and cost-of-living deep dives - find where you actually want to live.',
   },
 ];
 
@@ -68,7 +68,7 @@ export function WhyAttendSection() {
             Why Attend
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-black text-off-white mb-5 leading-[1.05]">
-            Everything you need to <span className="text-accent-yellow">make the move</span> — in one day.
+            Everything you need to <span className="text-accent-yellow">make the move</span> - in one day.
           </h2>
           <p className="text-lg md:text-xl text-off-white/70 max-w-3xl mx-auto">
             Here&apos;s why most attendees leave feeling clearer, more confident, and genuinely closer to making it happen.
@@ -111,7 +111,7 @@ export function WhyAttendSection() {
               <span className="text-accent-yellow">Real Opportunities.</span>
             </blockquote>
             <figcaption className="mt-4 text-off-white/60 text-sm uppercase tracking-widest">
-              — The Relocation Expo Promise
+              - The Relocation Expo Promise
             </figcaption>
           </figure>
         </Reveal>

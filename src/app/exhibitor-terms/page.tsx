@@ -59,7 +59,7 @@ export default function ExhibitorTermsPage() {
                 <h2 className="text-2xl font-bold text-accent-yellow mb-4">4. Cancellation by the Exhibitor</h2>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>More than 90 days before the event:</strong> Full refund of any fees paid, less a 10% administration fee</li>
-                  <li><strong>30–90 days before the event:</strong> 50% of the total booking fee is retained by the Organiser</li>
+                  <li><strong>30-90 days before the event:</strong> 50% of the total booking fee is retained by the Organiser</li>
                   <li><strong>Less than 30 days before the event:</strong> No refund. The full booking fee is retained by the Organiser</li>
                   <li>All cancellations must be made in writing to <a href="mailto:partner@therelocationexpo.com" className="text-accent-yellow underline hover:no-underline">partner@therelocationexpo.com</a></li>
                 </ul>

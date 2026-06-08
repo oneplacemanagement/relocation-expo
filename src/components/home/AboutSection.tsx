@@ -6,7 +6,7 @@ import { Reveal } from '@/components/ui/Reveal';
 const POINTS = [
   {
     title: 'Real employers, real vacancies',
-    body: 'Australian companies hiring right now — across mining, healthcare, trades, engineering, education, IT and more.',
+    body: 'Australian companies hiring right now - across mining, healthcare, trades, engineering, education, IT and more.',
   },
   {
     title: 'Registered migration experts',
@@ -14,7 +14,7 @@ const POINTS = [
   },
   {
     title: 'Real stories, no sales pitch',
-    body: 'Hear from nurses, tradies, families and engineers who already made the move — what worked, what didn’t.',
+    body: 'Hear from nurses, tradies, families and engineers who already made the move - what worked, what didn’t.',
   },
 ];
 
@@ -28,7 +28,7 @@ export function AboutSection() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/Hogan Suite_files/3b6fb3ff32354b49a765d16449bbf5fd_LARGE!_!01d4ec79d4a2daf958d2ef47a34d9548(1).jpeg"
-                alt="Croke Park hospitality suite — venue for The Relocation Expo 2026"
+                alt="Croke Park hospitality suite - venue for The Relocation Expo 2026"
                 fill
                 quality={90}
                 className="object-cover"
@@ -47,7 +47,7 @@ export function AboutSection() {
             {/* Floating accent card */}
             <div className="hidden md:block absolute -bottom-6 -right-6 bg-navy-deep border border-accent-yellow/40 rounded-2xl p-5 shadow-2xl max-w-[220px]">
               <div className="text-3xl font-display font-black text-accent-yellow leading-none">
-                11am–5:30pm
+                11am-5:30pm
               </div>
               <p className="text-off-white/70 text-xs mt-2">
                 Sunday 27th September 2026 · One day only

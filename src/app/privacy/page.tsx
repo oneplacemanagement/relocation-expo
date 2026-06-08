@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | The Relocation Expo',
-  description: 'Privacy policy for The Relocation Expo — how we collect, use, store, and protect your personal information.',
+  description: 'Privacy policy for The Relocation Expo - how we collect, use, store, and protect your personal information.',
 };
 
 export default function PrivacyPage() {
@@ -80,14 +80,14 @@ export default function PrivacyPage() {
                   more of the following legal bases:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Consent</strong> — where you have given us permission to contact you or use your information for a
+                  <li><strong>Consent</strong> - where you have given us permission to contact you or use your information for a
                     specific purpose (for example, registering interest or opting in to exhibitor contact)</li>
-                  <li><strong>Contract</strong> — where processing is necessary to fulfil a contract with you (for example,
+                  <li><strong>Contract</strong> - where processing is necessary to fulfil a contract with you (for example,
                     ticket purchases or event attendance)</li>
-                  <li><strong>Legitimate Interests</strong> — where processing is necessary for our legitimate business interests
+                  <li><strong>Legitimate Interests</strong> - where processing is necessary for our legitimate business interests
                     in operating, promoting, improving, and administering The Relocation Expo, provided those interests do not
                     override your rights</li>
-                  <li><strong>Legal Obligation</strong> — where we are required to process your information to comply with
+                  <li><strong>Legal Obligation</strong> - where we are required to process your information to comply with
                     applicable laws or regulations</li>
                 </ul>
               </section>
@@ -146,13 +146,13 @@ export default function PrivacyPage() {
                   including:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Right of Access</strong> — request a copy of the personal data we hold about you</li>
-                  <li><strong>Right to Rectification</strong> — request correction of inaccurate or incomplete information</li>
-                  <li><strong>Right to Erasure</strong> — request deletion of your personal data</li>
-                  <li><strong>Right to Restrict Processing</strong> — request that we limit how we use your information</li>
-                  <li><strong>Right to Data Portability</strong> — request your data in a structured, machine-readable format</li>
-                  <li><strong>Right to Object</strong> — object to certain types of processing</li>
-                  <li><strong>Right to Withdraw Consent</strong> — withdraw consent at any time where we rely on consent as the
+                  <li><strong>Right of Access</strong> - request a copy of the personal data we hold about you</li>
+                  <li><strong>Right to Rectification</strong> - request correction of inaccurate or incomplete information</li>
+                  <li><strong>Right to Erasure</strong> - request deletion of your personal data</li>
+                  <li><strong>Right to Restrict Processing</strong> - request that we limit how we use your information</li>
+                  <li><strong>Right to Data Portability</strong> - request your data in a structured, machine-readable format</li>
+                  <li><strong>Right to Object</strong> - object to certain types of processing</li>
+                  <li><strong>Right to Withdraw Consent</strong> - withdraw consent at any time where we rely on consent as the
                     legal basis for processing</li>
                 </ul>
                 <p className="mt-3">

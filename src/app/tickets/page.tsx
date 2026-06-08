@@ -27,7 +27,7 @@ export default function TicketsPage() {
               Secure your seat at <span className="text-accent-yellow">Croke Park</span>.
             </h1>
             <p className="text-lg text-off-white/75 max-w-2xl mx-auto mb-8">
-              Sunday 27th September 2026 · Croke Park, Dublin. Three ticket types — pick the one that fits.
+              Sunday 27th September 2026 · Croke Park, Dublin. Three ticket types - pick the one that fits.
             </p>
             <div className="max-w-2xl mx-auto">
               <CountdownTimer />
@@ -39,7 +39,7 @@ export default function TicketsPage() {
       {/* Tier cards (anchor target #tickets) */}
       <PricingTiersSection />
 
-      {/* Embedded Wix checkout — anchor target #secure-checkout */}
+      {/* Embedded Wix checkout - anchor target #secure-checkout */}
       <Section background="navy" className="py-14 md:py-16">
         <Container size="md">
           <div className="text-center mb-8">
@@ -54,7 +54,7 @@ export default function TicketsPage() {
         </Container>
       </Section>
 
-      {/* Skyline cross-sell — compact */}
+      {/* Skyline cross-sell - compact */}
       <Section background="dark" className="py-12 md:py-14">
         <Container size="md">
           <SkylineDayOut variant="compact" />
@@ -69,7 +69,7 @@ export default function TicketsPage() {
               Can&apos;t buy online?
             </h3>
             <p className="text-off-white/70 text-sm md:text-base">
-              Walk-in tickets are limited on the day at the door (cash only, subject to availability) — and priced higher than online. We strongly recommend buying online to save money, guarantee your spot and skip the queue.
+              Walk-in tickets are limited on the day at the door (cash only, subject to availability) - and priced higher than online. We strongly recommend buying online to save money, guarantee your spot and skip the queue.
             </p>
           </div>
         </Container>

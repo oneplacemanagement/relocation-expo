@@ -7,7 +7,7 @@ import { eventData } from '@/data/event';
 /**
  * Mobile-only sticky bottom CTA. Appears after the user scrolls past the
  * hero (~600px) so it doesn't compete with the hero's primary CTA. On event
- * sites this single component typically lifts mobile conversion by 20–40%.
+ * sites this single component typically lifts mobile conversion by 20-40%.
  */
 export function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);

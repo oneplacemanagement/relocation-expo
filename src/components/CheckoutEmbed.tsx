@@ -77,7 +77,7 @@ export function CheckoutEmbed() {
 
   return (
     <div id="secure-checkout" className="scroll-mt-24">
-      {/* Trust header bar — sits flush above the iframe */}
+      {/* Trust header bar - sits flush above the iframe */}
       <div className="flex items-center justify-between bg-navy-deep border border-blue-grey/40 rounded-t-2xl px-4 md:px-5 py-3.5">
         <div className="flex items-center gap-2.5 text-off-white text-xs md:text-sm min-w-0">
           <span className="inline-flex w-7 h-7 rounded-full bg-emerald-500/15 border border-emerald-400/40 items-center justify-center flex-shrink-0">
@@ -87,7 +87,7 @@ export function CheckoutEmbed() {
             <strong className="font-semibold">Secure Checkout</strong>
             <span className="hidden sm:inline text-off-white/55">
               {' '}
-              — SSL encrypted via Wix Events
+              - SSL encrypted via Wix Events
             </span>
           </span>
         </div>
@@ -102,7 +102,7 @@ export function CheckoutEmbed() {
         </button>
       </div>
 
-      {/* Iframe — inline OR fullscreen overlay depending on `expanded` */}
+      {/* Iframe - inline OR fullscreen overlay depending on `expanded` */}
       <div
         className={
           expanded
@@ -134,7 +134,7 @@ export function CheckoutEmbed() {
         <iframe
           ref={iframeRef}
           src={src}
-          title="The Relocation Expo — Ticket Checkout"
+          title="The Relocation Expo - Ticket Checkout"
           className={
             expanded
               ? 'flex-1 w-full bg-off-white border-0'

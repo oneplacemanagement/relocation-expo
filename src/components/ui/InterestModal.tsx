@@ -9,9 +9,9 @@ interface InterestModalProps {
 }
 
 const TICKET_OPTIONS = [
-  { label: 'Single — €15', value: 'Single - €15' },
-  { label: 'Couple — €25', value: 'Couple - €25' },
-  { label: 'Family Pass — €35 (2 adults + 3 children)', value: 'Family Pass - €35' },
+  { label: 'Single - €15', value: 'Single - €15' },
+  { label: 'Couple - €25', value: 'Couple - €25' },
+  { label: 'Family Pass - €35 (2 adults + 3 children)', value: 'Family Pass - €35' },
 ];
 
 function deriveTicketValue(ticketType: string): string {
@@ -56,7 +56,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
           subject: `Ticket Interest - ${formData.selectedTicket}`,
           message: [
             `Ticket Type: ${formData.selectedTicket}`,
-            `Currently Based: ${formData.nationality === 'Other' ? `Other — ${formData.nationalityOther}` : formData.nationality}`,
+            `Currently Based: ${formData.nationality === 'Other' ? `Other - ${formData.nationalityOther}` : formData.nationality}`,
             `Occupation: ${formData.occupation}`,
             `Year of Birth: ${formData.yearOfBirth}`,
             `Phone: ${formData.phone || 'Not provided'}`,
@@ -125,7 +125,7 @@ export function InterestModal({ isOpen, onClose, ticketType }: InterestModalProp
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Honeypot — hidden from humans, bots fill it in and get rejected */}
+              {/* Honeypot - hidden from humans, bots fill it in and get rejected */}
               <input type="checkbox" name="botcheck" className="hidden" aria-hidden="true" tabIndex={-1} />
               {/* Full Name */}
               <div>

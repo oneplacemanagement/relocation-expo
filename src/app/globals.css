@@ -24,7 +24,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Focus rings — accessible, brand-coloured */
+  /* Focus rings - accessible, brand-coloured */
   :focus-visible {
     outline: 2px solid var(--accent-yellow);
     outline-offset: 3px;

@@ -3,8 +3,8 @@ import { faqs } from '@/data/faqs';
 
 /**
  * Server-rendered JSON-LD blocks. Search engines (Google in particular) use
- * these to surface rich event/FAQ results — date, venue, ticket link, price,
- * People-Also-Ask snippets — directly in the SERP.
+ * these to surface rich event/FAQ results - date, venue, ticket link, price,
+ * People-Also-Ask snippets - directly in the SERP.
  */
 export function JsonLd() {
   const eventSchema = {

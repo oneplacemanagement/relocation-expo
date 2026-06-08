@@ -12,7 +12,7 @@ import { eventData } from '@/data/event';
  * - When `eventData.crokeParkVideoId` is set (a YouTube video ID), it shows a
  *   click-to-play poster card, then loads the iframe on click (no autoplay
  *   bandwidth cost).
- * - When unset, it shows a beautiful still gallery hint instead — site
+ * - When unset, it shows a beautiful still gallery hint instead - site
  *   stays cinematic with no broken embed.
  *
  * To enable: set `crokeParkVideoId: 'XXXXXXXXXXX'` in src/data/event.ts.
@@ -46,7 +46,7 @@ export function CrokeParkVideoSection() {
               Held at <span className="text-accent-yellow">Ireland&apos;s Most&nbsp;Iconic</span> Venue.
             </h2>
             <p className="text-lg text-off-white/80 leading-relaxed mb-6">
-              Croke Park isn&apos;t just a venue — it&apos;s a statement. Ireland&apos;s largest conference centre, fully accessible, served by DART, LUAS and Dublin Bus, with on-site parking and the kind of hospitality you&apos;d expect for an event of this scale.
+              Croke Park isn&apos;t just a venue - it&apos;s a statement. Ireland&apos;s largest conference centre, fully accessible, served by DART, LUAS and Dublin Bus, with on-site parking and the kind of hospitality you&apos;d expect for an event of this scale.
             </p>
             <ul className="space-y-3 text-off-white/85">
               {[
@@ -96,7 +96,7 @@ export function CrokeParkVideoSection() {
                 >
                   <Image
                     src="/images/Hogan Mezzanine_files/7a31f77844a244f0ab9770bce2556ab3_LARGE!_!8409e51bf6888e13cc1e803159910837.jpeg"
-                    alt="Croke Park Hogan Mezzanine — venue for The Relocation Expo 2026"
+                    alt="Croke Park Hogan Mezzanine - venue for The Relocation Expo 2026"
                     fill
                     className="object-cover transition-transform duration-700 group-hover/btn:scale-105"
                     sizes="(min-width: 1024px) 50vw, 100vw"

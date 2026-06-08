@@ -1,7 +1,7 @@
 /**
  * Canonical Sponsors / Exhibitors data for The Relocation Expo 2026.
  * Order within each tier is the order of confirmation.
- * Logos live in /public/sponsors/ — see /public/sponsors/README.md if added.
+ * Logos live in /public/sponsors/ - see /public/sponsors/README.md if added.
  */
 
 export type SponsorTier = 'Platinum' | 'Gold' | 'Sponsor' | 'Digital';
@@ -13,7 +13,7 @@ export interface Sponsor {
   logo: string;
   website?: string;
   description?: string;
-  /** Industry tag — used on the directory cards */
+  /** Industry tag - used on the directory cards */
   industry?: string;
   /** Whether the logo PNG/JPG has a coloured background and needs a white panel behind it on dark sections */
   hasBackground?: boolean;
@@ -231,7 +231,7 @@ export const tierMeta: Record<
   Digital: {
     label: 'Digital Exhibitors',
     tagline: 'Online Exposure',
-    description: 'Featured online — logos, QR codes and email campaigns.',
+    description: 'Featured online - logos, QR codes and email campaigns.',
     ringColor: 'ring-blue-grey/40',
   },
 };

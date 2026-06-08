@@ -35,7 +35,7 @@ export function Header() {
           : 'bg-gradient-to-b from-navy/40 to-transparent border-b border-transparent'
       }`}
     >
-      {/* Date banner — collapses on scroll */}
+      {/* Date banner - collapses on scroll */}
       <div
         className={`transition-all duration-300 overflow-hidden ${
           scrolled ? 'max-h-0 opacity-0' : 'max-h-10 opacity-100 border-b border-accent-yellow/20 bg-accent-yellow/[0.07]'
@@ -132,7 +132,7 @@ export function Header() {
                 className="bg-gradient-to-r from-accent-yellow to-accent-yellow-glow text-navy font-bold text-center py-3 rounded-xl mt-2"
                 onClick={() => setMobileOpen(false)}
               >
-                Buy Tickets — From €15
+                Buy Tickets - From €15
               </a>
             </div>
           </div>

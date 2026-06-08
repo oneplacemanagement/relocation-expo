@@ -9,7 +9,7 @@ export function CountdownTimer() {
         Tickets On Sale Now
       </p>
       <p className="text-off-white/80 mb-5">
-        Secure your spot — limited availability.
+        Secure your spot - limited availability.
       </p>
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-off-white/70 text-sm mb-5">
         <Tick>Single from €15</Tick>

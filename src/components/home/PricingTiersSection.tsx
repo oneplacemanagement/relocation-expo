@@ -32,7 +32,7 @@ export function PricingTiersSection() {
             One Day. <span className="text-accent-yellow">Three Ways</span> to Be There.
           </h2>
           <p className="text-lg md:text-xl text-off-white/70 max-w-2xl mx-auto">
-            Pick the ticket that fits — every option includes full-day access, all stages, and migration clinics.
+            Pick the ticket that fits - every option includes full-day access, all stages, and migration clinics.
           </p>
         </Reveal>
 
