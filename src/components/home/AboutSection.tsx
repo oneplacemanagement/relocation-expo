@@ -10,7 +10,7 @@ const POINTS = [
   },
   {
     title: 'Registered migration experts',
-    body: 'Plain-English visa advice from agents who specialise in the relocation pathway to Australia.',
+    body: 'Visa advice from agents who specialise in the relocation pathway to Australia.',
   },
   {
     title: 'Real stories, no sales pitch',
@@ -64,7 +64,7 @@ export function AboutSection() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-off-white mb-6 leading-[1.05]">
-                The whole Australia move,{' '}
+                Your Australia move,{' '}
                 <span className="text-accent-yellow">solved in one day.</span>
               </h2>
             </Reveal>

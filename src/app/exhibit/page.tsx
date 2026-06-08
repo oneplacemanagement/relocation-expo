@@ -23,7 +23,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Exhibit',
   description:
-    "Connect with hundreds of professionals ready to relocate to Australia at the first one-stop relocation event - Croke Park, 27 September 2026.",
+    "Connect with hundreds of professionals ready to relocate to Australia at the only one-stop relocation event of its kind - Croke Park, 27 September 2026.",
   alternates: { canonical: '/exhibit' },
 };
 
@@ -137,7 +137,7 @@ export default function ExhibitPage() {
               </h1>
               <p className="text-lg md:text-xl text-off-white/80 mb-4 leading-relaxed">
                 <span className="text-accent-yellow font-semibold">
-                  The first one-stop relocation event of its kind.
+                  The only one-stop relocation event of its kind.
                 </span>
               </p>
               <p className="text-base md:text-lg text-off-white/75 mb-8 leading-relaxed">
